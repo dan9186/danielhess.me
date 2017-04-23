@@ -1,12 +1,13 @@
 language: node_js
 
-sudo: required
-
 node_js:
   - "7"
 
 install:
-  - make travis_setup
+  - export PATH=$PATH:$HOME/google-cloud-sdk/bin
+  - mkdir -p $HOME/.gcloud
+  - echo $GCLOUD_KEY_FILE > $HOME/.gcloud/creds && chmod 600 $HOME/.gcloud/creds
+  - curl https://sdk.cloud.google.com | bash
 
 script:
   - make test

@@ -26,6 +26,3 @@ test: unit_test  ## Run all tests
 unit_test:  ## Run unit tests
 	@echo "Running tests"
 	@npm run test
-
-travis_setup:  ## Setup the travis environment
-	@sudo pip install gsutil
