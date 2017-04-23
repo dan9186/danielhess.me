@@ -8,6 +8,7 @@ install:
   - mkdir -p $HOME/.gcloud
   - echo $GCLOUD_KEY_FILE > $HOME/.gcloud/creds && chmod 600 $HOME/.gcloud/creds
   - curl https://sdk.cloud.google.com | bash
+  - gcloud auth activate-service-account --key-file=$HOME/.gcloud/creds
 
 script:
   - make test
