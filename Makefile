@@ -14,6 +14,8 @@ deploy:  ## Deploy the project
 		gsutil -m rsync dist gs://$(TESTING_BUCKET)/; \
 	elif [ "$(TRAVIS_BRANCH)" == "release" ]; then \
 		gsutil -m rsync dist gs://$(PROD_BUCKET)/; \
+	else \
+		echo "Not a deploy branch, no action performed"; \
 	fi
 
 install:  ## Install project
