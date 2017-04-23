@@ -28,4 +28,4 @@ unit_test:  ## Run unit tests
 	@npm run test
 
 travis_setup:  ## Setup the travis environment
-	@pip install gsutil
+	@sudo pip install gsutil
