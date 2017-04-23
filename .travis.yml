@@ -5,3 +5,8 @@ node_js:
 
 install:
   - make travis_setup
+
+script:
+  - make test
+  - make build
+  - make deploy
