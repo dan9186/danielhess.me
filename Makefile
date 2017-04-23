@@ -11,9 +11,9 @@ build: install  ## Build the project
 
 deploy:  ## Deploy the project
 	@if [ "$(TRAVIS_BRANCH)" == "master" ]; then \
-		gsutil -m rsync dist gs://$(TESTING_BUCKET)/; \
+		gsutil -m -d rsync dist gs://$(TESTING_BUCKET)/; \
 	elif [ "$(TRAVIS_BRANCH)" == "release" ]; then \
-		gsutil -m rsync dist gs://$(PROD_BUCKET)/; \
+		gsutil -m -d rsync dist gs://$(PROD_BUCKET)/; \
 	else \
 		echo "Not a deploy branch, no action performed"; \
 	fi
