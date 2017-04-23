@@ -1,7 +1,14 @@
 language: node_js
 
+sudo: required
+
 node_js:
   - "7"
 
 install:
   - make travis_setup
+
+script:
+  - make test
+  - make build
+  - make deploy
