@@ -7,12 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #778492;
@@ -93,10 +88,11 @@ a.dotted-link:hover {
   text-decoration: none;
   color: #49515a;
 }
+
 /* ======= Sections======= */
 .sections-wrapper {
-  padding-top: 60px;
-  padding-bottom: 60px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 .section {
   margin-bottom: 30px;
