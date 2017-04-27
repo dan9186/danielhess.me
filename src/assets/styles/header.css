@@ -1,12 +1,10 @@
 .header {
-  padding: 30px 0;
-  /*background: #f5f5f5;*/
-  background-image: url('../images/header-bg.jpg');
-  background-size: cover;
-  background-repeat: repeat, no-repeat;
-  background-position: bottom center;
-  /*background-attachment: fixed;*/
-  /*border-top: 10px solid #778492;*/
+	/*margin-top: 51px;*/
+	padding: 30px 0;
+	background-image: url('../images/header-bg.jpg');
+	background-size: cover;
+	background-repeat: repeat, no-repeat;
+	background-position: bottom center;
 }
 
 .header .btn {
