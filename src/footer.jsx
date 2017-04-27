@@ -12,7 +12,7 @@ export class Footer extends React.Component {
         return (
             <footer className="footer">
                 <div className="container text-center">
-                    <small className="copyright">Copyright 2017 - Daniel Hess</small>
+                    <small className="copyright">© All rights reserved. Daniel Hess 2017</small>
                 </div>
             </footer>
         )
