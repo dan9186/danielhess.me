@@ -1,9 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import 'whatwg-fetch'
-import {Page} from './page.jsx'
+import './assets/styles/page.css'
+import {Header} from './header.jsx'
+import {Body} from './body.jsx'
+import {Footer} from './footer.jsx'
 
 ReactDOM.render(
-    <Page />,
+    <div>
+        <Header />
+        <Body />
+        <Footer />
+    </div>,
     document.getElementById('app')
 )
