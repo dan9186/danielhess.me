@@ -21,24 +21,34 @@
 	margin-left: 30px;
 }
 
+.header .profile-content h1 {
+  margin-top: 30px;
+}
+
 .header .profile-content .name {
   color: #f5f5f5;
   font-size: 38px;
   margin-bottom: 5px;
-  margin-top: 30px;
 }
 
 .header .profile-content .desc {
   color: #778492;
   font-family: "Lato", arial, sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 24px;
   margin-top: 0;
   margin-bottom: 15px;
 }
 
+.header .profile-content .slogan {
+	color: #FFFFFF;
+}
+
+.header .profile-content .highlighted {
+	color: #259d07;
+}
+
 .header .profile-content .social a {
-  background: #b0b7bf;
   width: 36px;
   height: 36px;
   display: inline-block;
@@ -55,7 +65,7 @@
 }
 
 .header .profile-content .social a:hover {
-  background: #778492;
+  background: #259d07;
 }
 
 .header .profile-content .social a .fa {
