@@ -28,12 +28,15 @@ export class Header extends React.Component {
                     <h1 className="name">{name}</h1>
                     <h2 className="desc">{description}</h2>
                     <ul className="social list-inline">
+                        <SocialBadge icon="github" href={"https://github.com/" + username} last="true" />
                         <SocialBadge icon="twitter" href={"https://twitter.com/" + username} />
                         <SocialBadge icon="linkedin" href={"https://www.linkedin.com/in/" + username + "/"} />
-                        <SocialBadge icon="github" href={"https://github.com/" + username} last="true" />
+                        <SocialBadge icon="envelope" href={"mailto:" + email} />
                     </ul>
                 </div>
-                <a className="btn btn-cta-primary pull-right" href={"mailto:" + email}><i className="fa fa-paper-plane"></i> Contact Me</a>
+                <div className="profile-content pull-right">
+                    <h1 className="slogan">Dedicated to <span className="highlighted">Devops</span></h1>
+                </div>
             </div>
         )
     }
