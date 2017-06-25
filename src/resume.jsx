@@ -13,10 +13,32 @@ export class Resume extends React.Component {
             <div className="container sections-wrapper">
                 <div className="row">
                     <div className="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                        { this.render_tech_experience() }
                         { this.render_prof_experience() }
+                        { this.render_eduction() }
+                        { this.render_accomplishments() }
+                        { this.render_community_involvement() }
+                        { this.render_references() }
                     </div>
                 </div>
             </div>
+        )
+    }
+
+    render_tech_experience() {
+        return (
+            <section className="section">
+                <div className="section-inner">
+                    <h2 className="heading">Technical Experience</h2>
+                    <div className="content">
+                        <h4>Languages</h4>
+                        <h4>Frameworks</h4>
+                        <h4>Infrastructure</h4>
+                        <h4>Tools</h4>
+                        <h4>Systems</h4>
+                    </div>
+                </div>
+            </section>
         )
     }
 
@@ -219,6 +241,54 @@ export class Resume extends React.Component {
                             <li>Assisted in multiple process improvements in Support Logistics Center layout and flow</li>
                             <li>Designed and implemented paperless process for equipment disposal</li>
                         </ul>
+                    </div>
+                </div>
+            </section>
+        )
+    }
+
+    render_eduction() {
+        return (
+            <section className="section">
+                <div className="section-inner">
+                    <h2 className="heading">Education</h2>
+                    <div className="content">
+                    </div>
+                </div>
+            </section>
+        )
+    }
+
+    render_accomplishments() {
+        return (
+            <section className="section">
+                <div className="section-inner">
+                    <h2 className="heading">Accomplishments</h2>
+                    <div className="content">
+                    </div>
+                </div>
+            </section>
+        )
+    }
+
+    render_community_involvement() {
+        return (
+            <section className="section">
+                <div className="section-inner">
+                    <h2 className="heading">Community Involvement</h2>
+                    <div className="content">
+                    </div>
+                </div>
+            </section>
+        )
+    }
+
+    render_references() {
+        return (
+            <section className="section">
+                <div className="section-inner">
+                    <h2 className="heading">References</h2>
+                    <div className="content">
                     </div>
                 </div>
             </section>
