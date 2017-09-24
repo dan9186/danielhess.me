@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import 'whatwg-fetch'
-import './assets/styles/resume.css'
+import '../assets/styles/resume.css'
 
 export class Resume extends React.Component {
     constructor(props) {
@@ -11,20 +11,19 @@ export class Resume extends React.Component {
     render() {
         return (
             <div className="container sections-wrapper">
-                <div className="row">
-                    <div className="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
-                        { this.render_tech_experience() }
-                        { this.render_prof_experience() }
-                        { this.render_eduction() }
-                        { this.render_accomplishments() }
-                        { this.render_community_involvement() }
-                        { this.render_references() }
-                    </div>
+                <div className="primary col-md-8 col-sm-12 col-xs-12">
+                    { this.render_tech_experience() }
+                    { this.render_prof_experience() }
+                </div>
+                <div className="secondary col-md-4 col-sm-12 col-xs-12">
+                    { this.render_eduction() }
+                    { this.render_accomplishments() }
+                    { this.render_community_involvement() }
+                    { this.render_references() }
                 </div>
             </div>
         )
     }
-
     render_tech_experience() {
         return (
             <section className="section">
@@ -289,6 +288,7 @@ export class Resume extends React.Component {
                 <div className="section-inner">
                     <h2 className="heading">References</h2>
                     <div className="content">
+                        Available upon request.
                     </div>
                 </div>
             </section>
