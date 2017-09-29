@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import 'whatwg-fetch'
+
 import './style.css'
 
 export class Resume extends React.Component {
