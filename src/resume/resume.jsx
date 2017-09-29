@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import 'whatwg-fetch'
-import './assets/styles/resume.css'
+import '../assets/styles/resume.css'
 
 export class Resume extends React.Component {
     constructor(props) {
@@ -11,12 +11,47 @@ export class Resume extends React.Component {
     render() {
         return (
             <div className="container sections-wrapper">
-                <div className="row">
-                    <div className="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
-                        { this.render_prof_experience() }
-                    </div>
+                <div className="primary col-md-8 col-sm-12 col-xs-12">
+                    { this.render_about_me() }
+                    { this.render_tech_experience() }
+                    { this.render_prof_experience() }
+                </div>
+                <div className="secondary col-md-4 col-sm-12 col-xs-12">
+                    { this.render_info() }
+                    { this.render_eduction() }
+                    { this.render_accomplishments() }
+                    { this.render_references() }
                 </div>
             </div>
+        )
+    }
+
+    render_about_me() {
+        return (
+            <section className="section">
+                <div className="section-inner">
+                    <h2 className="heading">About Me</h2>
+                    <div className="content">
+                    </div>
+                </div>
+            </section>
+        )
+    }
+
+    render_tech_experience() {
+        return (
+            <section className="section">
+                <div className="section-inner">
+                    <h2 className="heading">Technical Experience</h2>
+                    <div className="content">
+                        <h4>Languages</h4>
+                        <h4>Frameworks</h4>
+                        <h4>Infrastructure</h4>
+                        <h4>Tools</h4>
+                        <h4>Systems</h4>
+                    </div>
+                </div>
+            </section>
         )
     }
 
@@ -26,7 +61,7 @@ export class Resume extends React.Component {
                 <div className="section-inner">
                     <h2 className="heading">Professional Experience</h2>
                     <div className="content">
-                        <h3>Senior Software Engineer<span className="pull-right date-rage">January 2016 – Present</span></h3>
+                        <h3>Senior Software Engineer<span className="pull-right date-range">January 2016 – Present</span></h3>
                         <h4>Treetop Commons, LLC<span className="pull-right"><i className="fa fa-map-marker"></i> Portland, OR</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
@@ -54,7 +89,7 @@ export class Resume extends React.Component {
                         </ul>
                     </div>
                     <div className="content">
-                        <h3>Devops Engineer<span className="pull-right date-rage">June 2014 – Dec 2015</span></h3>
+                        <h3>Devops Engineer<span className="pull-right date-range">June 2014 – Dec 2015</span></h3>
                         <h4>Monsoon Commerce<span className="pull-right"><i className="fa fa-map-marker"></i> Portland, OR</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
@@ -133,7 +168,7 @@ export class Resume extends React.Component {
                         </ul>
                     </div>
                     <div className="content">
-                        <h3>Senior Technical Service Provider<span className="pull-right date-rage"> January 2012 – June 2013</span></h3>
+                        <h3>Senior Technical Service Provider<span className="pull-right date-range"> January 2012 – June 2013</span></h3>
                         <h4>St. Jude Children's Research Hospital<span className="pull-right"><i className="fa fa-map-marker"></i> Memphis, TN</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
@@ -166,7 +201,7 @@ export class Resume extends React.Component {
                         </ul>
                     </div>
                     <div className="content">
-                        <h3>Technical Service Provider<span className="pull-right date-rage"> June 2009 – January 2012</span></h3>
+                        <h3>Technical Service Provider<span className="pull-right date-range"> June 2009 – January 2012</span></h3>
                         <h4>St. Jude Children's Research Hospital<span className="pull-right"><i className="fa fa-map-marker"></i> Memphis, TN</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
@@ -198,7 +233,7 @@ export class Resume extends React.Component {
                         </ul>
                     </div>
                     <div className="content">
-                        <h3>Student Intern PC Support Specialist<span className="pull-right date-rage">Nov. 2005 – June 2009</span></h3>
+                        <h3>Student Intern PC Support Specialist<span className="pull-right date-range">Nov. 2005 – June 2009</span></h3>
                         <h4>St. Jude Children's Research Hospital<span className="pull-right"><i className="fa fa-map-marker"></i> Memphis, TN</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
@@ -219,6 +254,100 @@ export class Resume extends React.Component {
                             <li>Assisted in multiple process improvements in Support Logistics Center layout and flow</li>
                             <li>Designed and implemented paperless process for equipment disposal</li>
                         </ul>
+                    </div>
+                </div>
+            </section>
+        )
+    }
+
+    render_my_github() {
+        return (
+            <section className="github section">
+                <div className="section-inner">
+                    <h2 className="heading">My GitHub</h2>
+
+                    <div id="github-graph" className="github-graph">
+                    </div>
+
+                    <div id="ghfeed" className="ghfeed">
+                    </div>
+                </div>
+            </section>
+        )
+    }
+
+    render_info() {
+        return (
+            <aside className="info aside section">
+                <div className="section-inner">
+                    <h2 className="heading sr-only">Basic Information</h2>
+                    <div className="content">
+                        <ul className="list-unstyled">
+                            <li><i className="fa fa-map-marker"></i><span className="sr-only">Location:</span>Portland, OR</li>
+                            <li><i className="fa fa-envelope-o"></i><span className="sr-only">Email:</span><a href="#">daniel@danielhess.me</a></li>
+                            <li><i className="fa fa-github"></i><span className="sr-only">Github:</span><a href="#">github.com/dan9186</a></li>
+                            <li><i className="fa fa-twitter"></i><span className="sr-only">Twitter:</span><a href="#">@dan9186</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        )
+    }
+
+    render_eduction() {
+        return (
+            <section className="education aside section">
+                <div className="section-inner">
+                    <h2 className="heading">Education</h2>
+                    <div className="content">
+                        <div className="item">
+                            <h3 className="title"><i className="fa fa-graduation-cap"></i> B.S. in Computer Engineering</h3>
+                            <h3 className="title"><i className="fa fa-graduation-cap"></i> B.S. in Computer Science</h3>
+                            <h3 className="title"><i className="fa fa-graduation-cap"></i> Minor in Mathematics</h3>
+                            <h4 className="university">Christian Brothers University<br/>Memphis, TN <span className="date-range">(August 2005 – May 2009)</span></h4>
+                        </div>
+                        <div className="item">
+                        </div>
+                        <div className="item">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        )
+    }
+
+    render_accomplishments() {
+        return (
+            <section className="section">
+                <div className="section-inner">
+                    <h2 className="heading">Accomplishments</h2>
+                    <div className="content">
+                        Eagle Scout
+                    </div>
+                </div>
+            </section>
+        )
+    }
+
+    render_community_involvement() {
+        return (
+            <section className="section">
+                <div className="section-inner">
+                    <h2 className="heading">Community Involvement</h2>
+                    <div className="content">
+                    </div>
+                </div>
+            </section>
+        )
+    }
+
+    render_references() {
+        return (
+            <section className="section">
+                <div className="section-inner">
+                    <h2 className="heading">References</h2>
+                    <div className="content">
+                        Available upon request.
                     </div>
                 </div>
             </section>
