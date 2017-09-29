@@ -1,9 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+
 import 'whatwg-fetch'
-import './assets/styles/header.css'
-import LogoImg from './assets/images/logo.png'
-import {SocialBadge} from './social_badge.jsx'
+
+import './style.css'
+import LogoImg from './images/logo.png'
+
+import {SocialBadge} from '../social_badge/social_badge.jsx'
 
 export class Header extends React.Component {
     constructor(props) {

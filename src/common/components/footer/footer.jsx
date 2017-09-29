@@ -1,7 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+
 import 'whatwg-fetch'
-import './assets/styles/footer.css'
+
+import './style.css'
 
 export class Footer extends React.Component {
     constructor(props) {
