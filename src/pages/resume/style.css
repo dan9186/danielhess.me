@@ -30,6 +30,28 @@
 	font-size: 22px;
 }
 
+/*====== Tech Experience ======*/
+.tech-experience ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.tech-experience h5 {
+	margin-bottom: 0;
+}
+
+.tech-experience .skills span {
+	background: #17CF5D;
+	display: inline-block;
+	height: 2px;
+	margin-right: 10px;
+	width: 55px;
+}
+
+.tech-experience .skills span.transparent {
+	background: #D6D6D6;
+}
+
 /*====== Github =======*/
 .github-graph {
 	margin-bottom: 30px;
