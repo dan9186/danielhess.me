@@ -14,7 +14,7 @@ export class Resume extends React.Component {
         return (
             <div className="container sections-wrapper">
                 <div className="primary col-md-8 col-sm-12 col-xs-12">
-                    { this.render_about_me() }
+                    { /*this.render_about_me()*/ }
                     { this.render_prof_experience() }
                     { this.render_tech_experience() }
                 </div>
