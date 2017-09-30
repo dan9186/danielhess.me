@@ -219,6 +219,30 @@ export class Resume extends React.Component {
                     <h2 className="heading">Professional Experience</h2>
                     <hr />
                     <div className="content">
+                        <h3>Senior Software Engineer<span className="pull-right date-range">September 2016 – Present</span></h3>
+                        <h4>Ion Channel<span className="pull-right"><i className="fa fa-map-marker"></i> Portland, OR</span></h4>
+                        <hr />
+                        <h4>Responsibilities</h4>
+                        <ul>
+                            <li>Write, maintain, and collaborate on JSON RPC style API for consumption by multiple clients</li>
+                            <li>Assist in any architectural concerns of current and new environments</li>
+                            <li>Work closely with both collocated and remote coworkers in the Engineering Team</li>
+                            <li>Share and expand knowledge of team around best practices of Golang</li>
+                            <li>Guide and foster juniors to produce quality work and progress their technical abilities</li>
+                        </ul>
+                        <h4>Achievements</h4>
+                        <ul>
+                            <li>Created open source Golang SDK for interaction with API</li>
+                            <li>Took over as Project Manager when previous left</li>
+                            <li>Improved quality of tickets and workflow to the degree of being able to drop several all hands, daily meetings</li>
+                            <li>Provided a means of strangling a bottleneck Ruby service with a Golang version, one endpoint at a time, reducing page load times from 3 seconds to 1.6 seconds in first round</li>
+                            <li>Formalized and cleaned up build process for all services with simple Makefile commands</li>
+                            <li>Instigated and drove several changes in communications with remote team to improve team dynamics</li>
+                            <li>Designed multiple new services in Golang to provide good examples for less experienced team members</li>
+                        </ul>
+                    </div>
+                    <div className="clearfix"></div>
+                    <div className="content">
                         <h3>Senior Software Engineer<span className="pull-right date-range">January 2016 – September 2016</span></h3>
                         <h4>Treetop Commons, LLC<span className="pull-right"><i className="fa fa-map-marker"></i> Portland, OR</span></h4>
                         <hr />
