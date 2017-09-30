@@ -2,7 +2,7 @@
   "name": "danielhess.me",
   "version": "0.0.1",
   "description": "Personal Website",
-  "main": "index.jsx",
+  "main": "main.jsx",
   "scripts": {
     "build": "webpack -p",
     "dev": "webpack-dev-server",

@@ -1,0 +1,121 @@
+/* ======= Base ======= */
+body {
+	font-family: 'Lato', arial, sans-serif;
+	color: #434343;
+	background: #DAE3E7;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	color: #778492;
+}
+
+a {
+	color: #3AAA64;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #5f6b77;
+	color: #2d844e;
+}
+
+a:focus {
+	text-decoration: none;
+}
+
+.btn, a.btn {
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	font-family: 'Montserrat', arial, sans-serif;
+	padding: 8px 16px;
+	font-weight: bold;
+}
+
+.btn .fa, a.btn .fa {
+	margin-right: 5px;
+}
+
+.btn:focus, a.btn:focus {
+	color: #fff;
+}
+
+a.btn-cta-primary, .btn-cta-primary {
+	background: #54ba4e;
+	border: 1px solid #54ba4e;
+	color: #fff;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+a.btn-cta-primary:hover, .btn-cta-primary:hover {
+	background: #49ac43;
+	border: 1px solid #49ac43;
+	color: #fff;
+}
+
+a.btn-cta-secondary, .btn-cta-secondary {
+	background: #479FC8;
+	border: 1px solid #479FC8;
+	color: #fff;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+a.btn-cta-secondary:hover, .btn-cta-secondary:hover {
+	background: #3893bd;
+	border: 1px solid #3893bd;
+	color: #fff;
+}
+
+.text-highlight {
+	color: #32383e;
+}
+
+.label-theme {
+	background: #3AAA64;
+	font-size: 12px;
+}
+
+a.dotted-link {
+	border-bottom: 1px dotted #778492;
+	color: #778492;
+}
+
+a.dotted-link:hover {
+	text-decoration: none;
+	color: #49515a;
+}
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 991px) {
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 1199px) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (max-width: 1399px) {
+}
+
+/* Ex-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1400px) {
+	.container {
+		width: 1360px;
+	}
+}

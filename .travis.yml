@@ -3,14 +3,23 @@ language: node_js
 node_js:
   - "7"
 
+addons:
+  apt:
+    sources:
+    - sourceline: 'deb http://packages.cloud.google.com/apt cloud-sdk-trusty main'
+      key_url: 'https://packages.cloud.google.com/apt/doc/apt-key.gpg'
+    packages:
+    - google-cloud-sdk
+
 install:
-  - export PATH=$PATH:$HOME/google-cloud-sdk/bin
   - mkdir -p $HOME/.gcloud
   - echo $GCLOUD_KEY_FILE > $HOME/.gcloud/creds && chmod 600 $HOME/.gcloud/creds
-  - curl https://sdk.cloud.google.com | bash
   - gcloud auth activate-service-account --key-file=$HOME/.gcloud/creds
 
 script:
   - make test
   - make build
   - make deploy
+
+notifications:
+  email: false
