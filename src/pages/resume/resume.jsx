@@ -33,6 +33,7 @@ export class Resume extends React.Component {
             <section className="section">
                 <div className="section-inner">
                     <h2 className="heading">About Me</h2>
+                    <hr />
                     <div className="content">
                     </div>
                 </div>
@@ -45,6 +46,7 @@ export class Resume extends React.Component {
             <section className="section">
                 <div className="section-inner">
                     <h2 className="heading">Technical Experience</h2>
+                    <hr />
                     <div className="content">
                         <h4>Languages</h4>
                         <h4>Frameworks</h4>
@@ -62,6 +64,7 @@ export class Resume extends React.Component {
             <section className="section">
                 <div className="section-inner">
                     <h2 className="heading">Professional Experience</h2>
+                    <hr />
                     <div className="content">
                         <h3>Senior Software Engineer<span className="pull-right date-range">January 2016 – September 2016</span></h3>
                         <h4>Treetop Commons, LLC<span className="pull-right"><i className="fa fa-map-marker"></i> Portland, OR</span></h4>
@@ -272,7 +275,7 @@ export class Resume extends React.Component {
             <section className="github section">
                 <div className="section-inner">
                     <h2 className="heading">My GitHub</h2>
-
+                    <hr />
                     <div id="github-graph" className="github-graph">
                     </div>
 
@@ -288,6 +291,7 @@ export class Resume extends React.Component {
             <aside className="info aside section">
                 <div className="section-inner">
                     <h2 className="heading sr-only">Basic Information</h2>
+                    <hr />
                     <div className="content">
                         <ul className="list-unstyled">
                             <li><i className="fa fa-map-marker"></i><span className="sr-only">Location:</span>Portland, OR</li>
@@ -306,6 +310,7 @@ export class Resume extends React.Component {
             <section className="education aside section">
                 <div className="section-inner">
                     <h2 className="heading">Education</h2>
+                    <hr />
                     <div className="content">
                         <div className="item">
                             <h3 className="title"><i className="fa fa-graduation-cap"></i> B.S. in Computer Engineering</h3>
@@ -328,6 +333,7 @@ export class Resume extends React.Component {
             <section className="section">
                 <div className="section-inner">
                     <h2 className="heading">Accomplishments</h2>
+                    <hr />
                     <div className="content">
                         Eagle Scout
                     </div>
@@ -341,6 +347,7 @@ export class Resume extends React.Component {
             <section className="section">
                 <div className="section-inner">
                     <h2 className="heading">Community Involvement</h2>
+                    <hr />
                     <div className="content">
                     </div>
                 </div>
@@ -353,6 +360,7 @@ export class Resume extends React.Component {
             <section className="section">
                 <div className="section-inner">
                     <h2 className="heading">References</h2>
+                    <hr />
                     <div className="content">
                         Available upon request.
                     </div>
