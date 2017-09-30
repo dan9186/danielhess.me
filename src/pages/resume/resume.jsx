@@ -521,4 +521,17 @@ export class Resume extends React.Component {
             </section>
         )
     }
+
+    render_interests() {
+        return (
+            <section className="section">
+                <div className="section-inner">
+                    <h2 className="heading">Interests</h2>
+                    <hr />
+                    <div className="content">
+                    </div>
+                </div>
+            </section>
+        )
+    }
 }
