@@ -1,19 +1,21 @@
+/* ====== Footer ====== */
 .footer {
-  background: #32383e;
-  color: #fff;
-  padding: 10px 0;
+	background: #32383e;
+	color: #fff;
+	padding: 10px 0;
+	border-top: #778492 0.4em solid;
 }
 
 .footer .copyright {
-  line-height: 1.6;
-  color: #a1aab4;
-  font-size: 14px;
+	line-height: 1.6;
+	color: #a1aab4;
+	font-size: 14px;
 }
 
 .footer a {
-  color: #fff;
+	color: #fff;
 }
 
 .footer .fa-heart {
-  color: #fb866a;
+	color: #fb866a;
 }
