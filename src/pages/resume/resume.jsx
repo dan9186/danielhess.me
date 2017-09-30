@@ -15,8 +15,8 @@ export class Resume extends React.Component {
             <div className="container sections-wrapper">
                 <div className="primary col-md-8 col-sm-12 col-xs-12">
                     { this.render_about_me() }
-                    { this.render_tech_experience() }
                     { this.render_prof_experience() }
+                    { this.render_tech_experience() }
                 </div>
                 <div className="secondary col-md-4 col-sm-12 col-xs-12">
                     { this.render_info() }
@@ -63,7 +63,7 @@ export class Resume extends React.Component {
                 <div className="section-inner">
                     <h2 className="heading">Professional Experience</h2>
                     <div className="content">
-                        <h3>Senior Software Engineer<span className="pull-right date-range">January 2016 – Present</span></h3>
+                        <h3>Senior Software Engineer<span className="pull-right date-range">January 2016 – September 2016</span></h3>
                         <h4>Treetop Commons, LLC<span className="pull-right"><i className="fa fa-map-marker"></i> Portland, OR</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
