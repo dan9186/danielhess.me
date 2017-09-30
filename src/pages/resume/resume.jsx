@@ -14,9 +14,9 @@ export class Resume extends React.Component {
         return (
             <div className="container sections-wrapper">
                 <div className="primary col-md-8 col-sm-12 col-xs-12">
-                    { this.render_about_me() }
-                    { this.render_tech_experience() }
+                    { /*this.render_about_me()*/ }
                     { this.render_prof_experience() }
+                    { this.render_tech_experience() }
                 </div>
                 <div className="secondary col-md-4 col-sm-12 col-xs-12">
                     { this.render_info() }
@@ -33,6 +33,7 @@ export class Resume extends React.Component {
             <section className="section">
                 <div className="section-inner">
                     <h2 className="heading">About Me</h2>
+                    <hr />
                     <div className="content">
                     </div>
                 </div>
@@ -42,19 +43,173 @@ export class Resume extends React.Component {
 
     render_tech_experience() {
         return (
-            <section className="section">
+            <section className="section tech-experience">
                 <div className="section-inner">
                     <h2 className="heading">Technical Experience</h2>
+                    <hr />
                     <div className="content">
-                        <h4>Languages</h4>
-                        <h4>Frameworks</h4>
-                        <h4>Infrastructure</h4>
-                        <h4>Tools</h4>
-                        <h4>Systems</h4>
+                        <div className="row">
+                            <div className="col-md-8">
+                                <h4>Languages</h4>
+                                <hr />
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <ul className="skills">
+                                            { this.skill("Golang", 3) }
+                                            { this.skill("Java", 1) }
+                                            { this.skill("JavaScript", 1) }
+                                            { this.skill("Make", 2) }
+                                            { this.skill("PHP", 1) }
+                                            { this.skill("Perl", 1) }
+                                        </ul>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <ul className="skills">
+                                            { this.skill("Python", 1) }
+                                            { this.skill("Ruby", 2) }
+                                            { this.skill("SQL", 3) }
+                                            { this.skill("Shell Scripts", 3) }
+                                            { this.skill("VimL", 1) }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <h4>Frameworks</h4>
+                                <hr />
+                                <div className="row">
+                                    <div className="col-md-12">
+                                        <ul className="skills">
+                                            { this.skill("Cucumber", 3) }
+                                            { this.skill("Goblin/Gomega", 3) }
+                                            { this.skill("Gorilla (Mux)", 3) }
+                                            { this.skill("Sinatra", 2) }
+                                            { this.skill("Swagger", 2) }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-md-4">
+                                <h4>Systems</h4>
+                                <hr />
+                                <div className="row">
+                                    <div className="col-md-12">
+                                        <ul className="skills">
+                                            { this.skill("CentOS", 3) }
+                                            { this.skill("Red Hat Enterprise Linux", 3) }
+                                            { this.skill("Ubuntu", 3) }
+                                            { this.skill("Debian", 3) }
+                                            { this.skill("Mac OS X", 3) }
+                                            { this.skill("Windows", 2) }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-8">
+                                <h4>Infrastructure</h4>
+                                <hr />
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <ul className="skills">
+                                            { this.skill("Amazon Web Services", 3) }
+                                            { this.skill("ApolloMQ", 2) }
+                                            { this.skill("Digitial Ocean", 2) }
+                                            { this.skill("Google Cloud Platform", 3) }
+                                            { this.skill("Kubernetes", 2) }
+                                            { this.skill("Postgres", 3) }
+                                        </ul>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <ul className="skills">
+                                            { this.skill("RabbitMQ", 3) }
+                                            { this.skill("Redis", 2) }
+                                            { this.skill("etcd", 3) }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-md-12">
+                                <h4>Tools</h4>
+                                <hr />
+                                <div className="row">
+                                    <div className="col-md-4">
+                                        <ul className="skills">
+                                            { this.skill("Ansible", 3) }
+                                            { this.skill("Chef", 1) }
+                                            { this.skill("CircleCI", 2) }
+                                            { this.skill("Docker", 3) }
+                                            { this.skill("Drone", 1) }
+                                        </ul>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <ul className="skills">
+                                            { this.skill("Git", 3) }
+                                            { this.skill("Graphite/Graphana", 3) }
+                                            { this.skill("Jenkins", 2) }
+                                            { this.skill("Packer", 3) }
+                                            { this.skill("RVM", 3) }
+                                        </ul>
+                                    </div>
+                                    <div className="col-md-4">
+                                        <ul className="skills">
+                                            { this.skill("TeamCity", 2) }
+                                            { this.skill("TravisCI", 3) }
+                                            { this.skill("Vagrant", 3) }
+                                            { this.skill("Vim/Vi", 3) }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
         )
+    }
+
+    skill(name, level) {
+        return (
+            <li><h5>{name}</h5>
+                { this.skill_level(level) }
+            </li>
+        )
+    }
+
+    skill_level(level) {
+        switch(level) {
+            case 1: return (
+                <div>
+                    <span></span>
+                    <span className="transparent"></span>
+                    <span className="transparent"></span>
+                </div>
+            );
+            case 2: return (
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span className="transparent"></span>
+                </div>
+            );
+            case 3: return (
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            );
+            default: return (
+                <div>
+                    <span className="transparent"></span>
+                    <span className="transparent"></span>
+                    <span className="transparent"></span>
+                </div>
+            );
+        }
     }
 
     render_prof_experience() {
@@ -62,8 +217,33 @@ export class Resume extends React.Component {
             <section className="section">
                 <div className="section-inner">
                     <h2 className="heading">Professional Experience</h2>
+                    <hr />
                     <div className="content">
-                        <h3>Senior Software Engineer<span className="pull-right date-range">January 2016 – Present</span></h3>
+                        <h3>Senior Software Engineer<span className="pull-right date-range">September 2016 – Present</span></h3>
+                        <h4>Ion Channel<span className="pull-right"><i className="fa fa-map-marker"></i> Portland, OR</span></h4>
+                        <hr />
+                        <h4>Responsibilities</h4>
+                        <ul>
+                            <li>Write, maintain, and collaborate on JSON RPC style API for consumption by multiple clients</li>
+                            <li>Assist in any architectural concerns of current and new environments</li>
+                            <li>Work closely with both collocated and remote coworkers in the Engineering Team</li>
+                            <li>Share and expand knowledge of team around best practices of Golang</li>
+                            <li>Guide and foster juniors to produce quality work and progress their technical abilities</li>
+                        </ul>
+                        <h4>Achievements</h4>
+                        <ul>
+                            <li>Created open source Golang SDK for interaction with API</li>
+                            <li>Took over as Project Manager when previous left</li>
+                            <li>Improved quality of tickets and workflow to the degree of being able to drop several all hands, daily meetings</li>
+                            <li>Provided a means of strangling a bottleneck Ruby service with a Golang version, one endpoint at a time, reducing page load times from 3 seconds to 1.6 seconds in first round</li>
+                            <li>Formalized and cleaned up build process for all services with simple Makefile commands</li>
+                            <li>Instigated and drove several changes in communications with remote team to improve team dynamics</li>
+                            <li>Designed multiple new services in Golang to provide good examples for less experienced team members</li>
+                        </ul>
+                    </div>
+                    <div className="clearfix"></div>
+                    <div className="content">
+                        <h3>Senior Software Engineer<span className="pull-right date-range">January 2016 – September 2016</span></h3>
                         <h4>Treetop Commons, LLC<span className="pull-right"><i className="fa fa-map-marker"></i> Portland, OR</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
@@ -272,7 +452,7 @@ export class Resume extends React.Component {
             <section className="github section">
                 <div className="section-inner">
                     <h2 className="heading">My GitHub</h2>
-
+                    <hr />
                     <div id="github-graph" className="github-graph">
                     </div>
 
@@ -285,9 +465,10 @@ export class Resume extends React.Component {
 
     render_info() {
         return (
-            <aside className="info aside section">
+            <section className="info section">
                 <div className="section-inner">
-                    <h2 className="heading sr-only">Basic Information</h2>
+                    <h2 className="heading">Info</h2>
+                    <hr />
                     <div className="content">
                         <ul className="list-unstyled">
                             <li><i className="fa fa-map-marker"></i><span className="sr-only">Location:</span>Portland, OR</li>
@@ -297,15 +478,16 @@ export class Resume extends React.Component {
                         </ul>
                     </div>
                 </div>
-            </aside>
+            </section>
         )
     }
 
     render_eduction() {
         return (
-            <section className="education aside section">
+            <section className="education section">
                 <div className="section-inner">
                     <h2 className="heading">Education</h2>
+                    <hr />
                     <div className="content">
                         <div className="item">
                             <h3 className="title"><i className="fa fa-graduation-cap"></i> B.S. in Computer Engineering</h3>
@@ -328,6 +510,7 @@ export class Resume extends React.Component {
             <section className="section">
                 <div className="section-inner">
                     <h2 className="heading">Accomplishments</h2>
+                    <hr />
                     <div className="content">
                         Eagle Scout
                     </div>
@@ -341,6 +524,7 @@ export class Resume extends React.Component {
             <section className="section">
                 <div className="section-inner">
                     <h2 className="heading">Community Involvement</h2>
+                    <hr />
                     <div className="content">
                     </div>
                 </div>
@@ -353,8 +537,22 @@ export class Resume extends React.Component {
             <section className="section">
                 <div className="section-inner">
                     <h2 className="heading">References</h2>
+                    <hr />
                     <div className="content">
                         Available upon request.
+                    </div>
+                </div>
+            </section>
+        )
+    }
+
+    render_interests() {
+        return (
+            <section className="section">
+                <div className="section-inner">
+                    <h2 className="heading">Interests</h2>
+                    <hr />
+                    <div className="content">
                     </div>
                 </div>
             </section>
