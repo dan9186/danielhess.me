@@ -441,9 +441,9 @@ export class Resume extends React.Component {
 
     render_info() {
         return (
-            <aside className="info aside section">
+            <section className="info section">
                 <div className="section-inner">
-                    <h2 className="heading sr-only">Basic Information</h2>
+                    <h2 className="heading">Info</h2>
                     <hr />
                     <div className="content">
                         <ul className="list-unstyled">
@@ -454,13 +454,13 @@ export class Resume extends React.Component {
                         </ul>
                     </div>
                 </div>
-            </aside>
+            </section>
         )
     }
 
     render_eduction() {
         return (
-            <section className="education aside section">
+            <section className="education section">
                 <div className="section-inner">
                     <h2 className="heading">Education</h2>
                     <hr />
