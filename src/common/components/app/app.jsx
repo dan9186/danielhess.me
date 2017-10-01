@@ -4,6 +4,7 @@ import {Switch,Route,Link} from 'react-router-dom'
 import {Footer} from '../footer/footer.jsx'
 import {Header} from '../header/header.jsx'
 
+import {Home} from '../../../pages/home/home.jsx'
 import {Resume} from '../../../pages/resume/resume.jsx'
 
 export class App extends React.Component {
@@ -18,7 +19,8 @@ export class App extends React.Component {
                 <div className="container sections-wrapper">
                     <div className="row">
                         <Switch>
-                            <Route exact path='/' component={Resume}/>
+                            <Route exact path='/' component={Home}/>
+                            <Route path='/resume' component={Resume}/>
                         </Switch>
                     </div>
                 </div>

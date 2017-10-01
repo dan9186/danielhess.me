@@ -1,6 +1,7 @@
 /* ====== Header ====== */
 .header {
 	padding: 30px 0;
+	margin-top: 55px;
 	background-image: url('./images/header-bg.jpg');
 	background-size: cover;
 	background-repeat: repeat, no-repeat;
