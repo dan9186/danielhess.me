@@ -4,13 +4,13 @@ import {BrowserRouter} from 'react-router-dom'
 
 import 'whatwg-fetch'
 
-import {Home} from './pages/home/home.jsx'
+import {App} from './common/components/app/app.jsx'
 
 import './common/base.css'
 
 ReactDOM.render((
     <BrowserRouter>
-        <Home />
+        <App />
     </BrowserRouter>
 
 ), document.getElementById('app'))
