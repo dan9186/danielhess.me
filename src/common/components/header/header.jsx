@@ -1,11 +1,9 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-
-import 'whatwg-fetch'
 
 import './style.css'
 import LogoImg from './images/logo.png'
 
+import {Nav} from '../nav/nav.jsx'
 import {SocialBadge} from '../social_badge/social_badge.jsx'
 
 export class Header extends React.Component {
@@ -16,6 +14,7 @@ export class Header extends React.Component {
     render() {
         return (
             <header className="header">
+                <Nav />
                 <div className="container">
                     { this.profile("Daniel Hess", "daniel@danielhess.me", "dan9186", "Devops Engineer") }
                 </div>
