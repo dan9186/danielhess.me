@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 import 'whatwg-fetch'
 
@@ -25,8 +25,8 @@ export class Nav extends React.Component {
                     </div>
                     <div id="navbar" className="collapse navbar-collapse">
                         <ul className="nav navbar-nav">
-                            <li><Link to='/'>Home</Link></li>
-                            <li><Link to='/resume'>Resume</Link></li>
+                            <li><NavLink to='/' exact activeClassName="active">Home</NavLink></li>
+                            <li><NavLink to='/resume' activeClassName="active">Resume</NavLink></li>
                         </ul>
                     </div>
                 </div>

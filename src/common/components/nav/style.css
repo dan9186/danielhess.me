@@ -15,3 +15,14 @@
 ul.navbar-nav > li > a{
 	font-weight: bold;
 }
+
+ul.navbar-nav > li > a:focus,
+.active {
+	color: #3AAA64;
+}
+
+ul.navbar-nav > li > a:hover,
+ul.navbar-nav > li > a:focus,
+.active {
+	background: #fff;
+}
