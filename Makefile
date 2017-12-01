@@ -7,7 +7,7 @@ all: test
 
 build: install  ## Build the project
 	@echo "Building Project"
-	@npm run build
+	@yarn run build
 
 deploy:  ## Deploy the project
 	@if [ "$(TRAVIS_BRANCH)" == "master" ]; then \
@@ -19,10 +19,10 @@ deploy:  ## Deploy the project
 	fi
 
 install:  ## Install project
-	@npm install
+	@yarn install
 
 test: unit_test  ## Run all tests
 
 unit_test:  ## Run unit tests
 	@echo "Running tests"
-	@npm run test
+	@yarn run test
