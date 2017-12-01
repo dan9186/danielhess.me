@@ -1,7 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-
-import 'whatwg-fetch'
 
 export class SocialBadge extends React.Component {
     constructor(props) {

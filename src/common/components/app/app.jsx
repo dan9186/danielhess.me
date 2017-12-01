@@ -1,8 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import {Switch,Route,Link} from 'react-router-dom'
-
-import 'whatwg-fetch'
 
 import {Footer} from '../footer/footer.jsx'
 import {Header} from '../header/header.jsx'

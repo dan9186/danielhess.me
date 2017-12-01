@@ -1,7 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-
-import 'whatwg-fetch'
 
 import './style.css'
 import LogoImg from './images/logo.png'
