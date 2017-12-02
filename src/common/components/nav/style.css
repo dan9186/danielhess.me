@@ -1,7 +1,7 @@
 /* ====== Navbar ====== */
 .navbar{
 	background: #32383E;
-	border-top: #259d07 4px solid;
+	border-top: #259d07 4px solid !important;
 }
 
 .navbar-toggle{

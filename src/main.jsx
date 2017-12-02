@@ -5,6 +5,7 @@ import 'whatwg-fetch'
 
 import {App} from './common/components/app/app.jsx'
 
+import 'bootstrap/dist/css/bootstrap.css'
 import './common/base.css'
 
 ReactDOM.render((
