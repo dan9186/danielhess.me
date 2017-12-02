@@ -1,4 +1,5 @@
 import React from 'react'
+import {Grid} from 'react-bootstrap'
 
 import './style.css'
 
@@ -10,9 +11,9 @@ export class Footer extends React.Component {
     render() {
         return (
             <footer className="footer">
-                <div className="container text-center">
+                <Grid className="text-center">
                     <small className="copyright">© All rights reserved. Daniel Hess 2017</small>
-                </div>
+                </Grid>
             </footer>
         )
     }
