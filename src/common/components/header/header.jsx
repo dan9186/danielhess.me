@@ -1,4 +1,5 @@
 import React from 'react'
+import {Grid,Image} from 'react-bootstrap'
 
 import './style.css'
 import LogoImg from './images/logo.png'
@@ -15,17 +16,15 @@ export class Header extends React.Component {
         return (
             <header className="header">
                 <Navigation />
-                <div className="container">
-                    { this.profile("Daniel Hess", "daniel@danielhess.me", "dan9186", "Devops Engineer") }
-                </div>
+                { this.profile("Daniel Hess", "daniel@danielhess.me", "dan9186", "Devops Engineer") }
             </header>
         )
     }
 
     profile(name, email, username, description) {
         return (
-            <div>
-                <img className="profile-image img-responsive img-circle pull-left" src={LogoImg} alt="Daniel Hess" />
+            <Grid>
+                <Image className="profile-image pull-left" src={LogoImg} alt="Daniel Hess" circle responsive />
                 <div className="profile-content pull-left">
                     <h1 className="name">{name}</h1>
                     <h2 className="desc">{description}</h2>
@@ -39,7 +38,7 @@ export class Header extends React.Component {
                 <div className="profile-content pull-right">
                     <h1 className="slogan">Dedicated to <span className="highlighted">Devops</span></h1>
                 </div>
-            </div>
+            </Grid>
         )
     }
 }
