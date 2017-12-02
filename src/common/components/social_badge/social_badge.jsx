@@ -1,4 +1,5 @@
 import React from 'react'
+import {Icon} from 'react-fa'
 
 export class SocialBadge extends React.Component {
     constructor(props) {
@@ -7,7 +8,7 @@ export class SocialBadge extends React.Component {
 
     render() {
         return (
-            <li className={this.props.last && "last-item"}><a href={this.props.href} target="_blank"><i className={"fa fa-" + this.props.icon}></i></a></li>
+            <li className={this.props.last && "last-item"}><a href={this.props.href} target="_blank"><Icon name={this.props.icon} /></a></li>
         )
     }
 }
