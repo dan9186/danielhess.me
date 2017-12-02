@@ -8,22 +8,10 @@ module.exports = {
 	},
 	module: {
 		loaders: [
-			{
-				test: /\.jsx$/,
-				exclude: /node_modules/,
-				loader: 'babel-loader',
-			},
-			{
-				test: /\.css$/,
-				loader: "style-loader!css-loader"
-			},
-			{
-				test: /\.(jpg|png|svg)$/,
-				loader: 'url-loader',
-				options: {
-					limit: 25000,
-				},
-			},
+			{ test: /\.js$/, exclude: /node_modules/, loaders: ['react-hot', 'babel?stage=0&optional=runtime&plugins=typecheck'] },
+			{ test: /\.css$/, loader: 'style-loader!css-loader' },
+			{ test: /\.jsx$/, exclude: /node_modules/, loader: 'babel-loader', },
+			{ test: /\.(jpg|png|svg|woff|woff2|ttf|eot)$/, loader: 'url-loader', options: { limit: 25000, }, },
 		]
 	},
 	devtool: 'source-map',
