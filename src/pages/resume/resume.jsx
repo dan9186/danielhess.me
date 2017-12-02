@@ -1,5 +1,6 @@
 import React from 'react'
 import {Col,Clearfix,Grid,Row} from 'react-bootstrap'
+import {Icon} from 'react-fa'
 
 import './style.css'
 
@@ -219,7 +220,7 @@ export class Resume extends React.Component {
                     <hr />
                     <div className="content">
                         <h3>Senior Software Engineer<span className="pull-right date-range">September 2016 – Present</span></h3>
-                        <h4>Ion Channel<span className="pull-right"><i className="fa fa-map-marker"></i> Portland, OR</span></h4>
+                        <h4>Ion Channel<span className="pull-right"><Icon name='map-marker' /> Portland, OR</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
                         <ul>
@@ -243,7 +244,7 @@ export class Resume extends React.Component {
                     <Clearfix />
                     <div className="content">
                         <h3>Senior Software Engineer<span className="pull-right date-range">January 2016 – September 2016</span></h3>
-                        <h4>Treetop Commons, LLC<span className="pull-right"><i className="fa fa-map-marker"></i> Portland, OR</span></h4>
+                        <h4>Treetop Commons, LLC<span className="pull-right"><Icon name='map-marker' /> Portland, OR</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
                         <ul>
@@ -272,7 +273,7 @@ export class Resume extends React.Component {
                     <Clearfix />
                     <div className="content">
                         <h3>Devops Engineer<span className="pull-right date-range">June 2014 – Dec 2015</span></h3>
-                        <h4>Monsoon Commerce<span className="pull-right"><i className="fa fa-map-marker"></i> Portland, OR</span></h4>
+                        <h4>Monsoon Commerce<span className="pull-right"><Icon name='map-marker' /> Portland, OR</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
                         <ul>
@@ -312,7 +313,7 @@ export class Resume extends React.Component {
                     <Clearfix />
                     <div className="content">
                         <h3>System Administrator I<span className="pull-right date-range">June 2013 – June 2014</span></h3>
-                        <h4>St. Jude Children's Research Hospital<span className="pull-right"><i className="fa fa-map-marker"></i> Memphis, TN</span></h4>
+                        <h4>St. Jude Children's Research Hospital<span className="pull-right"><Icon name='map-marker' /> Memphis, TN</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
                         <ul>
@@ -353,7 +354,7 @@ export class Resume extends React.Component {
                     <Clearfix />
                     <div className="content">
                         <h3>Senior Technical Service Provider<span className="pull-right date-range"> January 2012 – June 2013</span></h3>
-                        <h4>St. Jude Children's Research Hospital<span className="pull-right"><i className="fa fa-map-marker"></i> Memphis, TN</span></h4>
+                        <h4>St. Jude Children's Research Hospital<span className="pull-right"><Icon name='map-marker' /> Memphis, TN</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
                         <ul>
@@ -387,7 +388,7 @@ export class Resume extends React.Component {
                     <Clearfix />
                     <div className="content">
                         <h3>Technical Service Provider<span className="pull-right date-range"> June 2009 – January 2012</span></h3>
-                        <h4>St. Jude Children's Research Hospital<span className="pull-right"><i className="fa fa-map-marker"></i> Memphis, TN</span></h4>
+                        <h4>St. Jude Children's Research Hospital<span className="pull-right"><Icon name='map-marker' /> Memphis, TN</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
                         <ul>
@@ -420,7 +421,7 @@ export class Resume extends React.Component {
                     <Clearfix />
                     <div className="content">
                         <h3>Student Intern PC Support Specialist<span className="pull-right date-range">Nov. 2005 – June 2009</span></h3>
-                        <h4>St. Jude Children's Research Hospital<span className="pull-right"><i className="fa fa-map-marker"></i> Memphis, TN</span></h4>
+                        <h4>St. Jude Children's Research Hospital<span className="pull-right"><Icon name='map-marker' /> Memphis, TN</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
                         <ul>
@@ -470,10 +471,10 @@ export class Resume extends React.Component {
                     <hr />
                     <div className="content">
                         <ul className="list-unstyled">
-                            <li><i className="fa fa-map-marker"></i><span className="sr-only">Location:</span>Portland, OR</li>
-                            <li><i className="fa fa-envelope-o"></i><span className="sr-only">Email:</span><a href="#">daniel@danielhess.me</a></li>
-                            <li><i className="fa fa-github"></i><span className="sr-only">Github:</span><a href="#">github.com/dan9186</a></li>
-                            <li><i className="fa fa-twitter"></i><span className="sr-only">Twitter:</span><a href="#">@dan9186</a></li>
+                            <li><Icon name='map-marker' /><span className="sr-only">Location:</span>Portland, OR</li>
+                            <li><Icon name='envelope-o' /><span className="sr-only">Email:</span><a href="#">daniel@danielhess.me</a></li>
+                            <li><Icon name='github' /><span className="sr-only">Github:</span><a href="#">github.com/dan9186</a></li>
+                            <li><Icon name='twitter' /><span className="sr-only">Twitter:</span><a href="#">@dan9186</a></li>
                         </ul>
                     </div>
                 </div>
@@ -489,9 +490,9 @@ export class Resume extends React.Component {
                     <hr />
                     <div className="content">
                         <div className="item">
-                            <h3 className="title"><i className="fa fa-graduation-cap"></i> B.S. in Computer Engineering</h3>
-                            <h3 className="title"><i className="fa fa-graduation-cap"></i> B.S. in Computer Science</h3>
-                            <h3 className="title"><i className="fa fa-graduation-cap"></i> Minor in Mathematics</h3>
+                            <h3 className="title"><Icon name='graduation-cap' /> B.S. in Computer Engineering</h3>
+                            <h3 className="title"><Icon name='graduation-cap' /> B.S. in Computer Science</h3>
+                            <h3 className="title"><Icon name='graduation-cap' /> Minor in Mathematics</h3>
                             <h4 className="university">Christian Brothers University<br/>Memphis, TN <span className="date-range">(August 2005 – May 2009)</span></h4>
                         </div>
                         <div className="item">
