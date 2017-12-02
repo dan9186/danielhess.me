@@ -185,28 +185,28 @@ export class Resume extends React.Component {
                     <span className="transparent"></span>
                     <span className="transparent"></span>
                 </div>
-            );
+            )
             case 2: return (
                 <div>
                     <span></span>
                     <span></span>
                     <span className="transparent"></span>
                 </div>
-            );
+            )
             case 3: return (
                 <div>
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-            );
+            )
             default: return (
                 <div>
                     <span className="transparent"></span>
                     <span className="transparent"></span>
                     <span className="transparent"></span>
                 </div>
-            );
+            )
         }
     }
 
