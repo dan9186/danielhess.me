@@ -20,8 +20,10 @@ ci_setup:  ## Setup the CI system
 .PHONY: deploy
 deploy:  ## Deploy the project
 	@if [ "$(TRAVIS_BRANCH)" == "master" ]; then \
+		echo "Deploying to Testing Bucket"; \
 		gsutil -m rsync -d dist gs://$(TESTING_BUCKET)/; \
 	elif [ "$(TRAVIS_BRANCH)" == "release" ]; then \
+		echo "Deploying to Prod Bucket"; \
 		gsutil -m rsync -d dist gs://$(PROD_BUCKET)/; \
 	else \
 		echo "Not a deploy branch, no action performed"; \
