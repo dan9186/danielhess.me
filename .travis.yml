@@ -12,9 +12,7 @@ addons:
     - google-cloud-sdk
 
 install:
-  - mkdir -p $HOME/.gcloud
-  - echo $GCLOUD_KEY_FILE > $HOME/.gcloud/creds && chmod 600 $HOME/.gcloud/creds
-  - gcloud auth activate-service-account --key-file=$HOME/.gcloud/creds
+  - make ci_setup
 
 script:
   - make test
