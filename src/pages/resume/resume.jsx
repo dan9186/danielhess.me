@@ -1,4 +1,5 @@
 import React from 'react'
+import {Col,Clearfix,Grid,Row} from 'react-bootstrap'
 
 import './style.css'
 
@@ -9,19 +10,19 @@ export class Resume extends React.Component {
 
     render() {
         return (
-            <div className="container sections-wrapper">
-                <div className="primary col-md-8 col-sm-12 col-xs-12">
+            <Grid className="sections-wrapper">
+                <Col md={8} sm={12} xs={12} className="primary">
                     { this.render_about_me() }
                     { this.render_prof_experience() }
                     { this.render_tech_experience() }
-                </div>
-                <div className="secondary col-md-4 col-sm-12 col-xs-12">
+                </Col>
+                <Col md={4} sm={12} xs={12} className="secondary">
                     { this.render_info() }
                     { this.render_eduction() }
                     { this.render_accomplishments() }
                     { this.render_references() }
-                </div>
-            </div>
+                </Col>
+            </Grid>
         )
     }
 
@@ -46,12 +47,12 @@ export class Resume extends React.Component {
                     <h2 className="heading">Technical Experience</h2>
                     <hr />
                     <div className="content">
-                        <div className="row">
-                            <div className="col-md-8">
+                        <Row>
+                            <Col md={8}>
                                 <h4>Languages</h4>
                                 <hr />
-                                <div className="row">
-                                    <div className="col-md-6">
+                                <Row>
+                                    <Col md={6}>
                                         <ul className="skills">
                                             { this.skill("Golang", 3) }
                                             { this.skill("Java", 1) }
@@ -60,8 +61,8 @@ export class Resume extends React.Component {
                                             { this.skill("PHP", 1) }
                                             { this.skill("Perl", 1) }
                                         </ul>
-                                    </div>
-                                    <div className="col-md-6">
+                                    </Col>
+                                    <Col md={6}>
                                         <ul className="skills">
                                             { this.skill("Python", 1) }
                                             { this.skill("Ruby", 2) }
@@ -69,14 +70,14 @@ export class Resume extends React.Component {
                                             { this.skill("Shell Scripts", 3) }
                                             { this.skill("VimL", 1) }
                                         </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4">
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col md={4}>
                                 <h4>Frameworks</h4>
                                 <hr />
-                                <div className="row">
-                                    <div className="col-md-12">
+                                <Row>
+                                    <Col md={12}>
                                         <ul className="skills">
                                             { this.skill("Cucumber", 3) }
                                             { this.skill("Goblin/Gomega", 3) }
@@ -84,16 +85,16 @@ export class Resume extends React.Component {
                                             { this.skill("Sinatra", 2) }
                                             { this.skill("Swagger", 2) }
                                         </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-4">
+                                    </Col>
+                                </Row>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md={4}>
                                 <h4>Systems</h4>
                                 <hr />
-                                <div className="row">
-                                    <div className="col-md-12">
+                                <Row>
+                                    <Col md={12}>
                                         <ul className="skills">
                                             { this.skill("CentOS", 3) }
                                             { this.skill("Red Hat Enterprise Linux", 3) }
@@ -102,14 +103,14 @@ export class Resume extends React.Component {
                                             { this.skill("Mac OS X", 3) }
                                             { this.skill("Windows", 2) }
                                         </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-8">
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col md={8}>
                                 <h4>Infrastructure</h4>
                                 <hr />
-                                <div className="row">
-                                    <div className="col-md-6">
+                                <Row>
+                                    <Col md={6}>
                                         <ul className="skills">
                                             { this.skill("Amazon Web Services", 3) }
                                             { this.skill("ApolloMQ", 2) }
@@ -118,23 +119,23 @@ export class Resume extends React.Component {
                                             { this.skill("Kubernetes", 2) }
                                             { this.skill("Postgres", 3) }
                                         </ul>
-                                    </div>
-                                    <div className="col-md-6">
+                                    </Col>
+                                    <Col md={6}>
                                         <ul className="skills">
                                             { this.skill("RabbitMQ", 3) }
                                             { this.skill("Redis", 2) }
                                             { this.skill("etcd", 3) }
                                         </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-12">
+                                    </Col>
+                                </Row>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md={12}>
                                 <h4>Tools</h4>
                                 <hr />
-                                <div className="row">
-                                    <div className="col-md-4">
+                                <Row>
+                                    <Col md={4}>
                                         <ul className="skills">
                                             { this.skill("Ansible", 3) }
                                             { this.skill("Chef", 1) }
@@ -142,8 +143,8 @@ export class Resume extends React.Component {
                                             { this.skill("Docker", 3) }
                                             { this.skill("Drone", 1) }
                                         </ul>
-                                    </div>
-                                    <div className="col-md-4">
+                                    </Col>
+                                    <Col md={4}>
                                         <ul className="skills">
                                             { this.skill("Git", 3) }
                                             { this.skill("Graphite/Graphana", 3) }
@@ -151,18 +152,18 @@ export class Resume extends React.Component {
                                             { this.skill("Packer", 3) }
                                             { this.skill("RVM", 3) }
                                         </ul>
-                                    </div>
-                                    <div className="col-md-4">
+                                    </Col>
+                                    <Col md={4}>
                                         <ul className="skills">
                                             { this.skill("TeamCity", 2) }
                                             { this.skill("TravisCI", 3) }
                                             { this.skill("Vagrant", 3) }
                                             { this.skill("Vim/Vi", 3) }
                                         </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                    </Col>
+                                </Row>
+                            </Col>
+                        </Row>
                     </div>
                 </div>
             </section>
@@ -239,7 +240,7 @@ export class Resume extends React.Component {
                             <li>Designed multiple new services in Golang to provide good examples for less experienced team members</li>
                         </ul>
                     </div>
-                    <div className="clearfix"></div>
+                    <Clearfix />
                     <div className="content">
                         <h3>Senior Software Engineer<span className="pull-right date-range">January 2016 – September 2016</span></h3>
                         <h4>Treetop Commons, LLC<span className="pull-right"><i className="fa fa-map-marker"></i> Portland, OR</span></h4>
@@ -268,7 +269,7 @@ export class Resume extends React.Component {
                             <li>Drove changes in Agile process to have sprint planning, estimating, grooming, and retrospectives that were not happening previously and resulting in significant churn during a sprint</li>
                         </ul>
                     </div>
-                    <div className="clearfix"></div>
+                    <Clearfix />
                     <div className="content">
                         <h3>Devops Engineer<span className="pull-right date-range">June 2014 – Dec 2015</span></h3>
                         <h4>Monsoon Commerce<span className="pull-right"><i className="fa fa-map-marker"></i> Portland, OR</span></h4>
@@ -308,7 +309,7 @@ export class Resume extends React.Component {
                             <li>Assisted in architecture and development of a Golang based strangler for a legacy Java service</li>
                         </ul>
                     </div>
-                    <div className="clearfix"></div>
+                    <Clearfix />
                     <div className="content">
                         <h3>System Administrator I<span className="pull-right date-range">June 2013 – June 2014</span></h3>
                         <h4>St. Jude Children's Research Hospital<span className="pull-right"><i className="fa fa-map-marker"></i> Memphis, TN</span></h4>
@@ -349,7 +350,7 @@ export class Resume extends React.Component {
                             <li>Assisted on documentation and training for Field Techs on tools and technology</li>
                         </ul>
                     </div>
-                    <div className="clearfix"></div>
+                    <Clearfix />
                     <div className="content">
                         <h3>Senior Technical Service Provider<span className="pull-right date-range"> January 2012 – June 2013</span></h3>
                         <h4>St. Jude Children's Research Hospital<span className="pull-right"><i className="fa fa-map-marker"></i> Memphis, TN</span></h4>
@@ -383,7 +384,7 @@ export class Resume extends React.Component {
                             <li>Redesigned and automated numerous workflows within Inventory Management system</li>
                         </ul>
                     </div>
-                    <div className="clearfix"></div>
+                    <Clearfix />
                     <div className="content">
                         <h3>Technical Service Provider<span className="pull-right date-range"> June 2009 – January 2012</span></h3>
                         <h4>St. Jude Children's Research Hospital<span className="pull-right"><i className="fa fa-map-marker"></i> Memphis, TN</span></h4>
@@ -416,7 +417,7 @@ export class Resume extends React.Component {
                             <li>Provided education and training on use of inventory and ticketing application to all of Client Services</li>
                         </ul>
                     </div>
-                    <div className="clearfix"></div>
+                    <Clearfix />
                     <div className="content">
                         <h3>Student Intern PC Support Specialist<span className="pull-right date-range">Nov. 2005 – June 2009</span></h3>
                         <h4>St. Jude Children's Research Hospital<span className="pull-right"><i className="fa fa-map-marker"></i> Memphis, TN</span></h4>
