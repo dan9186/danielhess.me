@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {Col,Grid} from 'react-bootstrap'
 
 export class Home extends React.Component {
     constructor(props) {
@@ -8,8 +9,8 @@ export class Home extends React.Component {
 
     render() {
         return (
-            <div className="container sections-wrapper">
-                <div className="primary col-md-12 col-sm-12 col-xs-12">
+            <Grid className="sections-wrapper">
+                <Col md={12} sm={12} xs={12}>
                     <section className="section">
                         <div className="section-inner">
                             <h2 className="heading">Welcome</h2>
@@ -19,8 +20,8 @@ export class Home extends React.Component {
                             </div>
                         </div>
                     </section>
-                </div>
-            </div>
+                </Col>
+            </Grid>
         )
     }
 }
