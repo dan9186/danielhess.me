@@ -1,7 +1,7 @@
 SHELL = bash
 TRAVIS_BRANCH ?= $(shell git branch | grep \* | cut -d " " -f 2)
-TESTING_BUCKET := new.danielhess.me
-PROD_BUCKET := www.danielhess.me
+TESTING_BUCKET := danielhess-me-testing-site
+PROD_BUCKET := danielhess-me-prod-site
 
 .PHONY: all
 all: test
