@@ -25,11 +25,11 @@ deploy:  ## Deploy the project
 	@if [ "$(TRAVIS_BRANCH)" == "master" ]; then \
 		echo "Deploying to Testing Bucket"; \
 		gsutil -m rsync -d dist gs://$(TESTING_BUCKET)/; \
-		gcloud compute url-maps invalidate-cdn-cache site-url-map --host $(TESTING_CDN_HOST) --path "/*"; \
+		gcloud compute url-maps invalidate-cdn-cache site-url-map --host $(TESTING_CDN_HOST) --async --path "/*"; \
 	elif [ "$(TRAVIS_BRANCH)" == "release" ]; then \
 		echo "Deploying to Prod Bucket"; \
 		gsutil -m rsync -d dist gs://$(PROD_BUCKET)/; \
-		gcloud compute url-maps invalidate-cdn-cache site-url-map --host $(PROD_CDN_HOST) --path "/*"; \
+		gcloud compute url-maps invalidate-cdn-cache site-url-map --host $(PROD_CDN_HOST) --async --path "/*"; \
 	else \
 		echo "Not a deploy branch, no action performed"; \
 	fi
