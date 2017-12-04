@@ -1,14 +1,30 @@
 /* ====== Footer ====== */
 .footer {
 	background: #32383e;
-	color: #fff;
+	color: #a1aab4;
 	padding: 10px 0;
 	border-top: #778492 0.4em solid;
 }
 
+.footer #gcp-icon, .footer #terraform-icon, .footer #react-icon {
+	fill: #a1aab4;
+	height: 18px;
+}
+
+.footer #gcp-icon {
+	transform: translateY(4px);
+}
+
+.footer #react-icon {
+	transform: translateY(3px);
+}
+
+.footer #terraform-icon {
+	transform: translateY(4px);
+}
+
 .footer .copyright {
 	line-height: 1.6;
-	color: #a1aab4;
 	font-size: 14px;
 }
 
