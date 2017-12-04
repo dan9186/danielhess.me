@@ -18,6 +18,7 @@ ci_setup:  ## Setup the CI system
 	@mkdir -p $(HOME)/.gcloud
 	@$(shell echo $(GCP_KEY_FILE) | base64 --decode > $(HOME)/keyfile.json)
 	@gcloud auth activate-service-account --key-file=$(HOME)/keyfile.json
+	@gcloud config set project $(GCP_PROJECT_ID)
 
 .PHONY: deploy
 deploy:  ## Deploy the project
