@@ -1,7 +1,9 @@
 SHELL = bash
 TRAVIS_BRANCH ?= $(shell git branch | grep \* | cut -d " " -f 2)
 TESTING_BUCKET := danielhess-me-testing-site
+TESTING_CDN_HOST := new.danielhess.me
 PROD_BUCKET := danielhess-me-prod-site
+PROD_CDN_HOST := www.danielhess.me
 
 .PHONY: all
 all: test
@@ -22,9 +24,11 @@ deploy:  ## Deploy the project
 	@if [ "$(TRAVIS_BRANCH)" == "master" ]; then \
 		echo "Deploying to Testing Bucket"; \
 		gsutil -m rsync -d dist gs://$(TESTING_BUCKET)/; \
+		gcloud compute url-maps invalidate-cdn-cache site-url-map --host $(TESTING_CDN_HOST) --path "/*"
 	elif [ "$(TRAVIS_BRANCH)" == "release" ]; then \
 		echo "Deploying to Prod Bucket"; \
 		gsutil -m rsync -d dist gs://$(PROD_BUCKET)/; \
+		gcloud compute url-maps invalidate-cdn-cache site-url-map --host $(PROD_CDN_HOST) --path "/*"
 	else \
 		echo "Not a deploy branch, no action performed"; \
 	fi
