@@ -30,7 +30,8 @@ deploy:  ## Deploy the project
 		gsutil -m rsync -d dist gs://$(PROD_BUCKET)/; \
 		gcloud compute url-maps invalidate-cdn-cache site-url-map --host $(PROD_CDN_HOST) --async --path "/*"; \
 	else \
-		echo "Not a deploy branch, no action performed"; \
+		echo "Deploying branch to branch path in testing"; \
+		gsutil -m rsync -d dist gs://$(TESTING_BUCKET)/branch/$(CI_BRANCH)/; \
 	fi
 
 .PHONY: install
