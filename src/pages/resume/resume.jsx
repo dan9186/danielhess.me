@@ -22,12 +22,14 @@ export class Resume extends React.Component {
             <Grid className="sections-wrapper">
                 <Col md={8} sm={12} xs={12} className="primary">
                     <Preface />
+                    <div className="visible-xs"><Info /></div>
+                    <div className="visible-xs"><Education /></div>
                     <ProfessionalExperience />
                     <TechnicalExperience />
                 </Col>
                 <Col md={4} sm={12} xs={12} className="secondary">
-                    <Info />
-                    <Education />
+                    <div className="hidden-xs"><Info /></div>
+                    <div className="hidden-xs"><Education /></div>
                     <Accomplishments />
                     <References />
                 </Col>
