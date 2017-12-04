@@ -1,5 +1,6 @@
 SHELL = bash
 TRAVIS_BRANCH ?= $(shell git branch | grep \* | cut -d " " -f 2)
+CI_BRANCH ?= $(TRAVIS_BRANCH)
 TESTING_BUCKET := danielhess-me-testing-site
 PROD_BUCKET := danielhess-me-prod-site
 PROD_CDN_HOST := www.danielhess.me
@@ -21,10 +22,10 @@ ci_setup:  ## Setup the CI system
 
 .PHONY: deploy
 deploy:  ## Deploy the project
-	@if [ "$(TRAVIS_BRANCH)" == "master" ]; then \
+	@if [ "$(CI_BRANCH)" == "master" ]; then \
 		echo "Deploying to Testing Bucket"; \
 		gsutil -m rsync -d dist gs://$(TESTING_BUCKET)/; \
-	elif [ "$(TRAVIS_BRANCH)" == "release" ]; then \
+	elif [ "$(CI_BRANCH)" == "release" ]; then \
 		echo "Deploying to Prod Bucket"; \
 		gsutil -m rsync -d dist gs://$(PROD_BUCKET)/; \
 		gcloud compute url-maps invalidate-cdn-cache site-url-map --host $(PROD_CDN_HOST) --async --path "/*"; \
