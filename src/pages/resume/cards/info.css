@@ -1,0 +1,17 @@
+/*====== Info =======*/
+.info .fa {
+	margin-right: 15px;
+	color: #778492;
+}
+
+.info ul {
+	margin-bottom: 0;
+}
+
+.info li {
+	margin-bottom: 0.2em;
+}
+
+.info li:last-child {
+	margin-bottom: 0;
+}
