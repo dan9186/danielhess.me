@@ -22,21 +22,22 @@ export class Navigation extends React.Component {
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <LinkContainer to='/' exact activeClassName="active">
-                            <NavItem href='/' eventKey={1}>Home</NavItem>
-                        </LinkContainer>
-                        <LinkContainer to='/resume' activeClassName="active">
-                            <NavItem href='/resume' eventKey={2}>Resume</NavItem>
-                        </LinkContainer>
-                        <LinkContainer to='/blog' activeClassName="active">
-                            <NavItem href='/blog' eventKey={3}>Blog</NavItem>
-                        </LinkContainer>
-                        <LinkContainer to='/projects' activeClassName="active">
-                            <NavItem href='/projects' eventKey={4}>Projects</NavItem>
-                        </LinkContainer>
+                        {this.render_link("/", 1, "Home")}
+                        {this.render_link("/resume", 2, "Resume")}
+                        {this.render_link("/slides", 3, "Slides")}
+                        {/*this.render_link("/blog", 4, "Blog")*/}
+                        {/*this.render_link("/projects", 5, "Projects")*/}
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
+        )
+    }
+
+    render_link(path, key, text) {
+        return (
+            <LinkContainer to={path} exact activeClassName="active">
+                <NavItem href={path} eventKey={key}>{text}</NavItem>
+            </LinkContainer>
         )
     }
 }
