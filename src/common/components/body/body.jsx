@@ -7,6 +7,7 @@ import './style.css'
 
 import {Home} from '../../../pages/home/home.jsx'
 import {Resume} from '../../../pages/resume/resume.jsx'
+import {Slides} from '../../../pages/slides/slides.jsx'
 
 export class Body extends React.Component {
     constructor(props) {
@@ -19,6 +20,7 @@ export class Body extends React.Component {
                 <Switch>
                     <Route exact path='/' component={Home}/>
                     <Route path='/resume' component={Resume}/>
+                    <Route path='/slides' component={Slides}/>
                 </Switch>
             </div>
         )
