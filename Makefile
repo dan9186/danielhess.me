@@ -38,6 +38,10 @@ deploy:  ## Deploy the project
 install:  ## Install project
 	@yarn install
 
+.PHONY: release
+release:  ## Create a release PR
+	@hub pull-request -b release -h master -m Release
+
 .PHONY: test
 test: unit_test  ## Run all tests
 
