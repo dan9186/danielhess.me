@@ -3,6 +3,7 @@ TRAVIS_BRANCH ?= $(shell git branch | grep \* | cut -d " " -f 2)
 CI_BRANCH ?= $(TRAVIS_BRANCH)
 TESTING_BUCKET := danielhess-me-testing-site
 PROD_BUCKET := danielhess-me-prod-site
+URL_MAP := sites-url-map
 PROD_CDN_HOST := www.danielhess.me
 
 .PHONY: all
@@ -28,7 +29,7 @@ deploy:  ## Deploy the project
 	elif [ "$(CI_BRANCH)" == "release" ]; then \
 		echo "Deploying to Prod Bucket"; \
 		gsutil -m rsync -d dist gs://$(PROD_BUCKET)/; \
-		gcloud compute url-maps invalidate-cdn-cache site-url-map --host $(PROD_CDN_HOST) --async --path "/*"; \
+		gcloud compute url-maps invalidate-cdn-cache $(URL_MAP) --host $(PROD_CDN_HOST) --async --path "/*"; \
 	else \
 		echo "Not a deploy branch, no action performed"; \
 	fi
