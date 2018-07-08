@@ -21,6 +21,11 @@ ci_setup:  ## Setup the CI system
 	@gcloud auth activate-service-account --key-file=$(HOME)/keyfile.json
 	@gcloud config set project $(GCP_PROJECT_ID)
 
+.PHONY: clean
+clean: ## Cleanup all running and generated items
+	-@rm -rf dist
+	-@rm -rf coverage
+
 .PHONY: deploy
 deploy:  ## Deploy the project
 	@if [ "$(CI_BRANCH)" == "master" ]; then \
