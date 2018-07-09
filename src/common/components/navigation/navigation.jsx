@@ -2,6 +2,7 @@ import React from 'react'
 import {Navbar,Nav,NavItem} from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 import {bootstrapUtils} from 'react-bootstrap/lib/utils'
+import styled from 'styled-components'
 
 import 'whatwg-fetch'
 
@@ -16,9 +17,9 @@ export class Navigation extends React.Component {
 
     render() {
         return (
-            <Navbar fixedTop bsStyle="custom" collapseOnSelect>
+            <StyledNavbar fixedTop bsStyle="custom" collapseOnSelect>
                 <Navbar.Header>
-                    <Navbar.Toggle />
+                    <StyledNavbarToggle />
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
@@ -29,7 +30,7 @@ export class Navigation extends React.Component {
                         {/*this.render_link("/projects", 5, "Projects")*/}
                     </Nav>
                 </Navbar.Collapse>
-            </Navbar>
+            </StyledNavbar>
         )
     }
 
@@ -41,3 +42,12 @@ export class Navigation extends React.Component {
         )
     }
 }
+
+const StyledNavbar = styled(Navbar)`
+	background: #32383E;
+	border-top: #259d07 4px solid !important;
+`
+
+const StyledNavbarToggle = styled(Navbar.Toggle)`
+	background: #FFFFFF !important;
+`
