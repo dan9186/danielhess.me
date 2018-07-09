@@ -1,7 +1,7 @@
 import React from 'react'
 
 export class CommunityInvolvement extends React.Component {
-    constructor(props) {
+    constructor() {
         super()
     }
 

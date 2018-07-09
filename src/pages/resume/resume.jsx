@@ -1,6 +1,5 @@
 import React from 'react'
 import {Col,Grid} from 'react-bootstrap'
-import {Icon} from 'react-fa'
 
 import {Accomplishments} from './cards/accomplishments.jsx'
 import {Education} from './cards/education.jsx'
@@ -13,7 +12,7 @@ import {TechnicalExperience} from './cards/technical_experience.jsx'
 import './style.css'
 
 export class Resume extends React.Component {
-    constructor(props) {
+    constructor() {
         super()
     }
 

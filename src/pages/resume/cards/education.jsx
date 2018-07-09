@@ -4,7 +4,7 @@ import {Icon} from 'react-fa'
 import './education.css'
 
 export class Education extends React.Component {
-    constructor(props) {
+    constructor() {
         super()
     }
 

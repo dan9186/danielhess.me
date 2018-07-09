@@ -1,20 +1,19 @@
 import React from 'react'
 import {Grid, Row, Col} from 'react-bootstrap'
-
-import './style.css'
+import styled, {css} from 'styled-components'
 
 export class Footer extends React.Component {
-    constructor(props) {
+    constructor() {
         super()
     }
 
     render() {
         return (
-            <footer className="footer">
+            <FooterWrapper>
                 <Grid>
                     <Row>
                         <Col md={4} mdOffset={4} sm={4} smOffset={4} className="text-center">
-                            <small className="copyright">© All rights reserved. Daniel Hess 2017</small>
+                            <FooterCopyright>© All rights reserved. Daniel Hess 2017</FooterCopyright>
                             <br />
                             <small>
                                 Powered by { this.render_react_icon() }, Runs on { this.render_gcp_icon() }, Deployed with { this.render_terraform_icon() }
@@ -22,24 +21,24 @@ export class Footer extends React.Component {
                         </Col>
                     </Row>
                 </Grid>
-            </footer>
+            </FooterWrapper>
         )
     }
 
     render_gcp_icon() {
         return (
-            <svg alt="GCP" id="gcp-icon" viewBox="0 0 19 17" preserveAspectRatio="xMidYMid meet" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <FooterIcon gcp alt="GCP" viewBox="0 0 19 17" preserveAspectRatio="xMidYMid meet" focusable="false" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="9" cy="8" r="2.433" transform="rotate(-89.504 9 8)"></circle>
                 <path d="M17.84 7.403l-1.9-3.323h-3.67L14.526 8 9.92 16h2.98a1.2 1.2 0 0 0 1.04-.603l3.9-6.8a1.2 1.2 0 0 0 0-1.194z"></path>
                 <path d="M10.756 12.8h-4.52L1.644 4.816.16 7.403a1.2 1.2 0 0 0 0 1.194l3.9 6.8A1.2 1.2 0 0 0 5.1 16h3.81l1.846-3.2z"></path>
                 <path d="M13.94.603A1.2 1.2 0 0 0 12.9 0H5.1a1.2 1.2 0 0 0-1.04.603L2.142 3.94l1.835 3.18 2.26-3.92h9.192L13.94.603z"></path>
-            </svg>
+            </FooterIcon>
         )
     }
 
     render_react_icon() {
         return (
-            <svg id="react-icon" viewBox="170 50 500 500" xmlns="http://www.w3.org/2000/svg">
+            <FooterIcon react alt="React" viewBox="170 50 500 500" xmlns="http://www.w3.org/2000/svg">
                 <path d="M666.3,296.5c0-32.5-40.7-63.3-103.1-82.4c14.4-63.6,8-114.2-20.2-130.4c-6.5-3.8-14.1-5.6-22.4-5.6v22.3
                     c4.6,0,8.3,0.9,11.4,2.6c13.6,7.8,19.5,37.5,14.9,75.7c-1.1,9.4-2.9,19.3-5.1,29.4c-19.6-4.8-41-8.5-63.5-10.9
                     c-13.5-18.5-27.5-35.3-41.6-50c32.6-30.3,63.2-46.9,84-46.9l0-22.3c0,0,0,0,0,0c-27.5,0-63.5,19.6-99.9,53.6
@@ -67,17 +66,46 @@ export class Footer extends React.Component {
                 <polygon points="320.8,78.4 320.8,78.4 320.8,78.4"/>
                 <circle cx="420.9" cy="296.5" r="45.7"/>
                 <polygon points="520.5,78.1 520.5,78.1 520.5,78.1"/>
-            </svg>
+            </FooterIcon>
         )
     }
 
     render_terraform_icon() {
         return (
-            <svg alt="Terraform" id="terraform-icon" viewBox="0 0 60 60" preserveAspectRatio="xMidYMid meet" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <FooterIcon terraform alt="Terraform" viewBox="0 0 60 60" preserveAspectRatio="xMidYMid meet" focusable="false" xmlns="http://www.w3.org/2000/svg">
                 <path d="M36.4 20.2v18.93l16.4-9.46V10.72L36.4 20.2z"></path>
                 <path d="M18.2 10.72l16.4 9.48v18.93l-16.4-9.47V10.72z"></path>
                 <path d="M0 .15v18.94l16.4 9.47V9.62L0 .15zm18.2 50.53l16.4 9.47V41.21l-16.4-9.47v18.94z"></path>
-            </svg>
+            </FooterIcon>
         )
     }
 }
+
+const FooterWrapper = styled.footer`
+	background: #32383e;
+	color: #a1aab4;
+	padding: 10px 0;
+	border-top: #778492 0.4em solid;
+`
+
+const FooterIcon = styled.svg`
+	fill: #a1aab4;
+	height: 18px;
+
+    ${props => props.terraform && css`
+	transform: translateY(4px);
+    `}
+
+    ${props => props.react && css`
+	transform: translateY(3px);
+    `}
+
+    ${props => props.gcp && css`
+	transform: translateY(4px);
+    `}
+`
+
+const FooterCopyright = styled.small`
+	line-height: 1.6;
+	font-size: 14px;
+`

@@ -3,7 +3,7 @@ import {Clearfix} from 'react-bootstrap'
 import {Icon} from 'react-fa'
 
 export class ProfessionalExperience extends React.Component {
-    constructor(props) {
+    constructor() {
         super()
     }
 

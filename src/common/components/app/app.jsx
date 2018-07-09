@@ -5,7 +5,7 @@ import {Body} from '../body/body.jsx'
 import {Footer} from '../footer/footer.jsx'
 
 export class App extends React.Component {
-    constructor(props) {
+    constructor() {
         super()
     }
 
