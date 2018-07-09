@@ -1,7 +1,8 @@
 /* global __dirname */
 
-var path = require('path')
+let path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const PATHS = {
     dist: path.join(__dirname, 'dist'),
@@ -45,6 +46,21 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: PATHS.src + '/index.ejs',
             title: 'Daniel Hess',
+        }),
+        new FaviconsWebpackPlugin({
+            logo: PATHS.src + '/assets/logo-lg.png',
+            icons: {
+                android: true,
+                appleIcon: true,
+                appleStartup: false,
+                coast: false,
+                favicons: true,
+                firefox: true,
+                opengraph: false,
+                twitter: false,
+                yandex: false,
+                windows: false,
+            },
         })
     ],
 }
