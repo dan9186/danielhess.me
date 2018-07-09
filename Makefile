@@ -25,6 +25,7 @@ ci_setup:  ## Setup the CI system
 clean: ## Cleanup all running and generated items
 	-@rm -rf dist
 	-@rm -rf coverage
+	-@rm -f *-debug.log *-error.log
 
 .PHONY: deploy
 deploy:  ## Deploy the project
