@@ -1,8 +1,10 @@
 /* global __dirname */
 
 let path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const RobotstxtPlugin = require("robotstxt-webpack-plugin").default
 
 const PATHS = {
     dist: path.join(__dirname, 'dist'),
@@ -61,6 +63,12 @@ module.exports = {
                 yandex: false,
                 windows: false,
             },
+        }),
+        new RobotstxtPlugin({
+            policy: [{
+                userAgent: "*",
+                disallow: "/",
+            }],
         })
     ],
 }
