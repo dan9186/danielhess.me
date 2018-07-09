@@ -10,7 +10,7 @@ import {Resume} from '../../../pages/resume/resume.jsx'
 import {Slides} from '../../../pages/slides/slides.jsx'
 
 export class Body extends React.Component {
-    constructor(props) {
+    constructor() {
         super()
     }
 

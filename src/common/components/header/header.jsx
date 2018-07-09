@@ -8,7 +8,7 @@ import {Navigation} from '../navigation/navigation.jsx'
 import {SocialBadge} from '../social_badge/social_badge.jsx'
 
 export class Header extends React.Component {
-    constructor(props) {
+    constructor() {
         super()
     }
 

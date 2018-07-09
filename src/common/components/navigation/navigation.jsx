@@ -10,7 +10,7 @@ import './style.css'
 bootstrapUtils.addStyle(Navbar, 'custom')
 
 export class Navigation extends React.Component {
-    constructor(props) {
+    constructor() {
         super()
     }
 

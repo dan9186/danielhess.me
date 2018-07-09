@@ -1,7 +1,7 @@
 import React from 'react'
 
 export class Accomplishments extends React.Component {
-    constructor(props) {
+    constructor() {
         super()
     }
 

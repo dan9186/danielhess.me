@@ -4,7 +4,7 @@ import {Grid, Row, Col} from 'react-bootstrap'
 import './style.css'
 
 export class Footer extends React.Component {
-    constructor(props) {
+    constructor() {
         super()
     }
 

@@ -3,7 +3,7 @@ import React from 'react'
 import './github.css'
 
 export class Github extends React.Component {
-    constructor(props) {
+    constructor() {
         super()
     }
 

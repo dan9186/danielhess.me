@@ -1,7 +1,7 @@
 import React from 'react'
 
 export class References extends React.Component {
-    constructor(props) {
+    constructor() {
         super()
     }
 

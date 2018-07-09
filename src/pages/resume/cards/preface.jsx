@@ -1,7 +1,7 @@
 import React from 'react'
 
 export class Preface extends React.Component {
-    constructor(props) {
+    constructor() {
         super()
     }
 

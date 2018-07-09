@@ -4,7 +4,7 @@ import {Col,Row} from 'react-bootstrap'
 import './technical_experience.css'
 
 export class TechnicalExperience extends React.Component {
-    constructor(props) {
+    constructor() {
         super()
     }
 
