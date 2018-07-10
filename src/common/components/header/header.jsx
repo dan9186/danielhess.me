@@ -2,7 +2,6 @@ import React from 'react'
 import {Grid,Image} from 'react-bootstrap'
 import styled, {css} from 'styled-components'
 
-import './style.css'
 import LogoImg from './images/logo.png'
 import HeaderBgImg from './images/header-bg.jpg'
 
@@ -30,12 +29,12 @@ export class Header extends React.Component {
                 <ProfileContent left>
                     <ProfileName>{name}</ProfileName>
                     <ProfileDescription>{description}</ProfileDescription>
-                    <ul className="social list-inline">
+                    <SocialList className="list-inline">
                         <SocialBadge icon="github" href={"https://github.com/" + username} last="true" />
                         <SocialBadge icon="twitter" href={"https://twitter.com/" + username} />
                         <SocialBadge icon="linkedin" href={"https://www.linkedin.com/in/" + username + "/"} />
                         <SocialBadge icon="envelope" href={"mailto:" + email} />
-                    </ul>
+                    </SocialList>
                 </ProfileContent>
                 <ProfileContent right>
                     <ProfileSlogan>Dedicated to <Highlighted>Devops</Highlighted></ProfileSlogan>
@@ -110,4 +109,22 @@ const ProfileSlogan = styled.h1`
 
 const Highlighted = styled.span`
 	color: #259d07;
+`
+
+const SocialList = styled.ul`
+    a {
+        width: 36px;
+        height: 36px;
+        display: inline-block;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        color: #FFFFFF;
+        text-align: center;
+    }
 `
