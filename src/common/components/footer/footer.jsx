@@ -5,6 +5,10 @@ import styled, {css} from 'styled-components'
 export class Footer extends React.Component {
     constructor() {
         super()
+
+        this.state = {
+            version: `${VERSION}-${BUILD}`,
+        }
     }
 
     render() {
@@ -13,11 +17,9 @@ export class Footer extends React.Component {
                 <Grid>
                     <Row>
                         <Col md={4} mdOffset={4} sm={4} smOffset={4} className="text-center">
-                            <FooterCopyright>© All rights reserved. Daniel Hess 2017</FooterCopyright>
+                            <FooterText>© All rights reserved. Daniel Hess 2017</FooterText>
                             <br />
-                            <small>
-                                Powered by { this.render_react_icon() }, Runs on { this.render_gcp_icon() }, Deployed with { this.render_terraform_icon() }
-                            </small>
+                            <FooterText>v{this.state.version} powered by { this.render_react_icon() }, runs on { this.render_gcp_icon() }, deployed with { this.render_terraform_icon() }</FooterText>
                         </Col>
                     </Row>
                 </Grid>
@@ -105,7 +107,7 @@ const FooterIcon = styled.svg`
     `}
 `
 
-const FooterCopyright = styled.small`
+const FooterText = styled.small`
 	line-height: 1.6;
 	font-size: 14px;
 `
