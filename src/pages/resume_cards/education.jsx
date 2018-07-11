@@ -2,8 +2,6 @@ import React from 'react'
 import {Icon} from 'react-fa'
 import styled from 'styled-components'
 
-import './education.css'
-
 export class Education extends React.Component {
     constructor() {
         super()
@@ -16,16 +14,16 @@ export class Education extends React.Component {
                     <SectionHeader>Education</SectionHeader>
                     <hr />
                     <SectionContent>
-                        <div className="item">
-                            <h3 className="title"><Icon name='graduation-cap' /> B.S. in Computer Engineering</h3>
-                            <h3 className="title"><Icon name='graduation-cap' /> B.S. in Computer Science</h3>
-                            <h3 className="title"><Icon name='graduation-cap' /> Minor in Mathematics</h3>
-                            <h4 className="university">Christian Brothers University<br/>Memphis, TN <span className="date-range">(August 2005 – May 2009)</span></h4>
-                        </div>
-                        <div className="item">
-                        </div>
-                        <div className="item">
-                        </div>
+                        <Degrees>
+                            <Degree><Icon name='graduation-cap' /> B.S. in Computer Engineering</Degree>
+                            <Degree><Icon name='graduation-cap' /> B.S. in Computer Science</Degree>
+                            <Degree><Icon name='graduation-cap' /> Minor in Mathematics</Degree>
+                            <University>
+                                Christian Brothers University
+                                <br/>
+                                Memphis, TN <span className="date-range">(August 2005 – May 2009)</span>
+                            </University>
+                        </Degrees>
                     </SectionContent>
                 </SectionInner>
             </Section>
@@ -65,4 +63,21 @@ const SectionContent = styled.div`
     hr {
         border: #C2EAD2 1px solid;
     }
+`
+
+const Degrees = styled.div`
+	margin-bottom: 30px;
+`
+
+const Degree = styled.h3`
+	font-size: 16px !important;
+	margin-top: 0;
+`
+
+const University = styled.h4`
+	font-family: "Lato", arial, sans-serif;
+	font-size: 13px;
+	color: #999;
+	font-weight: 600;
+	padding-left: 25px;
 `

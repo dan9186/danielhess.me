@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import './github.css'
-
 export class Github extends React.Component {
     constructor() {
         super()
@@ -14,11 +12,6 @@ export class Github extends React.Component {
                 <SectionInner>
                     <SectionHeader>My GitHub</SectionHeader>
                     <hr />
-                    <div id="github-graph" className="github-graph">
-                    </div>
-
-                    <div id="ghfeed" className="ghfeed">
-                    </div>
                 </SectionInner>
             </Section>
         )
