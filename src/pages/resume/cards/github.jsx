@@ -36,6 +36,10 @@ const Section = styled.section`
 
 const SectionInner = styled.div`
 	padding: 30px;
+
+    hr {
+        border: #C2EAD2 1px solid;
+    }
 `
 
 const SectionHeader = styled.h2`
