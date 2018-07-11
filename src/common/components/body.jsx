@@ -2,9 +2,9 @@ import React from 'react'
 import {Switch,Route} from 'react-router-dom'
 import styled from 'styled-components'
 
-import {Home} from './../../pages/home/home.jsx'
-import {Resume} from './../../pages/resume/resume.jsx'
-import {Slides} from './../../pages/slides/slides.jsx'
+import {Home} from './../../pages/home.jsx'
+import {Resume} from './../../pages/resume.jsx'
+import {Slides} from './../../pages/slides.jsx'
 
 export class Body extends React.Component {
     constructor() {
