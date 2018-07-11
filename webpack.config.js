@@ -50,7 +50,7 @@ module.exports = {
             title: 'Daniel Hess',
         }),
         new FaviconsWebpackPlugin({
-            logo: PATHS.src + '/assets/logo-lg.png',
+            logo: PATHS.src + '/assets/images/logo-lg.png',
             icons: {
                 android: true,
                 appleIcon: true,

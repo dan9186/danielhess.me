@@ -1,15 +1,16 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {Col,Grid} from 'react-bootstrap'
+import styled from 'styled-components'
 
 export class Home extends React.Component {
-    constructor(props) {
+    constructor() {
         super()
     }
 
     render() {
         return (
-            <Grid className="sections-wrapper">
+            <SectionWrapper>
                 <Col md={12} sm={12} xs={12}>
                     <section className="section">
                         <div className="section-inner">
@@ -21,7 +22,12 @@ export class Home extends React.Component {
                         </div>
                     </section>
                 </Col>
-            </Grid>
+            </SectionWrapper>
         )
     }
 }
+
+const SectionWrapper = styled(Grid)`
+	padding-top: 30px;
+	padding-bottom: 30px;
+`

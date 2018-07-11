@@ -17,9 +17,9 @@ export class Footer extends React.Component {
                 <Grid>
                     <Row>
                         <Col md={4} mdOffset={4} sm={4} smOffset={4} className="text-center">
-                            <FooterText>© All rights reserved. Daniel Hess 2017</FooterText>
+                            <SmallText>© All rights reserved. Daniel Hess 2017</SmallText>
                             <br />
-                            <FooterText>v{this.state.version} powered by { this.render_react_icon() }, runs on { this.render_gcp_icon() }, deployed with { this.render_terraform_icon() }</FooterText>
+                            <SmallText>v{this.state.version} powered by { this.render_react_icon() }, runs on { this.render_gcp_icon() }, deployed with { this.render_terraform_icon() }</SmallText>
                         </Col>
                     </Row>
                 </Grid>
@@ -107,7 +107,7 @@ const FooterIcon = styled.svg`
     `}
 `
 
-const FooterText = styled.small`
+const SmallText = styled.small`
 	line-height: 1.6;
 	font-size: 14px;
 `

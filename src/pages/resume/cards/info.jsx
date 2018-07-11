@@ -1,5 +1,6 @@
 import React from 'react'
 import {Icon} from 'react-fa'
+import styled from 'styled-components'
 
 import './info.css'
 
@@ -10,8 +11,8 @@ export class Info extends React.Component {
 
     render() {
         return (
-            <section className="info section">
-                <div className="section-inner">
+            <Section className="info">
+                <SectionInner>
                     <h2 className="heading">Info</h2>
                     <hr />
                     <div className="content">
@@ -22,8 +23,21 @@ export class Info extends React.Component {
                             <li><Icon name='twitter' /><span className="sr-only">Twitter:</span><a href="#">@dan9186</a></li>
                         </ul>
                     </div>
-                </div>
-            </section>
+                </SectionInner>
+            </Section>
         )
     }
 }
+
+const Section = styled.section`
+	margin-bottom: 30px;
+	background: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 2px solid #778492;
+`
+
+const SectionInner = styled.div`
+	padding: 30px;
+`
