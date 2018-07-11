@@ -10,7 +10,7 @@ export class References extends React.Component {
         return (
             <Section>
                 <SectionInner>
-                    <h2 className="heading">References</h2>
+                    <SectionHeader>References</SectionHeader>
                     <hr />
                     <div className="content">
                         Available upon request.
@@ -32,4 +32,11 @@ const Section = styled.section`
 
 const SectionInner = styled.div`
 	padding: 30px;
+`
+
+const SectionHeader = styled.h2`
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #545e69;
+    font-size: 24px;
 `

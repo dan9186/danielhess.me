@@ -13,7 +13,7 @@ export class Education extends React.Component {
         return (
             <Section className="education">
                 <SectionInner>
-                    <h2 className="heading">Education</h2>
+                    <SectionHeader>Education</SectionHeader>
                     <hr />
                     <div className="content">
                         <div className="item">
@@ -44,4 +44,11 @@ const Section = styled.section`
 
 const SectionInner = styled.div`
 	padding: 30px;
+`
+
+const SectionHeader = styled.h2`
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #545e69;
+    font-size: 24px;
 `

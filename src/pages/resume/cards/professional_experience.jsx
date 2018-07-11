@@ -12,7 +12,7 @@ export class ProfessionalExperience extends React.Component {
         return (
             <Section>
                 <SectionInner>
-                    <h2 className="heading">Professional Experience</h2>
+                    <SectionHeader>Professional Experience</SectionHeader>
                     <hr />
                     <div className="content">
                         <h3>Senior Software Engineer<span className="pull-right date-range">September 2016 – Present</span></h3>
@@ -255,4 +255,11 @@ const Section = styled.section`
 
 const SectionInner = styled.div`
 	padding: 30px;
+`
+
+const SectionHeader = styled.h2`
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #545e69;
+    font-size: 24px;
 `

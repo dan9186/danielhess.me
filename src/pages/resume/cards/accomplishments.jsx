@@ -10,7 +10,7 @@ export class Accomplishments extends React.Component {
         return (
             <Section>
                 <SectionInner>
-                    <h2 className="heading">Accomplishments</h2>
+                    <SectionHeader>Accomplishments</SectionHeader>
                     <hr />
                     <div className="content">
                         Eagle Scout
@@ -32,4 +32,11 @@ const Section = styled.section`
 
 const SectionInner = styled.div`
 	padding: 30px;
+`
+
+const SectionHeader = styled.h2`
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #545e69;
+    font-size: 24px;
 `

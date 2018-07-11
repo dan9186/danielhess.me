@@ -1,15 +1,4 @@
 /*====== Resume =======*/
-.section .heading {
-	margin-top: 0;
-	margin-bottom: 30px;
-	color: #545e69;
-	font-size: 24px;
-}
-
-.section-inner > hr {
-	border: #C2EAD2 1px solid;
-}
-
 .section .content > h3 {
 	font-size: 22px;
 }
