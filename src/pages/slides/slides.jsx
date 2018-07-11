@@ -12,11 +12,9 @@ export class Slides extends React.Component {
         return (
             <SectionWrapper>
                 <Col md={12} sm={12} xs={12}>
-                    <div className="section">
-                        <div className="section-inner">
-                            <h2 className="heading">
-                                Slides <a href="https://github.com/dan9186/slides" target="_blank"><Icon name="github" /></a>
-                            </h2>
+                    <Section>
+                        <SectionInner>
+                            <SectionHeader>Slides <a href="https://github.com/dan9186/slides" target="_blank"><Icon name="github" /></a></SectionHeader>
                             <hr />
                             <Row className="text-center">
                                 <Col md={4} mdOffset={4}>
@@ -28,8 +26,8 @@ export class Slides extends React.Component {
                                     )}
                                 </Col>
                             </Row>
-                        </div>
-                    </div>
+                        </SectionInner>
+                    </Section>
                 </Col>
             </SectionWrapper>
         )
@@ -51,4 +49,28 @@ export class Slides extends React.Component {
 const SectionWrapper = styled(Grid)`
 	padding-top: 30px;
 	padding-bottom: 30px;
+`
+
+const Section = styled.section`
+	margin-bottom: 30px;
+	background: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 2px solid #778492;
+`
+
+const SectionInner = styled.div`
+	padding: 30px;
+
+    hr {
+        border: #C2EAD2 1px solid;
+    }
+`
+
+const SectionHeader = styled.h2`
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #545e69;
+    font-size: 24px;
 `
