@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import './github.css'
 
@@ -9,8 +10,8 @@ export class Github extends React.Component {
 
     render() {
         return (
-            <section className="github section">
-                <div className="section-inner">
+            <Section className="github">
+                <SectionInner>
                     <h2 className="heading">My GitHub</h2>
                     <hr />
                     <div id="github-graph" className="github-graph">
@@ -18,8 +19,21 @@ export class Github extends React.Component {
 
                     <div id="ghfeed" className="ghfeed">
                     </div>
-                </div>
-            </section>
+                </SectionInner>
+            </Section>
         )
     }
 }
+
+const Section = styled.section`
+	margin-bottom: 30px;
+	background: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 2px solid #778492;
+`
+
+const SectionInner = styled.div`
+	padding: 30px;
+`

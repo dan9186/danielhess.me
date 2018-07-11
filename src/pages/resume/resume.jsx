@@ -1,5 +1,6 @@
 import React from 'react'
 import {Col,Grid} from 'react-bootstrap'
+import styled from 'styled-components'
 
 import {Accomplishments} from './cards/accomplishments.jsx'
 import {Education} from './cards/education.jsx'
@@ -18,21 +19,26 @@ export class Resume extends React.Component {
 
     render() {
         return (
-            <Grid className="sections-wrapper">
-                <Col md={8} sm={12} xs={12} className="primary">
+            <SectionWrapper>
+                <Col md={8} sm={12} xs={12}>
                     <Preface />
                     <div className="visible-xs"><Info /></div>
                     <div className="visible-xs"><Education /></div>
                     <ProfessionalExperience />
                     <TechnicalExperience />
                 </Col>
-                <Col md={4} sm={12} xs={12} className="secondary">
+                <Col md={4} sm={12} xs={12}>
                     <div className="hidden-xs"><Info /></div>
                     <div className="hidden-xs"><Education /></div>
                     <Accomplishments />
                     <References />
                 </Col>
-            </Grid>
+            </SectionWrapper>
         )
     }
 }
+
+const SectionWrapper = styled(Grid)`
+	padding-top: 30px;
+	padding-bottom: 30px;
+`

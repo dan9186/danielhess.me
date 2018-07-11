@@ -1,16 +1,16 @@
 import React from 'react'
-//import {Link} from 'react-router-dom'
-import {Col,Grid,Row,Thumbnail} from 'react-bootstrap'
+import {Col,Grid,Row} from 'react-bootstrap'
 import {Icon} from 'react-fa'
+import styled from 'styled-components'
 
 export class Slides extends React.Component {
-    constructor(props) {
+    constructor() {
         super()
     }
 
     render() {
         return (
-            <Grid className="sections-wrapper">
+            <SectionWrapper>
                 <Col md={12} sm={12} xs={12}>
                     <div className="section">
                         <div className="section-inner">
@@ -31,7 +31,7 @@ export class Slides extends React.Component {
                         </div>
                     </div>
                 </Col>
-            </Grid>
+            </SectionWrapper>
         )
     }
 
@@ -47,3 +47,8 @@ export class Slides extends React.Component {
         )
     }
 }
+
+const SectionWrapper = styled(Grid)`
+	padding-top: 30px;
+	padding-bottom: 30px;
+`

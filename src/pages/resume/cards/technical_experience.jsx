@@ -1,5 +1,6 @@
 import React from 'react'
 import {Col,Row} from 'react-bootstrap'
+import styled from 'styled-components'
 
 import './technical_experience.css'
 
@@ -10,8 +11,8 @@ export class TechnicalExperience extends React.Component {
 
     render() {
         return (
-            <section className="section tech-experience">
-                <div className="section-inner">
+            <Section className="tech-experience">
+                <SectionInner>
                     <h2 className="heading">Technical Experience</h2>
                     <hr />
                     <div className="content">
@@ -133,8 +134,8 @@ export class TechnicalExperience extends React.Component {
                             </Col>
                         </Row>
                     </div>
-                </div>
-            </section>
+                </SectionInner>
+            </Section>
         )
     }
 
@@ -179,3 +180,16 @@ export class TechnicalExperience extends React.Component {
         }
     }
 }
+
+const Section = styled.section`
+	margin-bottom: 30px;
+	background: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 2px solid #778492;
+`
+
+const SectionInner = styled.div`
+	padding: 30px;
+`

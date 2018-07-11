@@ -1,5 +1,6 @@
 import React from 'react'
 import {Icon} from 'react-fa'
+import styled from 'styled-components'
 
 import './education.css'
 
@@ -10,8 +11,8 @@ export class Education extends React.Component {
 
     render() {
         return (
-            <section className="education section">
-                <div className="section-inner">
+            <Section className="education">
+                <SectionInner>
                     <h2 className="heading">Education</h2>
                     <hr />
                     <div className="content">
@@ -26,8 +27,21 @@ export class Education extends React.Component {
                         <div className="item">
                         </div>
                     </div>
-                </div>
-            </section>
+                </SectionInner>
+            </Section>
         )
     }
 }
+
+const Section = styled.section`
+	margin-bottom: 30px;
+	background: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 2px solid #778492;
+`
+
+const SectionInner = styled.div`
+	padding: 30px;
+`
