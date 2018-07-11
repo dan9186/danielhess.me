@@ -13,9 +13,9 @@ export class TechnicalExperience extends React.Component {
         return (
             <Section className="tech-experience">
                 <SectionInner>
-                    <h2 className="heading">Technical Experience</h2>
+                    <SectionHeader>Technical Experience</SectionHeader>
                     <hr />
-                    <div className="content">
+                    <SectionContent>
                         <Row>
                             <Col md={8}>
                                 <h4>Languages</h4>
@@ -133,7 +133,7 @@ export class TechnicalExperience extends React.Component {
                                 </Row>
                             </Col>
                         </Row>
-                    </div>
+                    </SectionContent>
                 </SectionInner>
             </Section>
         )
@@ -192,4 +192,25 @@ const Section = styled.section`
 
 const SectionInner = styled.div`
 	padding: 30px;
+
+    hr {
+        border: #C2EAD2 1px solid;
+    }
+`
+
+const SectionHeader = styled.h2`
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #545e69;
+    font-size: 24px;
+`
+
+const SectionContent = styled.div`
+    h3 {
+        font-size: 22px;
+    }
+
+    hr {
+        border: #C2EAD2 1px solid;
+    }
 `

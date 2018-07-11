@@ -10,8 +10,6 @@ import {ProfessionalExperience} from './cards/professional_experience.jsx'
 import {References} from './cards/references.jsx'
 import {TechnicalExperience} from './cards/technical_experience.jsx'
 
-import './style.css'
-
 export class Resume extends React.Component {
     constructor() {
         super()

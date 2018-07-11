@@ -13,16 +13,16 @@ export class Info extends React.Component {
         return (
             <Section className="info">
                 <SectionInner>
-                    <h2 className="heading">Info</h2>
+                    <SectionHeader>Info</SectionHeader>
                     <hr />
-                    <div className="content">
+                    <SectionContent>
                         <ul className="list-unstyled">
                             <li><Icon name='map-marker' /><span className="sr-only">Location:</span>Portland, OR</li>
                             <li><Icon name='envelope-o' /><span className="sr-only">Email:</span><a href="#">daniel@danielhess.me</a></li>
                             <li><Icon name='github' /><span className="sr-only">Github:</span><a href="#">github.com/dan9186</a></li>
                             <li><Icon name='twitter' /><span className="sr-only">Twitter:</span><a href="#">@dan9186</a></li>
                         </ul>
-                    </div>
+                    </SectionContent>
                 </SectionInner>
             </Section>
         )
@@ -40,4 +40,25 @@ const Section = styled.section`
 
 const SectionInner = styled.div`
 	padding: 30px;
+
+    hr {
+        border: #C2EAD2 1px solid;
+    }
+`
+
+const SectionHeader = styled.h2`
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #545e69;
+    font-size: 24px;
+`
+
+const SectionContent = styled.div`
+    h3 {
+        font-size: 22px;
+    }
+
+    hr {
+        border: #C2EAD2 1px solid;
+    }
 `
