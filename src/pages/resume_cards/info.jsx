@@ -2,8 +2,6 @@ import React from 'react'
 import {Icon} from 'react-fa'
 import styled from 'styled-components'
 
-import './info.css'
-
 export class Info extends React.Component {
     constructor() {
         super()
@@ -11,17 +9,17 @@ export class Info extends React.Component {
 
     render() {
         return (
-            <Section className="info">
+            <Section>
                 <SectionInner>
                     <SectionHeader>Info</SectionHeader>
                     <hr />
                     <SectionContent>
-                        <ul className="list-unstyled">
-                            <li><Icon name='map-marker' /><span className="sr-only">Location:</span>Portland, OR</li>
-                            <li><Icon name='envelope-o' /><span className="sr-only">Email:</span><a href="#">daniel@danielhess.me</a></li>
-                            <li><Icon name='github' /><span className="sr-only">Github:</span><a href="#">github.com/dan9186</a></li>
-                            <li><Icon name='twitter' /><span className="sr-only">Twitter:</span><a href="#">@dan9186</a></li>
-                        </ul>
+                        <InfoList>
+                            <InfoItem><InfoIcon name='map-marker' /><span className="sr-only">Location:</span>Portland, OR</InfoItem>
+                            <InfoItem><InfoIcon name='envelope-o' /><span className="sr-only">Email:</span><a href="#">daniel@danielhess.me</a></InfoItem>
+                            <InfoItem><InfoIcon name='github' /><span className="sr-only">Github:</span><a href="#">github.com/dan9186</a></InfoItem>
+                            <InfoItem><InfoIcon name='twitter' /><span className="sr-only">Twitter:</span><a href="#">@dan9186</a></InfoItem>
+                        </InfoList>
                     </SectionContent>
                 </SectionInner>
             </Section>
@@ -61,4 +59,23 @@ const SectionContent = styled.div`
     hr {
         border: #C2EAD2 1px solid;
     }
+`
+
+const InfoList = styled.ul`
+	margin-bottom: 0;
+	list-style:none;
+    padding-left: 0;
+`
+
+const InfoItem = styled.li`
+	margin-bottom: 0.2em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+`
+
+const InfoIcon = styled(Icon)`
+	margin-right: 15px;
+	color: #778492;
 `
