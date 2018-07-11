@@ -2,11 +2,11 @@ import React from 'react'
 import {Grid,Image} from 'react-bootstrap'
 import styled, {css} from 'styled-components'
 
-import LogoImg from '../../../assets/images/logo.png'
-import HeaderBgImg from '../../../assets/images/header-bg.jpg'
+import LogoImg from './../../assets/images/logo.png'
+import HeaderBgImg from './../../assets/images/header-bg.jpg'
 
-import {Navigation} from '../navigation/navigation.jsx'
-import {SocialBadge} from '../social_badge/social_badge.jsx'
+import {Navigation} from './navigation.jsx'
+import {SocialBadge} from './social_badge.jsx'
 
 export class Header extends React.Component {
     constructor() {
