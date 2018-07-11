@@ -7,7 +7,7 @@ export class Footer extends React.Component {
         super()
 
         this.state = {
-            version: `${VERSION}-${BUILD}`,
+            version: `${VERSION}-${BUILD.slice(0,7)}`,
         }
     }
 

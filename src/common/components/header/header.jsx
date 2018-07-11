@@ -78,6 +78,10 @@ const ProfileContent = styled.div`
 
 	margin-left: 30px;
 
+    h1 {
+        margin-top: 30px;
+    }
+
     ${props => props.left && css`
     float: left;
     `}
@@ -88,7 +92,6 @@ const ProfileContent = styled.div`
 `
 
 const ProfileName = styled.h1`
-	margin-top: 30px;
 	color: #f5f5f5;
 	font-size: 38px;
 	margin-bottom: 5px;
