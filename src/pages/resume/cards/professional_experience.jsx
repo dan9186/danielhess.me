@@ -14,7 +14,7 @@ export class ProfessionalExperience extends React.Component {
                 <SectionInner>
                     <SectionHeader>Professional Experience</SectionHeader>
                     <hr />
-                    <div className="content">
+                    <SectionContent>
                         <h3>Senior Software Engineer<span className="pull-right date-range">September 2016 – Present</span></h3>
                         <h4>Ion Channel<span className="pull-right"><Icon name='map-marker' /> Portland, OR</span></h4>
                         <hr />
@@ -36,9 +36,9 @@ export class ProfessionalExperience extends React.Component {
                             <li>Instigated and drove several changes in communications with remote team to improve team dynamics</li>
                             <li>Designed multiple new services in Golang to provide good examples for less experienced team members</li>
                         </ul>
-                    </div>
+                    </SectionContent>
                     <Clearfix />
-                    <div className="content">
+                    <SectionContent>
                         <h3>Senior Software Engineer<span className="pull-right date-range">January 2016 – September 2016</span></h3>
                         <h4>Treetop Commons, LLC<span className="pull-right"><Icon name='map-marker' /> Portland, OR</span></h4>
                         <hr />
@@ -65,9 +65,9 @@ export class ProfessionalExperience extends React.Component {
                             <li>Created proof of concept for Dockerized API development environment to remove the need for Vagrant devbox and allow for local development of API</li>
                             <li>Drove changes in Agile process to have sprint planning, estimating, grooming, and retrospectives that were not happening previously and resulting in significant churn during a sprint</li>
                         </ul>
-                    </div>
+                    </SectionContent>
                     <Clearfix />
-                    <div className="content">
+                    <SectionContent>
                         <h3>Devops Engineer<span className="pull-right date-range">June 2014 – Dec 2015</span></h3>
                         <h4>Monsoon Commerce<span className="pull-right"><Icon name='map-marker' /> Portland, OR</span></h4>
                         <hr />
@@ -105,9 +105,9 @@ export class ProfessionalExperience extends React.Component {
                             <li>Continued the charge of a culture of testing environment resiliency and ensuring maximum uptime as others departed</li>
                             <li>Assisted in architecture and development of a Golang based strangler for a legacy Java service</li>
                         </ul>
-                    </div>
+                    </SectionContent>
                     <Clearfix />
-                    <div className="content">
+                    <SectionContent>
                         <h3>System Administrator I<span className="pull-right date-range">June 2013 – June 2014</span></h3>
                         <h4>St. Jude Children's Research Hospital<span className="pull-right"><Icon name='map-marker' /> Memphis, TN</span></h4>
                         <hr />
@@ -146,9 +146,9 @@ export class ProfessionalExperience extends React.Component {
                             <li>Provided proof of concept for software installation self service portal</li>
                             <li>Assisted on documentation and training for Field Techs on tools and technology</li>
                         </ul>
-                    </div>
+                    </SectionContent>
                     <Clearfix />
-                    <div className="content">
+                    <SectionContent>
                         <h3>Senior Technical Service Provider<span className="pull-right date-range"> January 2012 – June 2013</span></h3>
                         <h4>St. Jude Children's Research Hospital<span className="pull-right"><Icon name='map-marker' /> Memphis, TN</span></h4>
                         <hr />
@@ -180,9 +180,9 @@ export class ProfessionalExperience extends React.Component {
                             <li>Implemented Mac systems integration with Configuration Management</li>
                             <li>Redesigned and automated numerous workflows within Inventory Management system</li>
                         </ul>
-                    </div>
+                    </SectionContent>
                     <Clearfix />
-                    <div className="content">
+                    <SectionContent>
                         <h3>Technical Service Provider<span className="pull-right date-range"> June 2009 – January 2012</span></h3>
                         <h4>St. Jude Children's Research Hospital<span className="pull-right"><Icon name='map-marker' /> Memphis, TN</span></h4>
                         <hr />
@@ -213,9 +213,9 @@ export class ProfessionalExperience extends React.Component {
                             <li>Unified disposition process for data center and Client Services’ assets to ensure HIPAA compliance for both groups</li>
                             <li>Provided education and training on use of inventory and ticketing application to all of Client Services</li>
                         </ul>
-                    </div>
+                    </SectionContent>
                     <Clearfix />
-                    <div className="content">
+                    <SectionContent>
                         <h3>Student Intern PC Support Specialist<span className="pull-right date-range">Nov. 2005 – June 2009</span></h3>
                         <h4>St. Jude Children's Research Hospital<span className="pull-right"><Icon name='map-marker' /> Memphis, TN</span></h4>
                         <hr />
@@ -237,7 +237,7 @@ export class ProfessionalExperience extends React.Component {
                             <li>Assisted in multiple process improvements in Support Logistics Center layout and flow</li>
                             <li>Designed and implemented paperless process for equipment disposal</li>
                         </ul>
-                    </div>
+                    </SectionContent>
                 </SectionInner>
             </Section>
         )
@@ -266,4 +266,14 @@ const SectionHeader = styled.h2`
     margin-bottom: 30px;
     color: #545e69;
     font-size: 24px;
+`
+
+const SectionContent = styled.div`
+    h3 {
+        font-size: 22px;
+    }
+
+    hr {
+        border: #C2EAD2 1px solid;
+    }
 `

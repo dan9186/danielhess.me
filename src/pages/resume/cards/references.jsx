@@ -12,9 +12,9 @@ export class References extends React.Component {
                 <SectionInner>
                     <SectionHeader>References</SectionHeader>
                     <hr />
-                    <div className="content">
+                    <SectionContent>
                         Available upon request.
-                    </div>
+                    </SectionContent>
                 </SectionInner>
             </Section>
         )
@@ -43,4 +43,14 @@ const SectionHeader = styled.h2`
     margin-bottom: 30px;
     color: #545e69;
     font-size: 24px;
+`
+
+const SectionContent = styled.div`
+    h3 {
+        font-size: 22px;
+    }
+
+    hr {
+        border: #C2EAD2 1px solid;
+    }
 `
