@@ -2,13 +2,13 @@ import React from 'react'
 import {Col,Grid} from 'react-bootstrap'
 import styled from 'styled-components'
 
-import {Accomplishments} from './cards/accomplishments.jsx'
-import {Education} from './cards/education.jsx'
-import {Info} from './cards/info.jsx'
-import {Preface} from './cards/preface.jsx'
-import {ProfessionalExperience} from './cards/professional_experience.jsx'
-import {References} from './cards/references.jsx'
-import {TechnicalExperience} from './cards/technical_experience.jsx'
+import {Accomplishments} from './resume_cards/accomplishments.jsx'
+import {Education} from './resume_cards/education.jsx'
+import {Info} from './resume_cards/info.jsx'
+import {Preface} from './resume_cards/preface.jsx'
+import {ProfessionalExperience} from './resume_cards/professional_experience.jsx'
+import {References} from './resume_cards/references.jsx'
+import {TechnicalExperience} from './resume_cards/technical_experience.jsx'
 
 export class Resume extends React.Component {
     constructor() {
