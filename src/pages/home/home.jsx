@@ -12,15 +12,15 @@ export class Home extends React.Component {
         return (
             <SectionWrapper>
                 <Col md={12} sm={12} xs={12}>
-                    <section className="section">
-                        <div className="section-inner">
-                            <h2 className="heading">Welcome</h2>
+                    <Section>
+                        <SectionInner>
+                            <SectionHeader>Welcome</SectionHeader>
                             <hr />
                             <div className="content">
                                 I'm in the middle of setting up my blog and other items.  In the meantime, my <Link to='/resume'>resume</Link> is available for you to view.
                             </div>
-                        </div>
-                    </section>
+                        </SectionInner>
+                    </Section>
                 </Col>
             </SectionWrapper>
         )
@@ -30,4 +30,28 @@ export class Home extends React.Component {
 const SectionWrapper = styled(Grid)`
 	padding-top: 30px;
 	padding-bottom: 30px;
+`
+
+const Section = styled.section`
+	margin-bottom: 30px;
+	background: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 2px solid #778492;
+`
+
+const SectionInner = styled.div`
+	padding: 30px;
+
+    hr {
+        border: #C2EAD2 1px solid;
+    }
+`
+
+const SectionHeader = styled.h2`
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #545e69;
+    font-size: 24px;
 `
