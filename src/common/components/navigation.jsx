@@ -6,8 +6,6 @@ import styled from 'styled-components'
 
 import 'whatwg-fetch'
 
-import './style.css'
-
 bootstrapUtils.addStyle(Navbar, 'custom')
 
 export class Navigation extends React.Component {
@@ -22,13 +20,13 @@ export class Navigation extends React.Component {
                     <StyledNavbarToggle />
                 </Navbar.Header>
                 <Navbar.Collapse>
-                    <Nav>
+                    <StyledNav>
                         {this.render_link("/", 1, "Home")}
                         {this.render_link("/resume", 2, "Resume")}
                         {this.render_link("/slides", 3, "Slides")}
                         {/*this.render_link("/blog", 4, "Blog")*/}
                         {/*this.render_link("/projects", 5, "Projects")*/}
-                    </Nav>
+                    </StyledNav>
                 </Navbar.Collapse>
             </StyledNavbar>
         )
@@ -50,4 +48,25 @@ const StyledNavbar = styled(Navbar)`
 
 const StyledNavbarToggle = styled(Navbar.Toggle)`
 	background: #FFFFFF !important;
+
+    .icon-bar {
+        background: #32383E;
+    }
+`
+
+const StyledNav = styled(Nav)`
+    li > a {
+        font-weight: bold;
+    }
+
+    .active,
+    li > a:focus {
+        color: #3AAA64;
+    }
+
+    .active,
+    li > a:hover,
+    li > a:focus {
+        background: #FFFFFF;
+    }
 `
