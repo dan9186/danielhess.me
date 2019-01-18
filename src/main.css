@@ -1,13 +1,4 @@
 /* ======= Base ======= */
-body {
-	font-family: 'Lato', arial, sans-serif;
-	color: #434343;
-	background: #DAE3E7;
-	font-size: 16px;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
@@ -94,27 +85,4 @@ a.dotted-link {
 a.dotted-link:hover {
 	text-decoration: none;
 	color: #49515a;
-}
-
-/* Extra small devices (phones, less than 768px) */
-@media (max-width: 767px) {
-}
-
-/* Small devices (tablets, 768px and up) */
-@media (max-width: 991px) {
-}
-
-/* Medium devices (desktops, 992px and up) */
-@media (max-width: 1199px) {
-}
-
-/* Large devices (large desktops, 1200px and up) */
-@media (max-width: 1399px) {
-}
-
-/* Ex-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1400px) {
-	.container {
-		width: 1360px;
-	}
 }
