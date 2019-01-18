@@ -14,7 +14,7 @@ const PATHS = {
 module.exports = {
     mode: 'development',
     entry: {
-        main: './src/main.jsx',
+        main: './src/index.jsx',
     },
     module: {
         rules: [
