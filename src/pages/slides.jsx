@@ -1,6 +1,8 @@
 import React from 'react'
 import {Col,Grid,Row} from 'react-bootstrap'
-import {Icon} from 'react-fa'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import styled from 'styled-components'
 
 export class Slides extends React.Component {
@@ -14,7 +16,7 @@ export class Slides extends React.Component {
                 <Col md={12} sm={12} xs={12}>
                     <Section>
                         <SectionInner>
-                            <SectionHeader>Slides <a href="https://github.com/dan9186/slides" target="_blank"><Icon name="github" /></a></SectionHeader>
+                            <SectionHeader>Slides <a href="https://github.com/dan9186/slides" target="_blank"><FontAwesomeIcon icon={faGithub} /></a></SectionHeader>
                             <hr />
                             <Row className="text-center">
                                 <Col md={4} mdOffset={4}>
@@ -37,7 +39,7 @@ export class Slides extends React.Component {
         return (
             <div>
                 <a href={url} target="_blank">
-                    <Icon name={icon} size="5x" />
+                    <FontAwesomeIcon icon={faExclamationTriangle} size="5x" />
                     <h3>{title}</h3>
                 </a>
                 <p>{description}</p>

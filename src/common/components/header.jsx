@@ -6,7 +6,9 @@ import LogoImg from './../../assets/images/logo.png'
 import HeaderBgImg from './../../assets/images/header-bg.jpg'
 
 import {Navigation} from './navigation.jsx'
-import {SocialBadge} from './social_badge.jsx'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import {faGithub, faTwitter, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 
 export class Header extends React.Component {
     constructor() {
@@ -30,10 +32,26 @@ export class Header extends React.Component {
                     <ProfileName>{name}</ProfileName>
                     <ProfileDescription>{description}</ProfileDescription>
                     <SocialList className="list-inline">
-                        <SocialBadge icon="github" href={"https://github.com/" + username} last="true" />
-                        <SocialBadge icon="twitter" href={"https://twitter.com/" + username} />
-                        <SocialBadge icon="linkedin" href={"https://www.linkedin.com/in/" + username + "/"} />
-                        <SocialBadge icon="envelope" href={"mailto:" + email} />
+                        <li>
+                            <SocialLink href={"https://github.com/" + username} target="_blank">
+                                <SocialIcon icon={faGithub} />
+                            </SocialLink>
+                        </li>
+                        <li>
+                            <SocialLink href={"https://twitter.com/" + username} target="_blank">
+                                <SocialIcon icon={faTwitter} />
+                            </SocialLink>
+                        </li>
+                        <li>
+                            <SocialLink href={"https://www.linkedin.com/in/" + username + "/"} target="_blank">
+                                <SocialIcon icon={faLinkedin} />
+                            </SocialLink>
+                        </li>
+                        <li>
+                            <SocialLink href={"mailto:" + email} target="_blank">
+                                <SocialIcon icon={faEnvelope} />
+                            </SocialLink>
+                        </li>
                     </SocialList>
                 </ProfileContent>
                 <ProfileContent right>
@@ -130,4 +148,15 @@ const SocialList = styled.ul`
         color: #FFFFFF;
         text-align: center;
     }
+`
+
+const SocialLink = styled.a`
+    &:hover {
+        background: #259d07;
+    }
+`
+
+const SocialIcon = styled(FontAwesomeIcon)`
+    font-size: 28px !important;
+    padding-top: 8px;
 `

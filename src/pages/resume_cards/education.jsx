@@ -1,5 +1,6 @@
 import React from 'react'
-import {Icon} from 'react-fa'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import styled from 'styled-components'
 
 export class Education extends React.Component {
@@ -15,9 +16,15 @@ export class Education extends React.Component {
                     <hr />
                     <SectionContent>
                         <Degrees>
-                            <Degree><Icon name='graduation-cap' /> B.S. in Computer Engineering</Degree>
-                            <Degree><Icon name='graduation-cap' /> B.S. in Computer Science</Degree>
-                            <Degree><Icon name='graduation-cap' /> Minor in Mathematics</Degree>
+                            <Degree>
+                                <FontAwesomeIcon icon={faGraduationCap} /> B.S. in Computer Engineering
+                            </Degree>
+                            <Degree>
+                                <FontAwesomeIcon icon={faGraduationCap} /> B.S. in Computer Science
+                            </Degree>
+                            <Degree>
+                                <FontAwesomeIcon icon={faGraduationCap} /> Minor in Mathematics
+                            </Degree>
                             <University>
                                 Christian Brothers University
                                 <br/>
