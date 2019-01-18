@@ -3,12 +3,7 @@
   "version": "0.0.1",
   "description": "Personal Website",
   "main": "main.jsx",
-  "scripts": {
-    "build": "webpack -p",
-    "dev": "TRAVIS_COMMIT=$(git rev-parse --short HEAD) webpack-dev-server",
-    "lint": "eslint src/ --ext .js,.jsx",
-    "test": "echo \"Error: no test specified\" && exit 0"
-  },
+  "repository": "git@github.com:dan9186/danielhess.me.git",
   "author": "Daniel Hess",
   "license": "MIT",
   "dependencies": {
@@ -40,6 +35,5 @@
     "url-loader": "^0.5.8",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
-  },
-  "repository": "git@github.com:dan9186/danielhess.me.git"
+  }
 }
