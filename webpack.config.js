@@ -30,16 +30,26 @@ module.exports = {
             {
                 test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)|\.otf($|\?)/,
                 loader: "url-loader?limit=8192",
-            },
-            {
-                test: /\.css$/,
-                loader: 'style-loader!css-loader',
             }
         ],
     },
     output: {
         path: PATHS.dist,
-        filename: 'main.js',
+        publicPath: '/',
+        filename: '[name].js',
+        chunkFilename: '[name].js',
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+            maxInitialRequests: 5,
+            cacheGroups: {
+                style: {
+                    test: /(styled-components|stylis)/,
+                    priority: 10,
+                },
+            },
+        },
     },
     devtool: 'source-map',
     devServer: {
