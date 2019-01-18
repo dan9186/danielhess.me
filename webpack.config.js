@@ -4,7 +4,7 @@ const path = require('path')
 const webpack = require('webpack')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const RobotstxtPlugin = require("robotstxt-webpack-plugin").default
+const RobotstxtPlugin = require('robotstxt-webpack-plugin').default
 
 const PATHS = {
     dist: path.join(__dirname, 'dist'),
@@ -12,32 +12,34 @@ const PATHS = {
 }
 
 module.exports = {
-    entry: './src/main.jsx',
-    output: {
-        path: PATHS.dist,
-        filename: 'main.js',
+    mode: 'development',
+    entry: {
+        main: './src/main.jsx',
     },
     module: {
         rules: [
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loaders: ['react-hot', 'babel?stage=0&optional=runtime&plugins=typecheck'],
+                test: [/\.js$/, /\.jsx?$/],
+                exclude: [/node_modules\/(?!redux-form)/, /\.story.js$/, /\.test.js$/],
+                loader: 'babel-loader',
+            },
+            {
+                test: /\.(png|jpg)$/,
+                loader: 'url-loader?limit=8192',
+            },
+            {
+                test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)|\.otf($|\?)/,
+                loader: "url-loader?limit=8192",
             },
             {
                 test: /\.css$/,
                 loader: 'style-loader!css-loader',
-            },
-            {
-                test: /\.jsx$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader',
-            },
-            {
-                test: /\.(jpg|png|svg|woff|woff2|ttf|eot)$/,
-                loader: 'url-loader?limit=25000',
             }
         ],
+    },
+    output: {
+        path: PATHS.dist,
+        filename: 'main.js',
     },
     devtool: 'source-map',
     devServer: {
