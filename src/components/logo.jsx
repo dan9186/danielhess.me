@@ -6,13 +6,14 @@ export class Logo extends React.Component {
     super(props)
 
     this.state = {
+      className: this.props.className,
       size: this.props.size || '100px',
     }
   }
 
   render() {
     return (
-      <Icon size={this.state.size} viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+      <Icon className={this.state.className} size={this.state.size} viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
         <clipPath id="a">
           <path d="m255.79 111.23c-71 4.44-124.46 32.83-114.88 128.56s28.72 143.59 39.66 151.8 58.8 26 82.05 26 69.75-27.36 78-36.93 17.78-129.92 15-158.64-12.31-116.26-99.83-110.79z"/>
         </clipPath><path d="m484 250c0 129.23-104.76 234-234 234s-234-104.77-234-234 104.77-234 234-234 234 104.77 234 234z"/>
@@ -21,7 +22,7 @@ export class Logo extends React.Component {
           <path d="m357.08 282.38s-5.24 33.89 7.41 32.58 25.6-66.35 20.72-70.42c-9.4-7.87-25.24 5.34-25.24 5.34z"/>
           <path d="m258.6 113.54c-71 4.44-124.45 32.83-114.88 128.56s28.72 143.6 39.66 151.8 58.81 26 82.06 26 69.75-27.35 78-36.93 17.77-129.92 15-158.64-12.31-116.25-99.84-110.79z"/>
         </g>
-        <g clip-path="url(#a)" fill-rule="evenodd">
+        <g clipPath="url(#a)" fillRule="evenodd">
           <path d="m-.4 319.59h.52v.52c-.45.1-.62-.11-.52-.52z"/>
           <path d="m11.25 319.59h.52v.52c-.45.1-.62-.11-.52-.52z"/>
           <path d="m22.91 319.59h.51v.52c-.42.1-.61-.11-.51-.52z"/>
