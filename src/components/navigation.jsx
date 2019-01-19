@@ -8,9 +8,9 @@ export class Navigation extends React.Component {
         return (
             <Navbar role="navigation">
               <Nav>
-                {/*this.render_link("/", 1, "Home")*/}
-                {/*this.render_link("/resume", 2, "Resume")*/}
-                {/*this.render_link("/slides", 3, "Slides")*/}
+                {this.render_link("/", 1, "Home")}
+                {this.render_link("/resume", 2, "Resume")}
+                {this.render_link("/slides", 3, "Slides")}
                 {/*this.render_link("/blog", 4, "Blog")*/}
                 {/*this.render_link("/projects", 5, "Projects")*/}
               </Nav>
@@ -21,37 +21,61 @@ export class Navigation extends React.Component {
   render_link(path, key, text) {
     return (
       <li to={path}>
-        <a href={path} eventKey={key}>{text}</a>
+        <a href={path} eventKey={key} className=''>{text}</a>
       </li>
     )
   }
 }
 
 const Navbar = styled.div`
-  background: #32383E;
-  border-top: #259d07 4px solid !important;
-  height: 60px;
-  position: fixed;
-  top: 0;
+  display: flex;
+  align-self: flex-start;
+  flex-direction: row;
   width: 100%;
-  z-index: 1030;
+  height: 50px;
+  background: #32383E;
+  border-top: #259d07 4px solid;
 `
 
 const Nav = styled.ul`
-  display: flex;
-
-  li > a {
-      font-weight: bold;
+  @media (min-width: 768px) {
+    width: 750px;
   }
 
-  .active,
-  li > a:focus {
-      color: #3AAA64;
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+
+  @media (min-width: 1400px) {
+    width: 1360px;
+  }
+
+  display: flex;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  li > a {
+    color: #3AAA64;
+    padding: 15px;
+    font-weight: bold;
+    text-decoration: none;
   }
 
   .active,
   li > a:hover,
   li > a:focus {
-      background: #FFFFFF;
+    color: #3AAA64;
+    background: #FFFFFF;
+    text-decoration: none;
   }
 `
