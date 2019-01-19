@@ -13,13 +13,13 @@ export class Body extends React.Component {
 
     render() {
         return (
-            <BodyWrapper>
+            <Container>
                 <Switch>
                     <Route exact path='/' component={Home}/>
                     <Route path='/resume' component={Resume}/>
                     <Route path='/slides' component={Slides}/>
                 </Switch>
-            </BodyWrapper>
+            </Container>
         )
     }
 }
