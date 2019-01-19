@@ -19,11 +19,10 @@ export class Header extends React.Component {
 
 const Container = styled.header`
   display: flex;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 
-  padding: 30px 0;
-  margin-top: 55px;
   background-image: url(${HeaderBgImg});
   background-size: cover;
   background-repeat: repeat, no-repeat;

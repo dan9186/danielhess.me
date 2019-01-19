@@ -57,6 +57,8 @@ const Container = styled.div`
 
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
+  margin: 30px 0;
   font-family: "Montserrat", sans-serif;
 `
 
