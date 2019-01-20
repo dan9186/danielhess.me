@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import HeaderBgImg from './../assets/images/header-bg.jpg'
+import HeaderBgImg from '../assets/images/header-bg.jpg'
 
 import {Navigation} from './navigation'
 import {Profile} from './profile'

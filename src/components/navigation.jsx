@@ -1,16 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import 'whatwg-fetch'
-
 export class Navigation extends React.Component {
     render() {
         return (
             <Navbar role="navigation">
               <Nav>
-                {this.render_link("/", 1, "Home")}
-                {this.render_link("/resume", 2, "Resume")}
-                {this.render_link("/slides", 3, "Slides")}
+                {/*this.render_link("/", 1, "Home")*/}
+                {/*this.render_link("/resume", 2, "Resume")*/}
+                {/*this.render_link("/slides", 3, "Slides")*/}
                 {/*this.render_link("/blog", 4, "Blog")*/}
                 {/*this.render_link("/projects", 5, "Projects")*/}
               </Nav>
