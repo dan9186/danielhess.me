@@ -15,9 +15,7 @@ install:
   - make ci_setup
 
 script:
-  - make test
-  - make build
-  - make deploy
+  - make install build deploy
 
 notifications:
   email: false

@@ -1,5 +1,7 @@
 import React from 'react'
-import {Icon} from 'react-fa'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMapMarker, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import styled from 'styled-components'
 
 export class Info extends React.Component {
@@ -15,10 +17,10 @@ export class Info extends React.Component {
                     <hr />
                     <SectionContent>
                         <InfoList>
-                            <InfoItem><InfoIcon name='map-marker' /><span className="sr-only">Location:</span>Portland, OR</InfoItem>
-                            <InfoItem><InfoIcon name='envelope-o' /><span className="sr-only">Email:</span><a href="#">daniel@danielhess.me</a></InfoItem>
-                            <InfoItem><InfoIcon name='github' /><span className="sr-only">Github:</span><a href="#">github.com/dan9186</a></InfoItem>
-                            <InfoItem><InfoIcon name='twitter' /><span className="sr-only">Twitter:</span><a href="#">@dan9186</a></InfoItem>
+                            <InfoItem><InfoIcon icon={faMapMarker} /><span className="sr-only">Location:</span>Portland, OR</InfoItem>
+                            <InfoItem><InfoIcon icon={faEnvelope} /><span className="sr-only">Email:</span><a href="#">daniel@danielhess.me</a></InfoItem>
+                            <InfoItem><InfoIcon icon={faGithub} /><span className="sr-only">Github:</span><a href="#">github.com/dan9186</a></InfoItem>
+                            <InfoItem><InfoIcon icon={faTwitter} /><span className="sr-only">Twitter:</span><a href="#">@dan9186</a></InfoItem>
                         </InfoList>
                     </SectionContent>
                 </SectionInner>
@@ -75,7 +77,7 @@ const InfoItem = styled.li`
     }
 `
 
-const InfoIcon = styled(Icon)`
+const InfoIcon = styled(FontAwesomeIcon)`
 	margin-right: 15px;
 	color: #778492;
 `

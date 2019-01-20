@@ -1,6 +1,7 @@
 import React from 'react'
 import {Clearfix} from 'react-bootstrap'
-import {Icon} from 'react-fa'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMapMarker } from '@fortawesome/free-solid-svg-icons'
 import styled from 'styled-components'
 
 export class ProfessionalExperience extends React.Component {
@@ -16,7 +17,7 @@ export class ProfessionalExperience extends React.Component {
                     <hr />
                     <SectionContent>
                         <h3>Senior Software Engineer<span className="pull-right date-range">September 2016 – Present</span></h3>
-                        <h4>Ion Channel<span className="pull-right"><Icon name='map-marker' /> Portland, OR</span></h4>
+                        <h4>Ion Channel<span className="pull-right"><FontAwesomeIcon icon={faMapMarker} /> Portland, OR</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
                         <ul>
@@ -40,7 +41,7 @@ export class ProfessionalExperience extends React.Component {
                     <Clearfix />
                     <SectionContent>
                         <h3>Senior Software Engineer<span className="pull-right date-range">January 2016 – September 2016</span></h3>
-                        <h4>Treetop Commons, LLC<span className="pull-right"><Icon name='map-marker' /> Portland, OR</span></h4>
+                        <h4>Treetop Commons, LLC<span className="pull-right"><FontAwesomeIcon icon={faMapMarker} /> Portland, OR</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
                         <ul>
@@ -69,7 +70,7 @@ export class ProfessionalExperience extends React.Component {
                     <Clearfix />
                     <SectionContent>
                         <h3>Devops Engineer<span className="pull-right date-range">June 2014 – Dec 2015</span></h3>
-                        <h4>Monsoon Commerce<span className="pull-right"><Icon name='map-marker' /> Portland, OR</span></h4>
+                        <h4>Monsoon Commerce<span className="pull-right"><FontAwesomeIcon icon={faMapMarker} /> Portland, OR</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
                         <ul>
@@ -109,7 +110,7 @@ export class ProfessionalExperience extends React.Component {
                     <Clearfix />
                     <SectionContent>
                         <h3>System Administrator I<span className="pull-right date-range">June 2013 – June 2014</span></h3>
-                        <h4>St. Jude Children's Research Hospital<span className="pull-right"><Icon name='map-marker' /> Memphis, TN</span></h4>
+                        <h4>St. Jude Children's Research Hospital<span className="pull-right"><FontAwesomeIcon icon={faMapMarker} /> Memphis, TN</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
                         <ul>
@@ -150,7 +151,7 @@ export class ProfessionalExperience extends React.Component {
                     <Clearfix />
                     <SectionContent>
                         <h3>Senior Technical Service Provider<span className="pull-right date-range"> January 2012 – June 2013</span></h3>
-                        <h4>St. Jude Children's Research Hospital<span className="pull-right"><Icon name='map-marker' /> Memphis, TN</span></h4>
+                        <h4>St. Jude Children's Research Hospital<span className="pull-right"><FontAwesomeIcon icon={faMapMarker} /> Memphis, TN</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
                         <ul>
@@ -184,7 +185,7 @@ export class ProfessionalExperience extends React.Component {
                     <Clearfix />
                     <SectionContent>
                         <h3>Technical Service Provider<span className="pull-right date-range"> June 2009 – January 2012</span></h3>
-                        <h4>St. Jude Children's Research Hospital<span className="pull-right"><Icon name='map-marker' /> Memphis, TN</span></h4>
+                        <h4>St. Jude Children's Research Hospital<span className="pull-right"><FontAwesomeIcon icon={faMapMarker} /> Memphis, TN</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
                         <ul>
@@ -217,7 +218,7 @@ export class ProfessionalExperience extends React.Component {
                     <Clearfix />
                     <SectionContent>
                         <h3>Student Intern PC Support Specialist<span className="pull-right date-range">Nov. 2005 – June 2009</span></h3>
-                        <h4>St. Jude Children's Research Hospital<span className="pull-right"><Icon name='map-marker' /> Memphis, TN</span></h4>
+                        <h4>St. Jude Children's Research Hospital<span className="pull-right"><FontAwesomeIcon icon={faMapMarker} /> Memphis, TN</span></h4>
                         <hr />
                         <h4>Responsibilities</h4>
                         <ul>
