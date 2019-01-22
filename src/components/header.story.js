@@ -8,4 +8,4 @@ const globalStyle = {
 
 storiesOf('Header', module)
   .addDecorator(story => <div style={globalStyle}>{story()}</div>)
-  .add('default', () => <Header />)
+  .add('complete', () => <Header />)
