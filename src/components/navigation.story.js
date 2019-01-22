@@ -6,6 +6,6 @@ const globalStyle = {
   fontFamily: 'Lato',
 }
 
-storiesOf('Navigation', module)
+storiesOf('Header/Navigation', module)
   .addDecorator(story => <div style={globalStyle}>{story()}</div>)
   .add('default', () => <Navigation />)
