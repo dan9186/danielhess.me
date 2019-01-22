@@ -29,6 +29,22 @@ export class Row extends React.Component {
   }
 }
 
+export class Columns extends React.Component {
+  render() {
+    return (
+      <ColumnsContainer>
+        {this.props.children}
+      </ColumnsContainer>
+    )
+  }
+}
+
+const ColumnsContainer = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+`
+
 const RowContainer = styled.div`
   @media (min-width: 768px) {
     width: 750px;

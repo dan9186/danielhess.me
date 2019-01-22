@@ -8,8 +8,8 @@ import {Footer} from '../components/footer'
 import {Home} from './home'
 /*
 import {Resume} from './resume'
-import {Slides} from './slides'
 */
+import {Slides} from './slides'
 
 export class App extends React.Component {
   render() {
@@ -23,8 +23,8 @@ export class App extends React.Component {
               <Route exact path='/' component={Home}/>
               {/*
               <Route path='/resume' component={Resume}/>
-              <Route path='/slides' component={Slides}/>
               */}
+              <Route path='/slides' component={Slides}/>
             </Switch>
           </Content>
         </Body>
