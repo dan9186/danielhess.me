@@ -5,8 +5,8 @@ import styled, {createGlobalStyle} from 'styled-components'
 import {Header} from '../components/header'
 import {Footer} from '../components/footer'
 
-/*
 import {Home} from './home'
+/*
 import {Resume} from './resume'
 import {Slides} from './slides'
 */
@@ -17,17 +17,19 @@ export class App extends React.Component {
       <React.Fragment>
         <GlobalStyle />
         <Header />
-        <Container>
-          <Switch>
-            {/*
-            <Route exact path='/' component={Home}/>
-            <Route path='/resume' component={Resume}/>
-            <Route path='/slides' component={Slides}/>
-            */}
-          </Switch>
-        </Container>
-        <Footer version={VERSION} commit={BUILD} />
-      </React.Fragment>
+        <Body>
+          <Content>
+            <Switch>
+              <Route exact path='/' component={Home}/>
+              {/*
+              <Route path='/resume' component={Resume}/>
+              <Route path='/slides' component={Slides}/>
+              */}
+            </Switch>
+          </Content>
+        </Body>
+      <Footer version={VERSION} commit={BUILD} />
+    </React.Fragment>
     )
   }
 }
@@ -51,12 +53,17 @@ const GlobalStyle = createGlobalStyle`
 
   #app {
     min-height: 100%;
-    align-items: stretch;
     display: flex;
     flex-direction: column;
   }
 `
 
-const Container = styled.div`
+const Body = styled.div`
+  display: flex;
+  justify-content: center;
   flex-grow: 1;
+`
+
+const Content = styled.div`
+  display: block;
 `

@@ -6,7 +6,7 @@ export class Navigation extends React.Component {
         return (
             <Navbar role="navigation">
               <Nav>
-                {/*this.render_link("/", 1, "Home")*/}
+                {this.render_link("/", 1, "Home")}
                 {/*this.render_link("/resume", 2, "Resume")*/}
                 {/*this.render_link("/slides", 3, "Slides")*/}
                 {/*this.render_link("/blog", 4, "Blog")*/}
@@ -27,10 +27,11 @@ export class Navigation extends React.Component {
 
 const Navbar = styled.div`
   display: flex;
-  align-self: flex-start;
-  flex-direction: row;
+  justify-content: center;
+
   width: 100%;
   height: 50px;
+
   background: #32383E;
   border-top: #259d07 4px solid;
 `
@@ -53,6 +54,8 @@ const Nav = styled.ul`
   }
 
   display: flex;
+  flex-direction: row;
+
   margin: 0;
   padding-left: 0;
   list-style: none;
