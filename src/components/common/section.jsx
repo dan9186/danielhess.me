@@ -30,6 +30,22 @@ export class Row extends React.Component {
 }
 
 const RowContainer = styled.div`
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+
+  @media (min-width: 1400px) {
+    width: 1360px;
+  }
+
   display: flex;
   flex-direction: row;
   align-content: stretch;
