@@ -10,7 +10,8 @@ export class Footer extends React.Component {
     super(props)
 
     this.state = {
-      version: `${this.props.version}-${this.props.commit.slice(0,7)}`,
+      version: this.props.version || '0.0.1',
+      commit: this.props.commit ? this.props.commit.slice(0,7) : 'dev',
     }
   }
 
@@ -18,7 +19,7 @@ export class Footer extends React.Component {
     return (
       <Container>
         <SmallText>© All rights reserved. Daniel Hess 2017</SmallText>
-        <SmallText>v{this.state.version} powered by <ReactIcon />, runs on <GCPIcon />, deployed with <TerraformIcon /></SmallText>
+        <SmallText>v{this.state.version}-{this.state.commit} powered by <ReactIcon />, runs on <GCPIcon />, deployed with <TerraformIcon /></SmallText>
       </Container>
     )
   }
