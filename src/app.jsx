@@ -13,9 +13,7 @@ export class App extends React.Component {
         <GlobalStyle />
         <Header />
         <Body>
-          <Content>
-            <Pages />
-          </Content>
+          <Pages />
         </Body>
       <Footer version={VERSION} commit={BUILD} />
     </React.Fragment>
