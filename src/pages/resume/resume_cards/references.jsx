@@ -1,37 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export class References extends React.Component {
-    constructor() {
-        super()
-    }
-
-    render() {
-        return (
-            <Section>
-                <SectionInner>
-                    <SectionHeader>References</SectionHeader>
-                    <hr />
-                    <SectionContent>
-                        Available upon request.
-                    </SectionContent>
-                </SectionInner>
-            </Section>
-        )
-    }
-}
+export const References = () => (
+  <Section>
+    <SectionInner>
+      <SectionHeader>References</SectionHeader>
+      <hr />
+      <SectionContent>
+        Available upon request.
+      </SectionContent>
+    </SectionInner>
+  </Section>
+)
 
 const Section = styled.section`
-	margin-bottom: 30px;
-	background: #fff;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border: 2px solid #778492;
+  margin-bottom: 30px;
+  background: #fff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 2px solid #778492;
 `
 
 const SectionInner = styled.div`
-	padding: 30px;
+  padding: 30px;
 
     hr {
         border: #C2EAD2 1px solid;
