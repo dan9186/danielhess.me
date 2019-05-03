@@ -47,10 +47,7 @@ const GlobalStyle = createGlobalStyle`
 
 const Body = styled.div`
   display: flex;
+  flex-flow: column nowrap;
   flex-grow: 1;
-  justify-content: center;
-`
-
-const Content = styled.div`
-  display: block;
+  align-items: center;
 `
