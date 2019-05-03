@@ -1,11 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import {library, findIconDefinition} from '@fortawesome/fontawesome-svg-core'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {fas} from '@fortawesome/free-solid-svg-icons'
-
-import {Navigation} from './navigation'
+import { library, findIconDefinition } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 
 export const Slide = (props) => {
   library.add(fas)
