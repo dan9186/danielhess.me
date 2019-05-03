@@ -1,8 +1,8 @@
 import React from 'react'
 import styled, {createGlobalStyle} from 'styled-components'
 
-import {Header} from './components/header'
-import {Footer} from './components/footer'
+import { Header } from './components/header'
+import { Footer } from './components/footer'
 
 import { Pages } from './pages'
 
@@ -50,8 +50,8 @@ const GlobalStyle = createGlobalStyle`
 
 const Body = styled.div`
   display: flex;
-  justify-content: center;
   flex-grow: 1;
+  justify-content: center;
 `
 
 const Content = styled.div`
