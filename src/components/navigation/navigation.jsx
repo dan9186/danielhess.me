@@ -11,8 +11,8 @@ export const Navigation = () => (
   <Navbar role="navigation">
     <Nav>
       <Link path='/' key='1' text='Home' />
+      <Link path='/resume' key='2' text='Resume' />
       <Link path='/slides' key='3' text='Slides' />
-      {/*this.render_link("/resume", 2, "Resume")*/}
       {/*this.render_link("/blog", 4, "Blog")*/}
       {/*this.render_link("/projects", 5, "Projects")*/}
     </Nav>
