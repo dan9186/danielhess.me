@@ -7,31 +7,23 @@ import {fas} from '@fortawesome/free-solid-svg-icons'
 
 import {Navigation} from './navigation'
 
-export class Slide extends React.Component {
-  constructor(props) {
-    super(props)
+export const Slide = (props) => {
+  library.add(fas)
 
-    library.add(fas)
+  const url = props.url || '#'
+  const icon = findIconDefinition({prefix: 'fas', iconName: (props.icon || 'exclamation-triangle')})
+  const title = props.title
+  const description = props.description
 
-    this.state = {
-      url: this.props.url || '#',
-      icon: findIconDefinition({prefix: 'fas', iconName: (this.props.icon || 'exclamation-triangle')}),
-      title: this.props.title,
-      description: this.props.description,
-    }
-  }
-
-  render() {
-    return (
-      <Container>
-        <a href={this.state.url} target="_blank">
-          <Icon icon={this.state.icon} size="5x" />
-          <Title>{this.state.title}</Title>
-        </a>
-        <Description>{this.state.description}</Description>
-      </Container>
-    )
-  }
+  return (
+    <Container>
+      <a href={url} target="_blank">
+        <Icon icon={icon} size="5x" />
+        <Title>{title}</Title>
+      </a>
+      <Description>{description}</Description>
+    </Container>
+  )
 }
 
 const Container = styled.div`

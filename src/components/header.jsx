@@ -6,16 +6,12 @@ import HeaderBgImg from '../assets/images/header-bg.jpg'
 import {Navigation} from './navigation'
 import {Profile} from './profile'
 
-export class Header extends React.Component {
-  render() {
-    return (
-      <Container>
-        <Navigation />
-        <Profile name='Daniel Hess' email='daniel@danielhess.me' username='dan9186' description='Devops Engineer' />
-      </Container>
-    )
-  }
-}
+export const Header = () => (
+  <Container>
+    <Navigation />
+    <Profile name='Daniel Hess' email='daniel@danielhess.me' username='dan9186' description='Devops Engineer' />
+  </Container>
+)
 
 const Container = styled.header`
   display: flex;

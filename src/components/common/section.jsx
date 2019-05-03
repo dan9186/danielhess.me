@@ -56,7 +56,7 @@ const RowContainer = styled.div`
 const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  flex-grow: ${state => state.grow};
+  flex-grow: ${props => props.grow};
   flex-basis: 0;
 
   padding: 30px;
@@ -88,15 +88,11 @@ const SectionContainer = styled.div`
     color: #616b76;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 30px;
     color: #545e69;
     font-family: 'Montserrat', sans-serif;
-  }
-
-  h2 {
-    font-size: 24px;
   }
 
   h3 {
@@ -114,16 +110,18 @@ const SectionContainer = styled.div`
   h6 {
     font-size: 10px;
   }
-
-  hr {
-      border: #C2EAD2 1px solid;
-      margin: 0 0 20px 0;
-  }
 `
 
 const SubHeadingContainer = styled.h2`
-  font-size: 24px;
   margin-top: 0px;
   margin-bottom: 30px;
-  color: rgb(84, 94, 105);
+
+  font-size: 24px;
+  color: #545e69;
+  font-family: 'Montserrat', sans-serif;
   `
+
+export const Divider = styled.hr`
+  border: #C2EAD2 1px solid;
+  margin: 0 0 20px 0;
+`
