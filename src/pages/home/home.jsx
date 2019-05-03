@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 
-import {Section, Row} from '../components/common/section'
+import {Section, Row} from '../../components/common/section'
 
 export class Home extends React.Component {
   render() {

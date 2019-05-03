@@ -2,17 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 export class Section extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      grow: this.props.grow || 1,
-    }
-  }
-
   render() {
     return (
-      <SectionContainer grow={this.state.grow}>
+      <SectionContainer grow={this.props.grow || 1}>
         {this.props.children}
       </SectionContainer>
     )

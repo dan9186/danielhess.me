@@ -1,15 +1,11 @@
 import React from 'react'
-import {Switch,Route} from 'react-router-dom'
 import styled, {createGlobalStyle} from 'styled-components'
 
-import {Header} from '../components/header'
-import {Footer} from '../components/footer'
+import {Header} from './components/header'
+import {Footer} from './components/footer'
 
-import {Home} from './home'
-/*
-import {Resume} from './resume'
-*/
-import {Slides} from './slides'
+import { Pages } from './pages'
+
 
 export class App extends React.Component {
   render() {
@@ -19,13 +15,7 @@ export class App extends React.Component {
         <Header />
         <Body>
           <Content>
-            <Switch>
-              <Route exact path='/' component={Home}/>
-              {/*
-              <Route path='/resume' component={Resume}/>
-              */}
-              <Route path='/slides' component={Slides}/>
-            </Switch>
+            <Pages />
           </Content>
         </Body>
       <Footer version={VERSION} commit={BUILD} />

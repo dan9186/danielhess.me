@@ -1,9 +1,11 @@
 import React from 'react'
-import {Section, Row, Columns} from '../components/common/section'
-import {Slide} from '../components/slide'
+import styled from 'styled-components'
+
+import { Section, Row, Columns } from '../../components/common/section'
+import { Slide } from '../../components/slide'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import styled from 'styled-components'
 
 export class Slides extends React.Component {
   render() {
