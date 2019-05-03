@@ -15,6 +15,10 @@ PROD_CDN_HOST := www.danielhess.me
 .PHONY: all
 all: test
 
+.PHONY: analyze_bundle
+analyze_bundle: build ## view the bundle stats
+	yarn run webpack-bundle-analyzer dist/stats.json
+
 .PHONY: build
 build: install  ## Build the project
 	@echo "Building Project"
