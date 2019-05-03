@@ -10,6 +10,7 @@ storiesOf('Common/Sections', module)
       <Section><Typography /></Section>
     </Row>
   ))
+
 storiesOf('Common/Sections/Columns', module)
   .add('default spacing', () => (
     <Row>
@@ -23,6 +24,7 @@ storiesOf('Common/Sections/Columns', module)
       <Section />
     </Row>
   ))
+
 storiesOf('Common/Sections/Rows', module)
   .add('default spacing', () => (
     <React.Fragment>
