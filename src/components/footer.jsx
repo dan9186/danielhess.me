@@ -5,24 +5,16 @@ import {TerraformIcon} from './icons/terraform'
 import {ReactIcon} from './icons/react'
 import {GCPIcon} from './icons/gcp'
 
-export class Footer extends React.Component {
-  constructor(props) {
-    super(props)
+export const Footer = (props) => {
+  const version = props.version || '0.0.1'
+  const commit = props.commit ? props.commit.slice(0,7) : 'dev'
 
-    this.state = {
-      version: this.props.version || '0.0.1',
-      commit: this.props.commit ? this.props.commit.slice(0,7) : 'dev',
-    }
-  }
-
-  render() {
-    return (
-      <Container>
-        <SmallText>© All rights reserved. Daniel Hess 2017</SmallText>
-        <SmallText>v{this.state.version}-{this.state.commit} powered by <ReactIcon />, runs on <GCPIcon />, deployed with <TerraformIcon /></SmallText>
-      </Container>
-    )
-  }
+  return (
+    <Container>
+      <SmallText>© All rights reserved. Daniel Hess 2017</SmallText>
+      <SmallText>v{version}-{commit} powered by <ReactIcon />, runs on <GCPIcon />, deployed with <TerraformIcon /></SmallText>
+    </Container>
+  )
 }
 
 const Container = styled.footer`
