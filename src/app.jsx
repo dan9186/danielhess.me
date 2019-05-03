@@ -1,8 +1,8 @@
 import React from 'react'
 import styled, {createGlobalStyle} from 'styled-components'
 
-import { Header } from './components/header'
-import { Footer } from './components/footer'
+import { Header } from './components/header/header'
+import { Footer } from './components/footer/footer'
 
 import { Pages } from './pages'
 

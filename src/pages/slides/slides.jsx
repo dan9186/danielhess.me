@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Section, Row, Columns, SubHeading } from '../../components/common/section'
-import { Slide } from '../../components/slide'
+import { Section, Row, Columns, SubHeading } from '../../components/section/section'
+import { Slide } from '../../components/slide/slide'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'

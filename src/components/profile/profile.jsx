@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import {Logo} from './logo'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
-import {faGithub, faTwitter, faLinkedin} from '@fortawesome/free-brands-svg-icons'
+import { Logo } from '../logo/logo'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 export const Profile = (props) => {
   const name = props.name

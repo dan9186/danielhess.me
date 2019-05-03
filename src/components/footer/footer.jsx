@@ -1,9 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import {TerraformIcon} from './icons/terraform'
-import {ReactIcon} from './icons/react'
-import {GCPIcon} from './icons/gcp'
+import * as Icons from '../icons'
 
 export const Footer = (props) => {
   const version = props.version || '0.0.1'
@@ -12,7 +10,7 @@ export const Footer = (props) => {
   return (
     <Container>
       <SmallText>© All rights reserved. Daniel Hess 2017</SmallText>
-      <SmallText>v{version}-{commit} powered by <ReactIcon />, runs on <GCPIcon />, deployed with <TerraformIcon /></SmallText>
+      <SmallText>v{version}-{commit} powered by <Icons.ReactIcon />, runs on <Icons.GCPIcon />, deployed with <Icons.TerraformIcon /></SmallText>
     </Container>
   )
 }

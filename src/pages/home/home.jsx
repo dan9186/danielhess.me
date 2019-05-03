@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import { Section, Row, SubHeading, Divider } from '../../components/common/section'
+import { Section, Row, SubHeading, Divider } from '../../components/section/section'
 
 export const Home = () => (
   <Row>
