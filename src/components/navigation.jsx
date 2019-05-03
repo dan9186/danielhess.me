@@ -1,29 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export class Navigation extends React.Component {
-    render() {
-        return (
-            <Navbar role="navigation">
-              <Nav>
-                {this.render_link("/", 1, "Home")}
-                {/*this.render_link("/resume", 2, "Resume")*/}
-                {this.render_link("/slides", 3, "Slides")}
-                {/*this.render_link("/blog", 4, "Blog")*/}
-                {/*this.render_link("/projects", 5, "Projects")*/}
-              </Nav>
-            </Navbar>
-        )
-    }
+const Link = (props) => (
+  <li to={props.path}>
+    <a href={props.path} eventKey={props.key}>{props.text}</a>
+  </li>
+)
 
-  render_link(path, key, text) {
-    return (
-      <li to={path}>
-        <a href={path} eventKey={key} className=''>{text}</a>
-      </li>
-    )
-  }
-}
+export const Navigation = () => (
+  <Navbar role="navigation">
+    <Nav>
+      <Link path='/' key='1' text='Home' />
+      <Link path='/slides' key='3' text='Slides' />
+      {/*this.render_link("/resume", 2, "Resume")*/}
+      {/*this.render_link("/blog", 4, "Blog")*/}
+      {/*this.render_link("/projects", 5, "Projects")*/}
+    </Nav>
+  </Navbar>
+)
 
 const Navbar = styled.div`
   display: flex;

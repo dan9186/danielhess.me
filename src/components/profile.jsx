@@ -6,36 +6,28 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import {faGithub, faTwitter, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 
-export class Profile extends React.Component {
-  constructor(props) {
-    super(props)
+export const Profile = (props) => {
+  const name = props.name
+  const email = props.email
+  const username = props.username
+  const description = props.description
 
-    this.state = {
-      name: this.props.name,
-      email: this.props.email,
-      username: this.props.username,
-      description: this.props.description,
-    }
-  }
-
-  render() {
-    return (
-      <Container>
-        <ProfileImage size='150px' />
-        <Content>
-          <Name>{this.state.name}</Name>
-          <Description>{this.state.description}</Description>
-          <SocialList>
-            <li><a href={"https://github.com/" + this.state.username} target="_blank"><SocialIcon icon={faGithub} /></a></li>
-            <li><a href={"https://twitter.com/" + this.state.username} target="_blank"><SocialIcon icon={faTwitter} /></a></li>
-            <li><a href={"https://www.linkedin.com/in/" + this.state.username + "/"} target="_blank"><SocialIcon icon={faLinkedin} /></a></li>
-            <li><a href={"mailto:" + this.state.email} target="_blank"><SocialIcon icon={faEnvelope} /></a></li>
-          </SocialList>
-        </Content>
-        <Slogan>Dedicated to <span>Devops</span></Slogan>
-      </Container>
-    )
-  }
+  return (
+    <Container>
+      <ProfileImage size='150px' />
+      <Content>
+        <Name>{name}</Name>
+        <Description>{description}</Description>
+        <SocialList>
+          <li><a href={"https://github.com/" + username} target="_blank"><SocialIcon icon={faGithub} /></a></li>
+          <li><a href={"https://twitter.com/" + username} target="_blank"><SocialIcon icon={faTwitter} /></a></li>
+          <li><a href={"https://www.linkedin.com/in/" + username + "/"} target="_blank"><SocialIcon icon={faLinkedin} /></a></li>
+          <li><a href={"mailto:" + email} target="_blank"><SocialIcon icon={faEnvelope} /></a></li>
+        </SocialList>
+      </Content>
+      <Slogan>Dedicated to <span>Devops</span></Slogan>
+    </Container>
+  )
 }
 
 const Container = styled.div`
