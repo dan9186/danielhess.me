@@ -1,5 +1,4 @@
 import React from 'react'
-import {Clearfix} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarker } from '@fortawesome/free-solid-svg-icons'
 import styled from 'styled-components'
@@ -38,7 +37,6 @@ export class ProfessionalExperience extends React.Component {
                             <li>Designed multiple new services in Golang to provide good examples for less experienced team members</li>
                         </ul>
                     </SectionContent>
-                    <Clearfix />
                     <SectionContent>
                         <h3>Senior Software Engineer<span className="pull-right date-range">January 2016 – September 2016</span></h3>
                         <h4>Treetop Commons, LLC<span className="pull-right"><FontAwesomeIcon icon={faMapMarker} /> Portland, OR</span></h4>
@@ -67,7 +65,6 @@ export class ProfessionalExperience extends React.Component {
                             <li>Drove changes in Agile process to have sprint planning, estimating, grooming, and retrospectives that were not happening previously and resulting in significant churn during a sprint</li>
                         </ul>
                     </SectionContent>
-                    <Clearfix />
                     <SectionContent>
                         <h3>Devops Engineer<span className="pull-right date-range">June 2014 – Dec 2015</span></h3>
                         <h4>Monsoon Commerce<span className="pull-right"><FontAwesomeIcon icon={faMapMarker} /> Portland, OR</span></h4>
@@ -107,7 +104,6 @@ export class ProfessionalExperience extends React.Component {
                             <li>Assisted in architecture and development of a Golang based strangler for a legacy Java service</li>
                         </ul>
                     </SectionContent>
-                    <Clearfix />
                     <SectionContent>
                         <h3>System Administrator I<span className="pull-right date-range">June 2013 – June 2014</span></h3>
                         <h4>St. Jude Children's Research Hospital<span className="pull-right"><FontAwesomeIcon icon={faMapMarker} /> Memphis, TN</span></h4>
@@ -148,7 +144,6 @@ export class ProfessionalExperience extends React.Component {
                             <li>Assisted on documentation and training for Field Techs on tools and technology</li>
                         </ul>
                     </SectionContent>
-                    <Clearfix />
                     <SectionContent>
                         <h3>Senior Technical Service Provider<span className="pull-right date-range"> January 2012 – June 2013</span></h3>
                         <h4>St. Jude Children's Research Hospital<span className="pull-right"><FontAwesomeIcon icon={faMapMarker} /> Memphis, TN</span></h4>
@@ -182,7 +177,6 @@ export class ProfessionalExperience extends React.Component {
                             <li>Redesigned and automated numerous workflows within Inventory Management system</li>
                         </ul>
                     </SectionContent>
-                    <Clearfix />
                     <SectionContent>
                         <h3>Technical Service Provider<span className="pull-right date-range"> June 2009 – January 2012</span></h3>
                         <h4>St. Jude Children's Research Hospital<span className="pull-right"><FontAwesomeIcon icon={faMapMarker} /> Memphis, TN</span></h4>
@@ -215,7 +209,6 @@ export class ProfessionalExperience extends React.Component {
                             <li>Provided education and training on use of inventory and ticketing application to all of Client Services</li>
                         </ul>
                     </SectionContent>
-                    <Clearfix />
                     <SectionContent>
                         <h3>Student Intern PC Support Specialist<span className="pull-right date-range">Nov. 2005 – June 2009</span></h3>
                         <h4>St. Jude Children's Research Hospital<span className="pull-right"><FontAwesomeIcon icon={faMapMarker} /> Memphis, TN</span></h4>
