@@ -1,14 +1,13 @@
 import React from 'react'
-import {Col,Grid} from 'react-bootstrap'
 import styled from 'styled-components'
 
-import {Accomplishments} from './resume_cards/accomplishments.jsx'
-import {Education} from './resume_cards/education.jsx'
-import {Info} from './resume_cards/info.jsx'
-import {Preface} from './resume_cards/preface.jsx'
-import {ProfessionalExperience} from './resume_cards/professional_experience.jsx'
-import {References} from './resume_cards/references.jsx'
-import {TechnicalExperience} from './resume_cards/technical_experience.jsx'
+import { Accomplishments } from './resume_cards/accomplishments.jsx'
+import { Education } from './resume_cards/education.jsx'
+import { Info } from './resume_cards/info.jsx'
+import { Preface } from './resume_cards/preface.jsx'
+import { ProfessionalExperience } from './resume_cards/professional_experience.jsx'
+import { References } from './resume_cards/references.jsx'
+import { TechnicalExperience } from './resume_cards/technical_experience.jsx'
 
 export class Resume extends React.Component {
   constructor() {
@@ -39,4 +38,10 @@ export class Resume extends React.Component {
 const SectionWrapper = styled(Grid)`
   padding-top: 30px;
   padding-bottom: 30px;
+`
+
+const Col = styled.div`
+`
+
+const Row = styled.div`
 `

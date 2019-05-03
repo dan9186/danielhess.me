@@ -1,5 +1,4 @@
 import React from 'react'
-import {Col,Row} from 'react-bootstrap'
 import styled from 'styled-components'
 
 import './technical_experience.css'
@@ -213,4 +212,10 @@ const SectionContent = styled.div`
     hr {
         border: #C2EAD2 1px solid;
     }
+`
+
+const Col = styled.div`
+`
+
+const Row = styled.div`
 `

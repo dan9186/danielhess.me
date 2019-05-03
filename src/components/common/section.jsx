@@ -1,43 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export class Section extends React.Component {
-  constructor(props) {
-    super(props)
+export const SubHeading = (props) => (
+  <SubHeadingContainer>
+    {props.children}
+  </SubHeadingContainer>
+)
 
-    this.state = {
-      grow: this.props.grow || 1,
-    }
-  }
+export const Section = (props) => (
+  <SectionContainer grow={props.grow || 1}>
+    {props.children}
+  </SectionContainer>
+)
 
-  render() {
-    return (
-      <SectionContainer grow={this.state.grow}>
-        {this.props.children}
-      </SectionContainer>
-    )
-  }
-}
+export const Row = (props) => (
+  <RowContainer>
+    {props.children}
+  </RowContainer>
+)
 
-export class Row extends React.Component {
-  render() {
-    return (
-      <RowContainer>
-        {this.props.children}
-      </RowContainer>
-    )
-  }
-}
-
-export class Columns extends React.Component {
-  render() {
-    return (
-      <ColumnsContainer>
-        {this.props.children}
-      </ColumnsContainer>
-    )
-  }
-}
+export const Columns = (props) => (
+  <ColumnsContainer>
+    {props.children}
+  </ColumnsContainer>
+)
 
 const ColumnsContainer = styled.div`
   display: flex;
@@ -134,3 +120,10 @@ const SectionContainer = styled.div`
       margin: 0 0 20px 0;
   }
 `
+
+const SubHeadingContainer = styled.h2`
+  font-size: 24px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  color: rgb(84, 94, 105);
+  `
