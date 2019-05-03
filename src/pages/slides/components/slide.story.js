@@ -1,7 +1,7 @@
 import React from 'react'
-import {storiesOf} from '@storybook/react'
-import {Section, Columns} from './common/section'
-import {Slide} from './slide'
+import { storiesOf } from '@storybook/react'
+import { Section, Columns } from '../../../components/section/section'
+import { Slide } from './slide'
 
 const globalStyle = {
   fontFamily: 'Lato',
