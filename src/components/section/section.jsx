@@ -8,27 +8,28 @@ export const SubHeading = (props) => (
 )
 
 export const Section = (props) => (
-  <SectionContainer grow={props.grow || 1}>
+  <SectionContainer>
     {props.children}
   </SectionContainer>
 )
 
 export const Row = (props) => (
-  <RowContainer>
+  <RowContainer grow={props.grow || 1}>
     {props.children}
   </RowContainer>
 )
 
-export const Columns = (props) => (
-  <ColumnsContainer>
+export const Col = (props) => (
+  <ColumnContainer grow={props.grow || 1}>
     {props.children}
-  </ColumnsContainer>
+  </ColumnContainer>
 )
 
-const ColumnsContainer = styled.div`
+const ColumnContainer = styled.div`
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  flex-flow: column wrap;
+  flex-grow: ${props => props.grow};
+  flex-basis: 0;
 `
 
 const RowContainer = styled.div`
@@ -49,15 +50,14 @@ const RowContainer = styled.div`
   }
 
   display: flex;
-  flex-direction: row;
-  align-content: stretch;
+  flex-direction: row wrap;
+  flex-grow: ${props => props.grow};
+  flex-basis: 0;
 `
 
 const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  flex-grow: ${props => props.grow};
-  flex-basis: 0;
 
   padding: 30px;
   margin: 30px 15px 0px 15px;
