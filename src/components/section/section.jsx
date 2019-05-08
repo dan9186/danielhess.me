@@ -30,29 +30,21 @@ const ColumnContainer = styled.div`
   flex-flow: column wrap;
   flex-grow: ${props => props.grow};
   flex-basis: 0;
+
+  margin-bottom: 0;
+  margin-right: 15px;
+  &:last-child {
+    margin-right: 0;
+  }
 `
 
 const RowContainer = styled.div`
-  @media (min-width: 768px) {
-    width: 750px;
-  }
-
-  @media (min-width: 992px) {
-    width: 970px;
-  }
-
-  @media (min-width: 1200px) {
-    width: 1170px;
-  }
-
-  @media (min-width: 1400px) {
-    width: 1360px;
-  }
-
   display: flex;
   flex-direction: row wrap;
   flex-grow: ${props => props.grow};
   flex-basis: 0;
+
+  margin-bottom: 15px;
 `
 
 const SectionContainer = styled.div`
@@ -88,23 +80,11 @@ const SectionContainer = styled.div`
     color: #616b76;
   }
 
-  h1, h3, h4, h5, h6 {
+  h1, h6 {
     margin-top: 0;
     margin-bottom: 30px;
     color: #545e69;
     font-family: 'Montserrat', sans-serif;
-  }
-
-  h3 {
-    font-size: 22px;
-  }
-
-  h4 {
-    font-size: 18px;
-  }
-
-  h5 {
-    font-size: 14px;
   }
 
   h6 {
@@ -124,4 +104,22 @@ const SubHeadingContainer = styled.h2`
 export const Divider = styled.hr`
   border: #C2EAD2 1px solid;
   margin: 0 0 20px 0;
+`
+
+export const Container = styled.div`
+   @media (min-width: 768px) {
+     width: 750px;
+   }
+
+   @media (min-width: 992px) {
+     width: 970px;
+   }
+
+   @media (min-width: 1200px) {
+     width: 1170px;
+   }
+
+   @media (min-width: 1400px) {
+     width: 1360px;
+   }
 `
