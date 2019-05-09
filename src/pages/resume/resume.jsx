@@ -15,6 +15,7 @@ export const Resume = () => (
     <Row>
       <Col grow='8'>
         <Preface />
+        <ProfessionalExperience />
         <TechnicalExperience />
       </Col>
       <Col grow='4'>
