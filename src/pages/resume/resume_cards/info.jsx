@@ -11,9 +11,9 @@ export const Info = () => (
     <Divider />
     <InfoList>
       <InfoItem icon={faMapMarker} >Portland, OR</InfoItem>
-      <InfoItem icon={faEnvelope} ><a href="#">daniel@danielhess.me</a></InfoItem>
-      <InfoItem icon={faGithub} ><a href="#">github.com/dan9186</a></InfoItem>
-      <InfoItem icon={faTwitter} ><a href="#">@dan9186</a></InfoItem>
+      <InfoItem icon={faEnvelope} ><a href='mailto:daniel@danielhess.me' target='_blank'>daniel@danielhess.me</a></InfoItem>
+      <InfoItem icon={faGithub} ><a href='https://github.com/dan9186' target='_blank'>github.com/dan9186</a></InfoItem>
+      <InfoItem icon={faTwitter} ><a href='https://twitter.com/dan9186' target='_blank'>@dan9186</a></InfoItem>
     </InfoList>
   </Section>
 )

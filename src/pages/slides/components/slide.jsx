@@ -9,14 +9,14 @@ export const Slide = (props) => {
   library.add(fas)
 
   const url = props.url || '#'
-  const icon = findIconDefinition({prefix: 'fas', iconName: (props.icon || 'exclamation-triangle')})
+  const icon = findIconDefinition({ prefix: 'fas', iconName: (props.icon || 'exclamation-triangle') })
   const title = props.title
   const description = props.description
 
   return (
     <Container>
-      <a href={url} target="_blank">
-        <Icon icon={icon} size="5x" />
+      <a href={url} target='_blank'>
+        <Icon icon={icon} size='5x' />
         <Title>{title}</Title>
       </a>
       <Description>{description}</Description>
