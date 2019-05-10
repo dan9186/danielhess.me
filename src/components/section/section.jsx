@@ -80,7 +80,7 @@ const SectionContainer = styled.div`
     color: #616b76;
   }
 
-  h1, h6 {
+  h6 {
     margin-top: 0;
     margin-bottom: 30px;
     color: #545e69;
