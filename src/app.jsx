@@ -1,5 +1,7 @@
+/* global VERSION, BUILD */
+
 import React from 'react'
-import styled, {createGlobalStyle} from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 import { Header } from './components/header/header'
 import { Footer } from './components/footer/footer'
@@ -7,7 +9,7 @@ import { Footer } from './components/footer/footer'
 import { Pages } from './pages'
 
 export class App extends React.Component {
-  render() {
+  render () {
     return (
       <React.Fragment>
         <GlobalStyle />
@@ -15,8 +17,8 @@ export class App extends React.Component {
         <Body>
           <Pages />
         </Body>
-      <Footer version={VERSION} commit={BUILD} />
-    </React.Fragment>
+        <Footer version={ VERSION } commit={ BUILD } />
+      </React.Fragment>
     )
   }
 }

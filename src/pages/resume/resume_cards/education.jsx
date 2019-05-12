@@ -5,7 +5,7 @@ import { Section, Divider, SubHeading } from '../../../components/section/sectio
 import styled from 'styled-components'
 
 export const Education = () => (
-  <Section className="education">
+  <Section>
     <SubHeading>Education</SubHeading>
     <Divider />
     <div>
@@ -21,7 +21,7 @@ export const Education = () => (
       <University>
         Christian Brothers University
         <br/>
-        Memphis, TN <span className="date-range">(August 2005 – May 2009)</span>
+        Memphis, TN <span>(August 2005 – May 2009)</span>
       </University>
     </div>
   </Section>

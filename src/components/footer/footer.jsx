@@ -5,7 +5,7 @@ import * as Icons from '../icons'
 
 export const Footer = (props) => {
   const version = props.version || '0.0.1'
-  const commit = props.commit ? props.commit.slice(0,7) : 'dev'
+  const commit = props.commit ? props.commit.slice(0, 7) : 'dev'
 
   return (
     <Container>

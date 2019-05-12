@@ -19,10 +19,10 @@ export const Profile = (props) => {
         <Name>{name}</Name>
         <Description>{description}</Description>
         <SocialList>
-          <li><a href={"https://github.com/" + username} target="_blank"><SocialIcon icon={faGithub} /></a></li>
-          <li><a href={"https://twitter.com/" + username} target="_blank"><SocialIcon icon={faTwitter} /></a></li>
-          <li><a href={"https://www.linkedin.com/in/" + username + "/"} target="_blank"><SocialIcon icon={faLinkedin} /></a></li>
-          <li><a href={"mailto:" + email} target="_blank"><SocialIcon icon={faEnvelope} /></a></li>
+          <li><a href={'https://github.com/' + username} target='_blank'><SocialIcon icon={faGithub} /></a></li>
+          <li><a href={'https://twitter.com/' + username} target='_blank'><SocialIcon icon={faTwitter} /></a></li>
+          <li><a href={'https://www.linkedin.com/in/' + username + '/'} target='_blank'><SocialIcon icon={faLinkedin} /></a></li>
+          <li><a href={'mailto:' + email} target='_blank'><SocialIcon icon={faEnvelope} /></a></li>
         </SocialList>
       </Content>
       <Slogan>Dedicated to <span>Devops</span></Slogan>
@@ -51,7 +51,7 @@ const Container = styled.div`
   flex-direction: row;
   flex-grow: 1;
   margin: 30px 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 `
 
 const ProfileImage = styled(Logo)`
@@ -78,7 +78,7 @@ const Name = styled.h1`
 
 const Description = styled.h2`
   color: #778492;
-  font-family: "Lato", arial, sans-serif;
+  font-family: 'Lato', arial, sans-serif;
   font-weight: 600;
   font-size: 24px;
   margin-top: 0;
