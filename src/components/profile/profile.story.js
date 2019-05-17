@@ -1,6 +1,6 @@
 import React from 'react'
-import {storiesOf} from '@storybook/react'
-import {Profile} from './profile'
+import { storiesOf } from '@storybook/react'
+import { Profile } from './profile'
 
 const globalStyle = {
   fontFamily: 'Lato',
