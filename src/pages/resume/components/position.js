@@ -16,7 +16,7 @@ export const Position = (props) => {
           <Title>{ position.title }</Title><WorkDates from={ position.from } to={ position.to } />
         </Row>
         <Row>
-          <Company>Ion Channel</Company><H4><FontAwesomeIcon icon={ faMapMarker } />{ position.location }</H4>
+          <Company>{ position.company }</Company><H4><FontAwesomeIcon icon={ faMapMarker } />{ position.location }</H4>
         </Row>
         <Divider />
         <H4>Responsibilities</H4>

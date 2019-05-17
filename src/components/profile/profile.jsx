@@ -25,7 +25,6 @@ export const Profile = (props) => {
           <li><a href={'mailto:' + email} target='_blank'><SocialIcon icon={faEnvelope} /></a></li>
         </SocialList>
       </Content>
-      <Slogan>Dedicated to <span>Devops</span></Slogan>
     </Container>
   )
 }
@@ -83,18 +82,6 @@ const Description = styled.h2`
   font-size: 24px;
   margin-top: 0;
   margin-bottom: 15px;
-`
-
-const Slogan = styled.h1`
-  color: #FFFFFF;
-  font-size: 38px;
-  text-align: right;
-  margin-top: 30px;
-  flex-grow: 1;
-
-  span {
-    color: #259d07;
-  }
 `
 
 const SocialList = styled.ul`
