@@ -9,7 +9,7 @@ import { Profile } from '../profile/profile'
 export const Header = () => (
   <Container>
     <Navigation />
-    <Profile name='Daniel Hess' email='daniel@danielhess.me' username='dan9186' description='Devops Engineer' />
+    <Profile name='Daniel Hess' email='daniel@danielhess.me' username='dan9186' description='Software Engineer' />
   </Container>
 )
 
