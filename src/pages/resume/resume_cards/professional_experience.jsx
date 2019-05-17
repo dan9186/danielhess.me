@@ -32,6 +32,7 @@ const positions = [
       'Instigated and drove several changes in communications with remote team to improve team dynamics',
       'Designed multiple new services in Golang to provide good examples for less experienced team members',
     ],
+    'collapsed': false,
   },
   {
     'title': 'Senior Software Engineer',
@@ -60,6 +61,7 @@ const positions = [
       'Created proof of concept for Dockerized API development environment to remove the need for Vagrant devbox and allow for local development of API',
       'Drove changes in Agile process to have sprint planning, estimating, grooming, and retrospectives that were not happening previously and resulting in significant churn during a sprint',
     ],
+    'collapsed': false,
   },
   {
     'title': 'Devops Engineer',
@@ -99,6 +101,7 @@ const positions = [
       'Continued the charge of a culture of testing environment resiliency and ensuring maximum uptime as others departed',
       'Assisted in architecture and development of a Golang based strangler for a legacy Java service',
     ],
+    'collapsed': false,
   },
   {
     'title': 'System Administrator I',
