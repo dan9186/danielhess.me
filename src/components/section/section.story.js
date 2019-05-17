@@ -1,7 +1,7 @@
 import React from 'react'
-import {storiesOf} from '@storybook/react'
-import {Section,Row} from './section'
-import {Typography} from './typography'
+import { storiesOf } from '@storybook/react'
+import { Section, Row } from './section'
+import { Typography } from './typography'
 
 storiesOf('Common/Sections', module)
   .add('default', () => <Section />)
