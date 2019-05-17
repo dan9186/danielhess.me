@@ -1,20 +1,15 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-
-const Link = (props) => (
-  <li to={props.path}>
-    <a href={props.path} eventKey={props.key}>{props.text}</a>
-  </li>
-)
 
 export const Navigation = () => (
   <Navbar role="navigation">
     <Nav>
-      <Link path='/' key='1' text='Home' />
-      <Link path='/resume' key='2' text='Resume' />
-      <Link path='/slides' key='3' text='Slides' />
-      {/* this.render_link("/blog", 4, "Blog") */}
-      {/* this.render_link("/projects", 5, "Projects") */}
+      <StyledNavLink exact to='/'>Home</StyledNavLink>
+      <StyledNavLink to='/resume'>Resume</StyledNavLink>
+      <StyledNavLink to='/slides'>Slides</StyledNavLink>
+      {/* <StyledNavLink to='/blog'>Blog</StyledNavLink> */}
+      {/* <StyledNavLink to='/projects'>Projects</StyledNavLink> */}
     </Nav>
   </Navbar>
 )
@@ -30,7 +25,7 @@ const Navbar = styled.div`
   border-top: #259d07 4px solid;
 `
 
-const Nav = styled.ul`
+const Nav = styled.div`
   @media (min-width: 768px) {
     width: 750px;
   }
@@ -53,24 +48,23 @@ const Nav = styled.ul`
   margin: 0;
   padding-left: 0;
   list-style: none;
+`
 
-  li {
-    display: flex;
-    align-items: center;
-  }
+const StyledNavLink = styled(NavLink)`
+  color: #3AAA64;
+  font-weight: bold;
+  text-decoration: none;
 
-  li > a {
+  padding: 15px;
+
+  transition: background 0.5s;
+
+  &.active,
+  &:focus,
+  &:hover {
     color: #3AAA64;
-    padding: 15px;
-    font-weight: bold;
     text-decoration: none;
-  }
 
-  .active,
-  li > a:hover,
-  li > a:focus {
-    color: #3AAA64;
     background: #FFFFFF;
-    text-decoration: none;
   }
 `
