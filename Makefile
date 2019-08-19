@@ -75,7 +75,7 @@ release: ## Create a release PR
 
 .PHONY: linters
 linters: ## Run all linters
-	yarn run eslint src/**/*.jsx
+	yarn run eslint src/**/*.js
 
 .PHONY: story
 story: ## Run storybook
