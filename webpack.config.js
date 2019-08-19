@@ -1,5 +1,3 @@
-/* global __dirname */
-
 const path = require('path')
 const webpack = require('webpack')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
