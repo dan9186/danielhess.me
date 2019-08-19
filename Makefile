@@ -82,9 +82,12 @@ story: ## Run storybook
 	yarn run start-storybook -p 9001 -c .storybook
 
 .PHONY: test
-test: unit_test  ## Run all tests available
+test: snapshots ## Run all tests available
 
-.PHONY: unit_test
-unit_test:  ## Run unit tests
-	@echo "Running tests"
-	@yarn run mocha --require babel-core/register "src/**/*.test.js"
+.PHONY: snapshots
+snapshots:  ## Run snapshot tests
+	yarn run jest --config jest.snapshot.config.js
+
+.PHONY: update_snapshots
+update_snapshots:  ## Run snapshots to update the save state
+	yarn run jest --config jest.snapshot.config.js -u
