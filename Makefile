@@ -59,7 +59,7 @@ deploy: ## Deploy the project
 
 .PHONY: dev
 dev: ## Run the dev test server
-	@yarn run webpack-dev-server --hot --progress
+	@yarn run webpack-dev-server --hot --progress --port 8080
 
 .PHONY: help
 help:  ## Show This Help
