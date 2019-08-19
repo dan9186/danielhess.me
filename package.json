@@ -2,7 +2,7 @@
   "name": "danielhess.me",
   "version": "0.0.1",
   "description": "Personal Website",
-  "main": "index.jsx",
+  "main": "index.js",
   "repository": "git@github.com:dan9186/danielhess.me.git",
   "author": "Daniel Hess",
   "license": "MIT",
