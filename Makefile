@@ -20,12 +20,11 @@ analyze_bundle: build ## view the bundle stats
 	yarn run webpack-bundle-analyzer dist/stats.json
 
 .PHONY: build
-build: install  ## Build the project
-	@echo "Building Project"
+build: ## Build the project
 	@yarn run webpack -p
 
 .PHONY: ci
-ci: linters test ## Run ci
+ci: install linters test ## Run ci
 
 .PHONY: ci_setup
 ci_setup: ## Setup the ci environment
@@ -43,7 +42,7 @@ clean: ## Cleanup all running and generated items
 
 .PHONY: coverage
 coverage: ## Generate code coverage
-	yarn run nyc --reporter=text --reporter=html --all --extension .jsx mocha --require babel-core/register "src/**/*.test.js"
+	yarn run nyc --reporter=text --reporter=html --all --extension .js mocha --require babel-core/register "src/**/*.test.js"
 
 .PHONY: deploy
 deploy: ## Deploy the project
@@ -60,7 +59,7 @@ deploy: ## Deploy the project
 
 .PHONY: dev
 dev: ## Run the dev test server
-	@yarn run webpack-dev-server --hot --progress
+	@yarn run webpack-dev-server --hot --progress --port 8080
 
 .PHONY: help
 help:  ## Show This Help
@@ -76,16 +75,19 @@ release: ## Create a release PR
 
 .PHONY: linters
 linters: ## Run all linters
-	yarn run eslint src/**/*.jsx
+	yarn run eslint src/**/*.js
 
 .PHONY: story
 story: ## Run storybook
 	yarn run start-storybook -p 9001 -c .storybook
 
 .PHONY: test
-test: unit_test  ## Run all tests available
+test: snapshots ## Run all tests available
 
-.PHONY: unit_test
-unit_test:  ## Run unit tests
-	@echo "Running tests"
-	@yarn run mocha --require babel-core/register "src/**/*.test.js"
+.PHONY: snapshots
+snapshots:  ## Run snapshot tests
+	yarn run jest --config jest.snapshot.config.js
+
+.PHONY: update_snapshots
+update_snapshots:  ## Run snapshots to update the save state
+	yarn run jest --config jest.snapshot.config.js -u
