@@ -7,35 +7,36 @@
   "author": "Daniel Hess",
   "license": "MIT",
   "engines": {
-    "node": ">=10.12.0"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ]
+    "node": ">=10.16.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.21",
     "@fortawesome/free-brands-svg-icons": "^5.10.1",
     "@fortawesome/free-solid-svg-icons": "^5.10.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "styled-components": "^4.0.2"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-export-default-from": "^7.5.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.5.5",
     "@storybook/addon-actions": "^4.1.16",
-    "@storybook/addons": "^4.0.0",
-    "@storybook/react": "^4.1.16",
+    "@storybook/addons": "^5.1.11",
+    "@storybook/react": "^5.1.11",
     "babel-eslint": "^10.0.2",
-    "babel-loader": "^8.0.5",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-require-context-hook": "^1.0.0",
     "copy-webpack-plugin": "^5.0.4",
     "eslint": "^6.2.0",
     "eslint-plugin-import": "^2.18.2",
@@ -44,7 +45,7 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-standard": "^4.0.0",
     "html-webpack-plugin": "^3.2.0",
-    "storybook-react-router": "^1.0.1",
+    "storybook-react-router": "^1.0.5",
     "url-loader": "^1.1.2",
     "webpack": "^4.39.2",
     "webpack-bundle-analyzer": "^3.4.1",
