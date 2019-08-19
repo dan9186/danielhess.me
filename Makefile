@@ -20,12 +20,11 @@ analyze_bundle: build ## view the bundle stats
 	yarn run webpack-bundle-analyzer dist/stats.json
 
 .PHONY: build
-build: install  ## Build the project
-	@echo "Building Project"
+build: ## Build the project
 	@yarn run webpack -p
 
 .PHONY: ci
-ci: linters test ## Run ci
+ci: install linters test ## Run ci
 
 .PHONY: ci_setup
 ci_setup: ## Setup the ci environment
@@ -43,7 +42,7 @@ clean: ## Cleanup all running and generated items
 
 .PHONY: coverage
 coverage: ## Generate code coverage
-	yarn run nyc --reporter=text --reporter=html --all --extension .jsx mocha --require babel-core/register "src/**/*.test.js"
+	yarn run nyc --reporter=text --reporter=html --all --extension .js mocha --require babel-core/register "src/**/*.test.js"
 
 .PHONY: deploy
 deploy: ## Deploy the project
