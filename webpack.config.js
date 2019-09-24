@@ -1,10 +1,7 @@
-/* global __dirname */
-
 const path = require('path')
 const webpack = require('webpack')
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const RobotstxtPlugin = require('robotstxt-webpack-plugin').default
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const PATHS = {
@@ -71,27 +68,10 @@ module.exports = {
       template: PATHS.src + '/index.ejs',
       title: 'Daniel Hess',
     }),
-    new FaviconsWebpackPlugin({
-      logo: PATHS.src + '/assets/images/logo-lg.png',
-      icons: {
-        android: true,
-        appleIcon: true,
-        appleStartup: false,
-        coast: false,
-        favicons: true,
-        firefox: true,
-        opengraph: false,
-        twitter: false,
-        yandex: false,
-        windows: false,
-      },
-    }),
-    new RobotstxtPlugin({
-      policy: [{
-        userAgent: '*',
-        disallow: '/',
-      }],
-    }),
+    new CopyWebpackPlugin([
+      { from: './static/robots.txt', to: PATHS.dist },
+      { from: './static/favicons', to: path.join(PATHS.dist, 'favicons') },
+    ]),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
       VERSION: JSON.stringify(require('./package.json').version),
