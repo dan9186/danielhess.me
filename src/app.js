@@ -3,53 +3,60 @@
 import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 
-import { Header } from './components/header/header'
-import { Footer } from './components/footer/footer'
+import { ErrorBoundary } from './error_boundary'
 
 import { Pages } from './pages'
 
-export class App extends React.Component {
-  render () {
-    return (
-      <React.Fragment>
-        <GlobalStyle />
-        <Header />
-        <Body>
-          <Pages />
-        </Body>
-        <Footer version={ VERSION } commit={ BUILD } />
-      </React.Fragment>
-    )
-  }
-}
+export const App = () => (
+  <ErrorBoundary>
+    <GlobalStyle />
+    <AppContainer>
+      <Pages />
+    </AppContainer>
+  </ErrorBoundary>
+)
 
 const GlobalStyle = createGlobalStyle`
-  html, body {
+  html, body, #app {
+    display: flex;
+    flex: 1 0 auto;
     height: 100%;
-  }
-
-  body {
     margin: 0;
-
-    background: #DAE3E7;
-
-    color: #434343;
     font-family: 'Lato', arial, sans-serif;
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    background-color: #26262d;
   }
 
   #app {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `
 
-const Body = styled.div`
+const AppContainer = styled.div`
   display: flex;
-  flex-flow: column nowrap;
-  flex-grow: 1;
-  align-items: center;
+  flex-flow: row nowrap;
+  flex: 1;
+  height: 100%;
+  max-width: 1268px;
+  max-height: 674px;
+  margin: 8vh 6vw;
+
+  @media (min-width : 1200px) {
+  }
+
+  //tablet landscape
+  @media (min-width: 1024px) and (max-width: 1600px) {
+  }
+
+  //tablet portrait
+  @media (min-width: 768px) and (max-width: 1023px) {
+  }
+
+  //smartphone landscape
+  @media (min-width: 480px) and (max-width: 767px) {
+  }
+
+  //smartphone portrait
+  @media (max-width: 479px) {
+  }
 `
