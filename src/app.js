@@ -5,12 +5,14 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 import { ErrorBoundary } from './error_boundary'
 
+import { Card } from './components/card/card'
 import { Pages } from './pages'
 
 export const App = () => (
   <ErrorBoundary>
     <GlobalStyle />
     <AppContainer>
+      <Card />
       <Pages />
     </AppContainer>
   </ErrorBoundary>
