@@ -20,5 +20,9 @@ module.exports = function (api) {
   return {
     presets,
     plugins,
+    overrides: [{
+      test: './node_modules',
+      sourceType: 'unambiguous',
+    }],
   }
 }
