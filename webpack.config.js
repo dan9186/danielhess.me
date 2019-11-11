@@ -7,21 +7,28 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const PATHS = {
   dist: path.join(__dirname, 'dist'),
   src: path.join(__dirname, 'src'),
+  static: path.join(__dirname, 'static'),
 }
 
 module.exports = {
   mode: 'development',
+
   entry: {
-    main: './src/index.js',
+    main: path.join(PATHS.src, 'index.js'),
   },
+
+  resolve: {
+    extensions: ['.js'],
+    alias: {
+      react: path.resolve('./node_modules/react'),
+    },
+  },
+
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: [/node_modules\/(?!redux-form)/, /\.story.js$/, /\.test.js$/],
-        resolve: {
-          extensions: ['.js', '.jsx'],
-        },
+        test: /\.js$/,
+        exclude: [/node_modules/, /\.story.js$/, /\.test.js$/],
         use: {
           loader: 'babel-loader',
         },
@@ -40,12 +47,14 @@ module.exports = {
       },
     ],
   },
+
   output: {
     path: PATHS.dist,
     publicPath: '/',
     filename: '[name].js',
     chunkFilename: '[name].js',
   },
+
   optimization: {
     splitChunks: {
       chunks: 'all',
@@ -58,19 +67,22 @@ module.exports = {
       },
     },
   },
+
   devtool: 'source-map',
+
   devServer: {
     contentBase: './dist',
     historyApiFallback: true,
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: PATHS.src + '/index.ejs',
       title: 'Daniel Hess',
     }),
     new CopyWebpackPlugin([
-      { from: './static/robots.txt', to: PATHS.dist },
-      { from: './static/favicons', to: path.join(PATHS.dist, 'favicons') },
+      { from: path.join(PATHS.static, 'robots.txt'), to: PATHS.dist },
+      { from: path.join(PATHS.static, 'favicons'), to: path.join(PATHS.dist, 'favicons') },
     ]),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
