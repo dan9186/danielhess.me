@@ -1,18 +1,22 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Switch, Route } from 'react-router-dom'
 
-import { Home } from './home/home'
-import { Resume } from './resume/resume'
-import { NotFound } from './not_found/not_found'
-import { Slides } from './slides/slides'
-
 export const Pages = () => (
-  <React.Fragment>
+  <Container>
     <Switch>
-      <Route exact path='/' component={Home}/>
-      <Route path='/resume' component={Resume}/>
-      <Route path='/slides' component={Slides}/>
-      <Route component={NotFound}/>
     </Switch>
-  </React.Fragment>
+  </Container>
 )
+
+const Container = styled.div`
+  display: flex;
+  flex: 1;
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  color: #ffffff;
+  background-color: #31313a;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+`
