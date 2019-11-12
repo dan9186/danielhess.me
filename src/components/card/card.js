@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 import { Logo } from '../logo/logo'
 
@@ -9,6 +12,12 @@ export const Card = () => (
     <StyledLogo size={ '150px' } />
     <Name>Daniel Hess</Name>
     <Title>Software Engineer</Title>
+    <Icons>
+      <StyledLink href='https://github.com/dan9186' target='_blank'><Icon icon={ faGithub } /></StyledLink>
+      <StyledLink href='https://twitter.com/dan9186' target='_blank'><Icon icon={ faTwitter } /></StyledLink>
+      <StyledLink href='https://www.linkedin.com/in/dan9186/' target='_blank'><Icon icon={ faLinkedin } /></StyledLink>
+      <StyledLink href='mailto:daniel@danielhess.me' target='_blank'><Icon icon={ faEnvelope } /></StyledLink>
+    </Icons>
   </Container>
 )
 
@@ -82,7 +91,7 @@ const Name = styled.h1`
   display: flex;
   justify-content: center;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 
   color: #e3e3e3;
   font-size: 34px;
@@ -94,9 +103,30 @@ const Title = styled.h2`
   display: flex;
   justify-content: center;
   margin-top: 0;
+  margin-bottom: 16px;
 
   color: #78cc6d;
   font-size: 16px;
   line-height: 20px;
   font-weight: 300;
+`
+
+const Icons = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+`
+
+const StyledLink = styled.a`
+  text-decoration: none;
+`
+
+const Icon = styled(FontAwesomeIcon)`
+  color: #a2a2a2;
+  font-size: 24px;
+  transition: color 0.4s ease;
+
+  &:hover {
+    color: #78cc6d;
+  }
 `
