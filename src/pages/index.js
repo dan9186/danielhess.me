@@ -2,9 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { Switch, Route } from 'react-router-dom'
 
+import { Resume } from './resume/resume'
+
 export const Pages = () => (
   <Container>
     <Switch>
+      <Route exact path='/' component={ Resume } />
     </Switch>
   </Container>
 )

@@ -1,29 +1,44 @@
 import React from 'react'
-
-import { Container, Row, Col } from '../../components/section/section'
-
-import { Accomplishments } from './resume_cards/accomplishments'
-import { Education } from './resume_cards/education'
-import { Info } from './resume_cards/info'
-import { Preface } from './resume_cards/preface'
-import { References } from './resume_cards/references'
-import { ProfessionalExperience } from './resume_cards/professional_experience'
-import { TechnicalExperience } from './resume_cards/technical_experience'
+import styled from 'styled-components'
 
 export const Resume = () => (
   <Container>
-    <Row>
-      <Col grow='8'>
-        <Preface />
-        <ProfessionalExperience />
-        <TechnicalExperience />
-      </Col>
-      <Col grow='4'>
-        <Info />
-        <Education />
-        <Accomplishments />
-        <References />
-      </Col>
-    </Row>
+    <Title>Resume</Title>
   </Container>
 )
+
+const Container = styled.div`
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: column;
+  padding: 16px;
+
+  color: #a2a2a2;
+`
+
+const Title = styled.h1`
+  display: flex;
+  margin: 0;
+  padding-left: 8px;
+  padding-bottom: 16px;
+
+  color: #e3e3e3;
+  font-size: 24px;
+  font-weight: 300;
+
+  border-bottom: 1px solid #515151;
+
+  &:before {
+    content: ' ';
+
+    display: flex;
+    position: absolute;
+    margin-top: 4px;
+    margin-left: -8px;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+
+    background-color: rgb(120, 204, 109, 0.35);
+  }
+`
