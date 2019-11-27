@@ -23,8 +23,9 @@ export const Card = () => (
 
 const Container = styled.div`
   display: flex;
-  flex: 1;
+  flex: 1 0 auto;
   flex-flow: column;
+  max-height: 674px;
   max-width: 480px;
   z-index: 1;
 

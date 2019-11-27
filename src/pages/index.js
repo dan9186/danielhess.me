@@ -17,6 +17,7 @@ const Container = styled.div`
   flex: 1;
   margin-top: 16px;
   margin-bottom: 16px;
+  overflow: scroll;
 
   color: #ffffff;
   background-color: #31313a;

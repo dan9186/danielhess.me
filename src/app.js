@@ -37,13 +37,13 @@ const GlobalStyle = createGlobalStyle`
 const AppContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
-  flex: 1;
+  flex: 1 0 auto;
   height: 100%;
-  max-width: 1268px;
-  max-height: 674px;
   margin: 8vh 6vw;
 
   @media (min-width : 1200px) {
+    max-height: 674px;
+    max-width: 1268px;
   }
 
   //tablet landscape
@@ -52,6 +52,7 @@ const AppContainer = styled.div`
 
   //tablet portrait
   @media (min-width: 768px) and (max-width: 1023px) {
+    flex-flow: column;
   }
 
   //smartphone landscape
@@ -60,6 +61,7 @@ const AppContainer = styled.div`
 
   //smartphone portrait
   @media (max-width: 479px) {
+    flex-flow: column;
   }
 `
 
