@@ -1,4 +1,4 @@
-module.exports = function (api) {
+module.exports = function(api) {
   const presets = [
     '@babel/preset-env',
     '@babel/preset-flow',
@@ -14,9 +14,11 @@ module.exports = function (api) {
   return {
     presets,
     plugins,
-    overrides: [{
-      test: './node_modules',
-      sourceType: 'unambiguous',
-    }],
+    overrides: [
+      {
+        test: './node_modules',
+        sourceType: 'unambiguous',
+      },
+    ],
   }
 }

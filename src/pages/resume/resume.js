@@ -6,9 +6,9 @@ import { ResumeText } from './resume_text'
 export const Resume = () => (
   <Container>
     <Title>Resume</Title>
-    <Section>{ ResumeText.preface }</Section>
+    <Section>{ResumeText.preface}</Section>
     <Subtitle>Education</Subtitle>
-    <Section>{ ResumeText.education[0].school }</Section>
+    <Section>{ResumeText.education[0].school}</Section>
   </Container>
 )
 
@@ -44,7 +44,11 @@ const Title = styled.h1`
     width: 24px;
 
     background-color: rgb(120, 204, 109, 0.35);
-    background: linear-gradient(145deg, rgba(120,204,109,0.35) 0%, rgba(49,49,58,1) 100%);
+    background: linear-gradient(
+      145deg,
+      rgba(120, 204, 109, 0.35) 0%,
+      rgba(49, 49, 58, 1) 100%
+    );
   }
 `
 

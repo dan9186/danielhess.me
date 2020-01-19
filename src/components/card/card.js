@@ -2,21 +2,33 @@ import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import {
+  faGithub,
+  faTwitter,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons'
 
 import { Logo } from '../logo/logo'
 
 export const Card = () => (
   <Container>
     <Background />
-    <StyledLogo size={ '150px' } />
+    <StyledLogo size={'150px'} />
     <Name>Daniel Hess</Name>
     <Title>Software Engineer</Title>
     <Icons>
-      <StyledLink href='https://github.com/dan9186' target='_blank'><Icon icon={ faGithub } /></StyledLink>
-      <StyledLink href='https://twitter.com/dan9186' target='_blank'><Icon icon={ faTwitter } /></StyledLink>
-      <StyledLink href='https://www.linkedin.com/in/dan9186/' target='_blank'><Icon icon={ faLinkedin } /></StyledLink>
-      <StyledLink href='mailto:daniel@danielhess.me' target='_blank'><Icon icon={ faEnvelope } /></StyledLink>
+      <StyledLink href='https://github.com/dan9186' target='_blank'>
+        <Icon icon={faGithub} />
+      </StyledLink>
+      <StyledLink href='https://twitter.com/dan9186' target='_blank'>
+        <Icon icon={faTwitter} />
+      </StyledLink>
+      <StyledLink href='https://www.linkedin.com/in/dan9186/' target='_blank'>
+        <Icon icon={faLinkedin} />
+      </StyledLink>
+      <StyledLink href='mailto:daniel@danielhess.me' target='_blank'>
+        <Icon icon={faEnvelope} />
+      </StyledLink>
     </Icons>
   </Container>
 )
@@ -62,16 +74,20 @@ const Background = styled.div`
 
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
-  background: rgb(65,174,118);
-  background: radial-gradient(circle, rgba(65,174,118,1) 0%, rgba(0,68,27,1) 100%);
+  background: rgb(65, 174, 118);
+  background: radial-gradient(
+    circle,
+    rgba(65, 174, 118, 1) 0%,
+    rgba(0, 68, 27, 1) 100%
+  );
 
-  &::before{
+  &::before {
     content: ' ';
     height: 80px;
     width: 100%;
 
     background: #31313a;
-    transform: translate(-10px,325px) rotate(5deg);
+    transform: translate(-10px, 325px) rotate(5deg);
   }
 
   &::after {
@@ -80,7 +96,7 @@ const Background = styled.div`
     width: 100%;
 
     background: #31313a;
-    transform: translate(10px,325px) rotate(-5deg);
+    transform: translate(10px, 325px) rotate(-5deg);
   }
 `
 

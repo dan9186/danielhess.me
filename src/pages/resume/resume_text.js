@@ -1,12 +1,11 @@
 export const ResumeText = {
-  preface: "I'm a motivated and self directed individual with a passion for learning anything new.  My skillset helps me to provide a fully cloud native software lifecycle, from design and development, to testing and deployment.  Strong communication skills and being very familiar with Agile software practices, I am capable of interacting and fitting into almost any team.",
+  preface:
+    "I'm a motivated and self directed individual with a passion for learning anything new.  My skillset helps me to provide a fully cloud native software lifecycle, from design and development, to testing and deployment.  Strong communication skills and being very familiar with Agile software practices, I am capable of interacting and fitting into almost any team.",
   info: {
     location: 'Portland, OR',
     email: 'daniel@danielhess.me',
   },
-  accomplishments: [
-    'Eagle Scout',
-  ],
+  accomplishments: ['Eagle Scout'],
   education: [
     {
       school: 'Christian Brothers University',
@@ -42,7 +41,7 @@ export const ResumeText = {
         'Instigated and drove several changes in communications with remote team to improve team dynamics',
         'Designed multiple new services in Golang to provide good examples for less experienced team members',
       ],
-      'collapsed': false,
+      collapsed: false,
     },
     {
       title: 'Senior Software Engineer',
@@ -71,7 +70,7 @@ export const ResumeText = {
         'Created proof of concept for Dockerized API development environment to remove the need for Vagrant devbox and allow for local development of API',
         'Drove changes in Agile process to have sprint planning, estimating, grooming, and retrospectives that were not happening previously and resulting in significant churn during a sprint',
       ],
-      'collapsed': false,
+      collapsed: false,
     },
     {
       title: 'Devops Engineer',
@@ -111,7 +110,7 @@ export const ResumeText = {
         'Continued the charge of a culture of testing environment resiliency and ensuring maximum uptime as others departed',
         'Assisted in architecture and development of a Golang based strangler for a legacy Java service',
       ],
-      'collapsed': false,
+      collapsed: false,
     },
     {
       title: 'System Administrator I',

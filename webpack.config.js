@@ -2,7 +2,8 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin
 
 const PATHS = {
   dist: path.join(__dirname, 'dist'),
@@ -82,7 +83,10 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: path.join(PATHS.static, 'robots.txt'), to: PATHS.dist },
-      { from: path.join(PATHS.static, 'favicons'), to: path.join(PATHS.dist, 'favicons') },
+      {
+        from: path.join(PATHS.static, 'favicons'),
+        to: path.join(PATHS.dist, 'favicons'),
+      },
     ]),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),

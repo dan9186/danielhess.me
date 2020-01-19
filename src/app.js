@@ -41,7 +41,7 @@ const AppContainer = styled.div`
   height: 100%;
   margin: 8vh 6vw;
 
-  @media (min-width : 1200px) {
+  @media (min-width: 1200px) {
     max-height: 674px;
     max-width: 1268px;
   }
