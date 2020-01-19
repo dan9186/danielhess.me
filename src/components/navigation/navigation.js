@@ -3,9 +3,11 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Navigation = () => (
-  <Navbar role="navigation">
+  <Navbar role='navigation'>
     <Nav>
-      <StyledNavLink exact to='/'>Home</StyledNavLink>
+      <StyledNavLink exact to='/'>
+        Home
+      </StyledNavLink>
       <StyledNavLink to='/resume'>Resume</StyledNavLink>
       <StyledNavLink to='/slides'>Slides</StyledNavLink>
       {/* <StyledNavLink to='/blog'>Blog</StyledNavLink> */}
@@ -21,7 +23,7 @@ const Navbar = styled.div`
   width: 100%;
   height: 50px;
 
-  background: #32383E;
+  background: #32383e;
   border-top: #259d07 4px solid;
 `
 
@@ -51,7 +53,7 @@ const Nav = styled.div`
 `
 
 const StyledNavLink = styled(NavLink)`
-  color: #3AAA64;
+  color: #3aaa64;
   font-weight: bold;
   text-decoration: none;
 
@@ -62,9 +64,9 @@ const StyledNavLink = styled(NavLink)`
   &.active,
   &:focus,
   &:hover {
-    color: #3AAA64;
+    color: #3aaa64;
     text-decoration: none;
 
-    background: #FFFFFF;
+    background: #ffffff;
   }
 `

@@ -4,9 +4,13 @@ import styled from 'styled-components'
 import { Logo } from '../logo/logo'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import {
+  faGithub,
+  faTwitter,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons'
 
-export const Profile = (props) => {
+export const Profile = props => {
   const name = props.name
   const email = props.email
   const username = props.username
@@ -19,10 +23,29 @@ export const Profile = (props) => {
         <Name>{name}</Name>
         <Description>{description}</Description>
         <SocialList>
-          <li><a href={'https://github.com/' + username} target='_blank'><SocialIcon icon={faGithub} /></a></li>
-          <li><a href={'https://twitter.com/' + username} target='_blank'><SocialIcon icon={faTwitter} /></a></li>
-          <li><a href={'https://www.linkedin.com/in/' + username + '/'} target='_blank'><SocialIcon icon={faLinkedin} /></a></li>
-          <li><a href={'mailto:' + email} target='_blank'><SocialIcon icon={faEnvelope} /></a></li>
+          <li>
+            <a href={'https://github.com/' + username} target='_blank'>
+              <SocialIcon icon={faGithub} />
+            </a>
+          </li>
+          <li>
+            <a href={'https://twitter.com/' + username} target='_blank'>
+              <SocialIcon icon={faTwitter} />
+            </a>
+          </li>
+          <li>
+            <a
+              href={'https://www.linkedin.com/in/' + username + '/'}
+              target='_blank'
+            >
+              <SocialIcon icon={faLinkedin} />
+            </a>
+          </li>
+          <li>
+            <a href={'mailto:' + email} target='_blank'>
+              <SocialIcon icon={faEnvelope} />
+            </a>
+          </li>
         </SocialList>
       </Content>
     </Container>
@@ -69,7 +92,7 @@ const Content = styled.div`
 `
 
 const Name = styled.h1`
-  color: #F5F5F5;
+  color: #f5f5f5;
   font-size: 38px;
   margin-top: 30px;
   margin-bottom: 5px;
@@ -94,7 +117,7 @@ const SocialList = styled.ul`
   margin-left: -5px;
 
   a {
-    color: #FFFFFF;
+    color: #ffffff;
     width: 36px;
     height: 36px;
     margin-left: 5px;
