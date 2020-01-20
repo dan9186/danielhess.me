@@ -1,37 +1,17 @@
 import React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
 
 import { Theme } from './theme'
-import { ErrorBoundary } from './error_boundary'
 
 import { Card } from './components/card/card'
 
 export const App = () => (
   <Theme>
-    <ErrorBoundary>
-      <GlobalStyle />
-      <AppContainer>
-        <Card />
-      </AppContainer>
-    </ErrorBoundary>
+    <AppContainer>
+      <Card />
+    </AppContainer>
   </Theme>
 )
-
-const GlobalStyle = createGlobalStyle`
-  html, body, #app {
-    display: flex;
-    flex: 1 0 auto;
-    height: 100%;
-    margin: ${props => props.theme.spacing(0)};
-    font-family: 'Lato', arial, sans-serif;
-    background-color: #26262d;
-  }
-
-  #app {
-    justify-content: center;
-    align-items: center;
-  }
-`
 
 const AppContainer = styled.div`
   display: flex;
