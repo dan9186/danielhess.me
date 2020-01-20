@@ -68,6 +68,15 @@ const Background = styled.div`
   flex: 1 0 350px;
   z-index: -1;
 
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  background: rgb(65, 174, 118);
+  background: radial-gradient(
+    circle,
+    rgba(65, 174, 118, 1) 0%,
+    rgba(0, 68, 27, 1) 100%
+  );
+
   @media ${props => props.theme.media.width.xss} {
     max-height: 270px;
   }
@@ -80,22 +89,24 @@ const Background = styled.div`
     max-height: 350px;
   }
 
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
-  background: rgb(65, 174, 118);
-  background: radial-gradient(
-    circle,
-    rgba(65, 174, 118, 1) 0%,
-    rgba(0, 68, 27, 1) 100%
-  );
-
   &::before {
     content: ' ';
     height: 80px;
     width: 100%;
 
     background: #31313a;
-    transform: translate(-10px, 325px) rotate(5deg);
+
+    @media ${props => props.theme.media.width.xss} {
+      transform: translate(-10px, 250px) rotate(5deg);
+    }
+
+    @media ${props => props.theme.media.width.xs} {
+      transform: translate(-10px, 250px) rotate(5deg);
+    }
+
+    @media ${props => props.theme.media.width.sm} {
+      transform: translate(-10px, 325px) rotate(5deg);
+    }
   }
 
   &::after {
@@ -104,7 +115,18 @@ const Background = styled.div`
     width: 100%;
 
     background: #31313a;
-    transform: translate(10px, 325px) rotate(-5deg);
+
+    @media ${props => props.theme.media.width.xss} {
+      transform: translate(10px, 250px) rotate(-5deg);
+    }
+
+    @media ${props => props.theme.media.width.xs} {
+      transform: translate(10px, 250px) rotate(-5deg);
+    }
+
+    @media ${props => props.theme.media.width.sm} {
+      transform: translate(10px, 325px) rotate(-5deg);
+    }
   }
 `
 
@@ -121,7 +143,7 @@ const Name = styled.h1`
   color: #e3e3e3;
   font-size: 34px;
   line-height: 32px;
-  font-weight: 300;
+  font-weight: 400;
 `
 
 const Title = styled.h2`
