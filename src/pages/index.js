@@ -15,8 +15,8 @@ export const Pages = () => (
 const Container = styled.div`
   display: flex;
   flex: 1;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: ${props => props.theme.spacing(2)};
+  margin-bottom: ${props => props.theme.spacing(2)};
   overflow: scroll;
 
   color: #ffffff;

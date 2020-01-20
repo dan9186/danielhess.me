@@ -180,7 +180,7 @@ const Background = styled.div`
 
 const StyledLogo = styled(Logo)`
   align-self: center;
-  margin-top: -80px;
+  margin-top: ${props => props.theme.spacing(-10)};
 
   border: 4px solid #31313a;
   border-radius: 50%;
@@ -189,20 +189,20 @@ const StyledLogo = styled(Logo)`
 const Name = styled.h1`
   display: flex;
   justify-content: center;
-  margin-top: 2px;
-  margin-bottom: 8px;
+  margin-top: ${props => props.theme.spacing(0)};
+  margin-bottom: ${props => props.theme.spacing()};
 
   color: #e3e3e3;
   font-size: 34px;
-  line-height: 32px;
+  line-height: ${props => props.theme.spacing(4)};
   font-weight: 400;
 `
 
 const Title = styled.h2`
   display: flex;
   justify-content: center;
-  margin-top: 0;
-  margin-bottom: 16px;
+  margin-top: ${props => props.theme.spacing(0)};
+  margin-bottom: ${props => props.theme.spacing(2)};
 
   color: #78cc6d;
   font-size: 16px;
@@ -214,7 +214,7 @@ const Icons = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
-  margin-top: 8px;
+  margin-top: ${props => props.theme.spacing()};
 `
 
 const StyledLink = styled.a`

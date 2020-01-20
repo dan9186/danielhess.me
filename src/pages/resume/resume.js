@@ -25,7 +25,7 @@ const Container = styled.div`
 
 const Title = styled.h1`
   display: flex;
-  margin: 0;
+  margin: ${props => props.theme.spacing(0)};
   padding-left: 8px;
   padding-bottom: 16px;
 

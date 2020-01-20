@@ -1,6 +1,8 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
 
+const spacingMultiplier = 8
+
 const theme = {
   media: {
     landscape: `(orientation: landscape)`,
@@ -13,6 +15,7 @@ const theme = {
       xl: `(min-width: 1800px)`,
     },
   },
+  spacing: (x = 1) => `${x * spacingMultiplier}px`,
 }
 
 export const Theme = ({ children }) => (
