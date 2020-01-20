@@ -18,7 +18,7 @@ export const Education = ({ education = [] }) => (
 
 const Subtitle = styled.h2`
   display: flex;
-  margin: 0;
+  margin: ${props => props.theme.spacing(0)};
   padding-left: 8px;
   padding-bottom: 8px;
   padding-top: 16px;

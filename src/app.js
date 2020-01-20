@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex: 1 0 auto;
     height: 100%;
-    margin: 0;
+    margin: ${props => props.theme.spacing(0)};
     font-family: 'Lato', arial, sans-serif;
     background-color: #26262d;
   }
