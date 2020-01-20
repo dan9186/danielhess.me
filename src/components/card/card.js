@@ -13,7 +13,7 @@ import { Logo } from '../logo/logo'
 export const Card = () => (
   <Container>
     <Background />
-    <StyledLogo size={'150px'} />
+    <StyledLogo size='150px' />
     <Name>Daniel Hess</Name>
     <Title>Software Engineer</Title>
     <Icons>
@@ -35,35 +35,22 @@ export const Card = () => (
 
 const Container = styled.div`
   display: flex;
-  flex: 1 0 auto;
+  flex: 1;
   flex-flow: column;
+  z-index: 1;
   max-height: 674px;
   max-width: 480px;
-  z-index: 1;
+
+  @media ${props => props.theme.media.width.xss} {
+    max-width: 300px;
+  }
 
   background-color: #31313a;
   border-radius: 4px;
   overflow: hidden;
 
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15);
-
-  &::before {
-    display: flex;
-    flex: 1 0 480px;
-    width: 100%;
-    height: 100%;
-    max-width: 480px;
-    max-height: 674px;
-    z-index: -1;
-
-    position: absolute;
-    margin-top: -16px;
-    margin-left: -16px;
-
-    content: ' ';
-    background: #31313a;
-    opacity: 0.3;
-  }
+  filter: drop-shadow(-15px -15px 0px #292931);
 `
 
 const Background = styled.div`
@@ -132,6 +119,7 @@ const Icons = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
+  margin-top: 8px;
 `
 
 const StyledLink = styled.a`
