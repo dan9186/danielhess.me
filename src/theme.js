@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components'
 
 const theme = {
   media: {
+    landscape: `(orientation: landscape)`,
     width: {
       xss: `(max-width: 399px)`,
       xs: `(min-width: 400px)`,

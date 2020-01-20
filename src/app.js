@@ -48,7 +48,21 @@ const AppContainer = styled.div`
     max-height: 600px;
   }
 
+  @media ${props =>
+      `${props.theme.media.width.xs} and ${props.theme.media.landscape}`} {
+    max-height: 350px;
+  }
+
   @media ${props => props.theme.media.width.sm} {
+    max-height: 674px;
+  }
+
+  @media ${props =>
+      `${props.theme.media.width.sm} and ${props.theme.media.landscape}`} {
+    max-height: 350px;
+  }
+
+  @media ${props => props.theme.media.width.md} {
     max-height: 674px;
   }
 
