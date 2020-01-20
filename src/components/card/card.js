@@ -179,13 +179,17 @@ const Background = styled.div`
 `
 
 const StyledLogo = styled(Logo)`
+  align-self: center;
   margin-top: -80px;
+
+  border: 4px solid #31313a;
+  border-radius: 50%;
 `
 
 const Name = styled.h1`
   display: flex;
   justify-content: center;
-  margin-top: 0;
+  margin-top: 2px;
   margin-bottom: 8px;
 
   color: #e3e3e3;
