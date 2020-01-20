@@ -1087,4 +1087,5 @@ export const Logo = props => {
 
 const Icon = styled.svg`
   height: ${props => props.size};
+  width: ${props => props.size};
 `
