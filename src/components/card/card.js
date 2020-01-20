@@ -56,6 +56,12 @@ const Container = styled.div`
     filter: drop-shadow(-15px -15px 0px #292931);
   }
 
+  @media ${props =>
+      `${props.theme.media.width.xs} and ${props.theme.media.landscape}`} {
+    max-width: 480px;
+    filter: drop-shadow(-15px -15px 0px #292931);
+  }
+
   @media ${props => props.theme.media.width.sm} {
     max-height: 674px;
     max-width: 480px;
@@ -85,7 +91,21 @@ const Background = styled.div`
     max-height: 270px;
   }
 
+  @media ${props =>
+      `${props.theme.media.width.xs} and ${props.theme.media.landscape}`} {
+    max-height: 150px;
+  }
+
   @media ${props => props.theme.media.width.sm} {
+    max-height: 350px;
+  }
+
+  @media ${props =>
+      `${props.theme.media.width.sm} and ${props.theme.media.landscape}`} {
+    max-height: 150px;
+  }
+
+  @media ${props => props.theme.media.width.md} {
     max-height: 350px;
   }
 
@@ -104,7 +124,21 @@ const Background = styled.div`
       transform: translate(-10px, 250px) rotate(5deg);
     }
 
+    @media ${props =>
+        `${props.theme.media.width.xs} and ${props.theme.media.landscape}`} {
+      transform: translate(-10px, 139px) rotate(5deg);
+    }
+
     @media ${props => props.theme.media.width.sm} {
+      transform: translate(-10px, 325px) rotate(5deg);
+    }
+
+    @media ${props =>
+        `${props.theme.media.width.sm} and ${props.theme.media.landscape}`} {
+      transform: translate(-10px, 139px) rotate(5deg);
+    }
+
+    @media ${props => props.theme.media.width.md} {
       transform: translate(-10px, 325px) rotate(5deg);
     }
   }
@@ -124,7 +158,21 @@ const Background = styled.div`
       transform: translate(10px, 250px) rotate(-5deg);
     }
 
+    @media ${props =>
+        `${props.theme.media.width.xs} and ${props.theme.media.landscape}`} {
+      transform: translate(10px, 139px) rotate(-5deg);
+    }
+
     @media ${props => props.theme.media.width.sm} {
+      transform: translate(10px, 325px) rotate(-5deg);
+    }
+
+    @media ${props =>
+        `${props.theme.media.width.sm} and ${props.theme.media.landscape}`} {
+      transform: translate(10px, 139px) rotate(-5deg);
+    }
+
+    @media ${props => props.theme.media.width.md} {
       transform: translate(10px, 325px) rotate(-5deg);
     }
   }
