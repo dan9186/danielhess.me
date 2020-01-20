@@ -59,7 +59,7 @@ const AppContainer = styled.div`
 
   @media ${props =>
       `${props.theme.media.width.sm} and ${props.theme.media.landscape}`} {
-    max-height: 350px;
+    max-height: 315px;
   }
 
   @media ${props => props.theme.media.width.md} {

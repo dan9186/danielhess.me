@@ -93,7 +93,7 @@ const Background = styled.div`
 
   @media ${props =>
       `${props.theme.media.width.xs} and ${props.theme.media.landscape}`} {
-    max-height: 150px;
+    max-height: 120px;
   }
 
   @media ${props => props.theme.media.width.sm} {
@@ -102,7 +102,7 @@ const Background = styled.div`
 
   @media ${props =>
       `${props.theme.media.width.sm} and ${props.theme.media.landscape}`} {
-    max-height: 150px;
+    max-height: 120px;
   }
 
   @media ${props => props.theme.media.width.md} {
@@ -126,7 +126,7 @@ const Background = styled.div`
 
     @media ${props =>
         `${props.theme.media.width.xs} and ${props.theme.media.landscape}`} {
-      transform: translate(-10px, 139px) rotate(5deg);
+      transform: translate(-10px, 111px) rotate(5deg);
     }
 
     @media ${props => props.theme.media.width.sm} {
@@ -135,7 +135,7 @@ const Background = styled.div`
 
     @media ${props =>
         `${props.theme.media.width.sm} and ${props.theme.media.landscape}`} {
-      transform: translate(-10px, 139px) rotate(5deg);
+      transform: translate(-10px, 111px) rotate(5deg);
     }
 
     @media ${props => props.theme.media.width.md} {
@@ -160,7 +160,7 @@ const Background = styled.div`
 
     @media ${props =>
         `${props.theme.media.width.xs} and ${props.theme.media.landscape}`} {
-      transform: translate(10px, 139px) rotate(-5deg);
+      transform: translate(10px, 111px) rotate(-5deg);
     }
 
     @media ${props => props.theme.media.width.sm} {
@@ -169,7 +169,7 @@ const Background = styled.div`
 
     @media ${props =>
         `${props.theme.media.width.sm} and ${props.theme.media.landscape}`} {
-      transform: translate(10px, 139px) rotate(-5deg);
+      transform: translate(10px, 111px) rotate(-5deg);
     }
 
     @media ${props => props.theme.media.width.md} {
