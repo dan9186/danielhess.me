@@ -2,13 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { ResumeText } from './resume_text'
+import { Education, Preface } from './components'
 
 export const Resume = () => (
   <Container>
     <Title>Resume</Title>
-    <Section>{ResumeText.preface}</Section>
-    <Subtitle>Education</Subtitle>
-    <Section>{ResumeText.education[0].school}</Section>
+    <Preface preface={ResumeText.preface} />
+    <Education education={ResumeText.education} />
   </Container>
 )
 
@@ -20,6 +20,7 @@ const Container = styled.div`
   padding: 16px;
 
   color: #a2a2a2;
+  font-weight: 300;
 `
 
 const Title = styled.h1`
@@ -30,7 +31,7 @@ const Title = styled.h1`
 
   color: #e3e3e3;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 600;
 
   border-bottom: 1px solid #515151;
 
@@ -50,24 +51,4 @@ const Title = styled.h1`
       rgba(49, 49, 58, 1) 100%
     );
   }
-`
-
-const Subtitle = styled.h2`
-  display: flex;
-  margin: 0;
-  padding-left: 8px;
-  padding-bottom: 8px;
-  padding-top: 16px;
-
-  color: #e3e3e3;
-  font-size: 18px;
-  font-weight: 300;
-
-  border-bottom: 1px solid #515151;
-`
-
-const Section = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  padding-top: 8px;
 `
