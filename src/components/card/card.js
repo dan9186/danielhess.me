@@ -38,26 +38,47 @@ const Container = styled.div`
   flex: 1;
   flex-flow: column;
   z-index: 1;
-  max-height: 674px;
-  max-width: 480px;
-
-  @media ${props => props.theme.media.width.xss} {
-    max-width: 300px;
-  }
 
   background-color: #31313a;
   border-radius: 4px;
   overflow: hidden;
 
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15);
-  filter: drop-shadow(-15px -15px 0px #292931);
+
+  @media ${props => props.theme.media.width.xss} {
+    max-height: 550px;
+    max-width: 300px;
+  }
+
+  @media ${props => props.theme.media.width.xs} {
+    max-height: 600px;
+    max-width: 300px;
+    filter: drop-shadow(-15px -15px 0px #292931);
+  }
+
+  @media ${props => props.theme.media.width.sm} {
+    max-height: 674px;
+    max-width: 480px;
+    filter: drop-shadow(-15px -15px 0px #292931);
+  }
 `
 
 const Background = styled.div`
   display: flex;
   flex: 1 0 350px;
-  max-height: 350px;
   z-index: -1;
+
+  @media ${props => props.theme.media.width.xss} {
+    max-height: 270px;
+  }
+
+  @media ${props => props.theme.media.width.xs} {
+    max-height: 270px;
+  }
+
+  @media ${props => props.theme.media.width.sm} {
+    max-height: 350px;
+  }
 
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;

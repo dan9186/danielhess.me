@@ -41,23 +41,18 @@ const AppContainer = styled.div`
   height: 100%;
 
   @media ${props => props.theme.media.width.xss} {
-    max-height: 674px;
+    max-height: 550px;
   }
 
   @media ${props => props.theme.media.width.xs} {
-    max-height: 674px;
+    max-height: 600px;
   }
 
   @media ${props => props.theme.media.width.sm} {
     max-height: 674px;
   }
 
-  @media ${props => props.theme.media.width.md} {
-    max-height: 674px;
-  }
-
   @media ${props => props.theme.media.width.lg} {
-    max-height: 674px;
     max-width: 1268px;
   }
 `
