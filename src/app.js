@@ -16,7 +16,6 @@ export const App = () => (
 
 const AppContainer = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
   flex: 1;
   height: 100%;
@@ -49,6 +48,6 @@ const AppContainer = styled.div`
   }
 
   @media ${props => props.theme.media.width.lg} {
-    max-width: 1268px;
+    max-width: 1168px;
   }
 `

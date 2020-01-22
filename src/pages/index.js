@@ -15,9 +15,9 @@ export const Pages = () => (
 const Container = styled.div`
   display: flex;
   flex: 1 0 auto;
-  padding-top: ${props => props.theme.spacing(2)};
-  padding-bottom: ${props => props.theme.spacing(2)};
+  padding: ${props => props.theme.spacing(2)};
   overflow-y: scroll;
+  margin-bottom: ${props => props.theme.spacing(4)};
 
   color: #ffffff;
   background-color: #31313a;
@@ -26,6 +26,7 @@ const Container = styled.div`
   @media ${props => props.theme.media.width.md} {
     max-width: 350px;
     max-height: ${props => props.theme.spacing(4, 674)};
+    margin-bottom: ${props => props.theme.spacing(0)};
   }
 
   @media ${props => props.theme.media.width.lg} {
