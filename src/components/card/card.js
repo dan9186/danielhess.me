@@ -35,12 +35,14 @@ export const Card = () => (
 
 const Container = styled.div`
   display: flex;
-  flex: 1;
+  flex: 1 0 auto;
   flex-flow: column;
   z-index: 1;
+  height: 100%;
+  width: 100%;
 
   background-color: #31313a;
-  border-radius: 4px;
+  ${props => props.theme.borderRadius.all}
   overflow: hidden;
 
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15);
@@ -58,6 +60,7 @@ const Container = styled.div`
 
   @media ${props =>
       `${props.theme.media.width.xs} and ${props.theme.media.landscape}`} {
+    max-height: 350px;
     max-width: 480px;
     filter: drop-shadow(-15px -15px 0px #292931);
   }
@@ -67,6 +70,15 @@ const Container = styled.div`
     max-width: 480px;
     filter: drop-shadow(-15px -15px 0px #292931);
   }
+
+  @media ${props =>
+      `${props.theme.media.width.sm} and ${props.theme.media.landscape}`} {
+    max-height: 315px;
+  }
+
+  @media ${props => props.theme.media.width.md} {
+    max-height: 674px;
+  }
 `
 
 const Background = styled.div`
@@ -74,8 +86,7 @@ const Background = styled.div`
   flex: 1 0 350px;
   z-index: -1;
 
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  ${props => props.theme.borderRadius.top}
   background: rgb(65, 174, 118);
   background: radial-gradient(
     circle,
