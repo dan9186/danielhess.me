@@ -5,15 +5,16 @@ import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 
 import { Date } from './date'
 import { Icon } from './icon'
+import { Section } from './section'
 import { Subtitle } from './subtitle'
 
 export const Education = ({ education = [] }) => (
-  <>
+  <Section>
     <Subtitle>
       <Icon icon={faGraduationCap} />
       Education
     </Subtitle>
-    <Section>
+    <Content>
       {education.map(ed => (
         <School>
           <Date start={ed.start} end={ed.end} />
@@ -21,18 +22,18 @@ export const Education = ({ education = [] }) => (
           <Location>{ed.location}</Location>
           <Degrees>
             {ed.degrees.map(d => (
-              <Degree>{d}</Degree>
+              <li>{d}</li>
             ))}
           </Degrees>
         </School>
       ))}
-    </Section>
-  </>
+    </Content>
+  </Section>
 )
 
-const Section = styled.div`
+const Content = styled.div`
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   padding-top: 8px;
   padding-bottom: 8px;
 `
@@ -41,11 +42,16 @@ const School = styled.div`
   display: flex;
   flex-flow: column;
   flex: 1 0 50%;
+  margin-bottom: ${props => props.theme.spacing(3)};
+
+  &:last-child {
+    margin-bottom: ${props => props.theme.spacing(0)};
+  }
 `
 
 const Name = styled.h3`
   margin-top: ${props => props.theme.spacing(1)};
-  margin-bottom: 0;
+  margin-bottom: ${props => props.theme.spacing(0)};
 
   color: #e3e3e3;
   font-size: 18px;
@@ -65,5 +71,3 @@ const Degrees = styled.ul`
   font-size: 16px;
   font-weight: 500;
 `
-
-const Degree = styled.li``
