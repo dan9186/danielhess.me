@@ -16,8 +16,6 @@ const Container = styled.div`
   display: flex;
   flex: 1 0 auto;
   flex-flow: column;
-  max-width: 755px;
-  padding: 16px;
 
   color: #a2a2a2;
   font-weight: 300;

@@ -2,13 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { Theme } from './theme'
-
-import { Card } from './components/card/card'
+import { Card } from './components'
+import { Pages } from './pages'
 
 export const App = () => (
   <Theme>
     <AppContainer>
       <Card />
+      <Pages />
     </AppContainer>
   </Theme>
 )
