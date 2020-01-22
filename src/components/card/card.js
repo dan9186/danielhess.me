@@ -50,12 +50,16 @@ const Container = styled.div`
   @media ${props => props.theme.media.width.xss} {
     max-height: 550px;
     max-width: 300px;
+    margin-top: ${props => props.theme.spacing(4)};
+    margin-bottom: ${props => props.theme.spacing(4)};
   }
 
   @media ${props => props.theme.media.width.xs} {
     max-height: 600px;
     max-width: 300px;
     filter: drop-shadow(-15px -15px 0px #292931);
+    margin-top: ${props => props.theme.spacing(4)};
+    margin-bottom: ${props => props.theme.spacing(4)};
   }
 
   @media ${props =>
@@ -78,6 +82,8 @@ const Container = styled.div`
 
   @media ${props => props.theme.media.width.md} {
     max-height: 674px;
+    margin-top: ${props => props.theme.spacing(0)};
+    margin-bottom: ${props => props.theme.spacing(0)};
   }
 `
 
