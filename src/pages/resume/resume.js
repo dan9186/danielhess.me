@@ -2,13 +2,19 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { ResumeText } from './resume_text'
-import { Education, Preface } from './components'
+import { Accomplishments, Education, Info, Preface } from './components'
 
 export const Resume = () => (
   <Container>
     <Title>Resume</Title>
     <Preface preface={ResumeText.preface} />
-    <Education education={ResumeText.education} />
+    <Row>
+      <Info info={ResumeText.info} />
+    </Row>
+    <Row>
+      <Education education={ResumeText.education} />
+      <Accomplishments accomplishments={ResumeText.accomplishments} />
+    </Row>
   </Container>
 )
 
@@ -50,4 +56,10 @@ const Title = styled.h1`
       rgba(49, 49, 58, 1) 100%
     );
   }
+`
+
+const Row = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: ${props => props.theme.spacing(1)};
 `

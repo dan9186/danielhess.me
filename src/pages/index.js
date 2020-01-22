@@ -16,7 +16,6 @@ const Container = styled.div`
   display: flex;
   flex: 1 0 auto;
   padding: ${props => props.theme.spacing(2)};
-  overflow-y: scroll;
   margin-bottom: ${props => props.theme.spacing(4)};
 
   color: #ffffff;
