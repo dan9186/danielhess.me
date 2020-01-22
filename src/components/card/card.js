@@ -35,9 +35,11 @@ export const Card = () => (
 
 const Container = styled.div`
   display: flex;
-  flex: 1;
+  flex: 1 0 auto;
   flex-flow: column;
   z-index: 1;
+  height: 100%;
+  width: 100%;
 
   background-color: #31313a;
   border-radius: 4px;
@@ -58,6 +60,7 @@ const Container = styled.div`
 
   @media ${props =>
       `${props.theme.media.width.xs} and ${props.theme.media.landscape}`} {
+    max-height: 350px;
     max-width: 480px;
     filter: drop-shadow(-15px -15px 0px #292931);
   }
@@ -66,6 +69,15 @@ const Container = styled.div`
     max-height: 674px;
     max-width: 480px;
     filter: drop-shadow(-15px -15px 0px #292931);
+  }
+
+  @media ${props =>
+      `${props.theme.media.width.sm} and ${props.theme.media.landscape}`} {
+    max-height: 315px;
+  }
+
+  @media ${props => props.theme.media.width.md} {
+    max-height: 674px;
   }
 `
 

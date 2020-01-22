@@ -15,7 +15,13 @@ const theme = {
       xl: `(min-width: 1800px)`,
     },
   },
-  spacing: (x = 1) => `${x * spacingMultiplier}px`,
+  spacing: (x = 1, basis) => {
+    if (basis) {
+      return `${basis - x * spacingMultiplier}px`
+    }
+
+    return `${x * spacingMultiplier}px`
+  },
 }
 
 export const Theme = ({ children }) => (

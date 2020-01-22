@@ -16,34 +16,35 @@ export const App = () => (
 const AppContainer = styled.div`
   display: flex;
   justify-content: center;
-  flex-flow: row nowrap;
+  align-items: center;
   flex: 1;
   height: 100%;
 
   @media ${props => props.theme.media.width.xss} {
-    max-height: 550px;
+    flex-flow: column;
+    max-width: 300px;
   }
 
   @media ${props => props.theme.media.width.xs} {
-    max-height: 600px;
+    flex-flow: column;
+    max-width: 300px;
   }
 
   @media ${props =>
       `${props.theme.media.width.xs} and ${props.theme.media.landscape}`} {
-    max-height: 350px;
   }
 
   @media ${props => props.theme.media.width.sm} {
-    max-height: 674px;
+    max-width: 480px;
   }
 
   @media ${props =>
       `${props.theme.media.width.sm} and ${props.theme.media.landscape}`} {
-    max-height: 315px;
   }
 
   @media ${props => props.theme.media.width.md} {
-    max-height: 674px;
+    flex-flow: row nowrap;
+    max-width: 850px;
   }
 
   @media ${props => props.theme.media.width.lg} {
