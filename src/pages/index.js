@@ -21,8 +21,7 @@ const Container = styled.div`
 
   color: #ffffff;
   background-color: #31313a;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  ${props => props.theme.borderRadius.right}
 
   @media ${props => props.theme.media.width.md} {
     max-width: 350px;

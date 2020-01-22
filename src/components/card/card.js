@@ -42,7 +42,7 @@ const Container = styled.div`
   width: 100%;
 
   background-color: #31313a;
-  border-radius: 4px;
+  ${props => props.theme.borderRadius.all}
   overflow: hidden;
 
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15);
@@ -86,8 +86,7 @@ const Background = styled.div`
   flex: 1 0 350px;
   z-index: -1;
 
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  ${props => props.theme.borderRadius.top}
   background: rgb(65, 174, 118);
   background: radial-gradient(
     circle,
