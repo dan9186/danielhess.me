@@ -9,12 +9,18 @@ export const Date = ({ start, end }) => (
 
 const Container = styled.div`
   max-width: fit-content;
-  border: 1px solid ${props => (props.active ? '#78cc6d' : '#666666')};
+  border: 1px solid ${props =>
+    props.active
+      ? props.theme.palette.green[400]
+      : props.theme.palette.grey[600]};
   ${props => props.theme.borderRadius.all}
   margin-top: ${props => props.theme.spacing(1)};
   padding-right: ${props => props.theme.spacing(0.5)};
   padding-left: ${props => props.theme.spacing(0.5)};
 
-  color: ${props => (props.active ? '#78cc6d' : '#666666')};
+  color: ${props =>
+    props.active
+      ? props.theme.palette.green[400]
+      : props.theme.palette.grey[600]};
   font-size: 13px;
 `

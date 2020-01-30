@@ -53,7 +53,7 @@ const Name = styled.h3`
   margin-top: ${props => props.theme.spacing(1)};
   margin-bottom: ${props => props.theme.spacing(0)};
 
-  color: #e3e3e3;
+  color: ${props => props.theme.palette.grey[300]};
   font-size: 18px;
 `
 
