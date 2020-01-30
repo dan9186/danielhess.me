@@ -34,8 +34,8 @@ export const Education = ({ education = [] }) => (
 const Content = styled.div`
   display: flex;
   flex-flow: column;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: ${props => props.theme.spacing(1)};
+  padding-bottom: ${props => props.theme.spacing(1)};
 `
 
 const School = styled.div`
@@ -53,7 +53,7 @@ const Name = styled.h3`
   margin-top: ${props => props.theme.spacing(1)};
   margin-bottom: ${props => props.theme.spacing(0)};
 
-  color: #e3e3e3;
+  color: ${props => props.theme.palette.grey[300]};
   font-size: 18px;
 `
 

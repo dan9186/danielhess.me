@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Theme } from './theme'
+import { Theme } from './theme/'
 import { Card } from './components'
 import { Pages } from './pages'
 

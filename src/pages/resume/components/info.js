@@ -36,6 +36,8 @@ const Content = styled.div`
 `
 
 const Item = styled.div`
+  display: flex;
+  flex-flow: row wrap;
   margin-top: ${props => props.theme.spacing(1)};
 
   &:first-child {
@@ -44,14 +46,14 @@ const Item = styled.div`
 `
 
 const Pill = styled.span`
-  max-width: fit-content;
-  border: 1px solid #78cc6d;
+  display: flex;
+  border: 1px solid ${props => props.theme.palette.green[400]};
   ${props => props.theme.borderRadius.all}
   margin-right: ${props => props.theme.spacing(1)};
   padding-right: ${props => props.theme.spacing(0.5)};
   padding-left: ${props => props.theme.spacing(0.5)};
 
-  color: #78cc6d;
+  color: ${props => props.theme.palette.green[400]};
   font-size: 14px;
   font-weight: 500;
 `

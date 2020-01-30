@@ -209,7 +209,7 @@ const Name = styled.h1`
   margin-top: ${props => props.theme.spacing(0)};
   margin-bottom: ${props => props.theme.spacing()};
 
-  color: #e3e3e3;
+  color: ${props => props.theme.palette.grey[300]};
   font-size: 34px;
   line-height: ${props => props.theme.spacing(4)};
   font-weight: 400;
@@ -221,7 +221,7 @@ const Title = styled.h2`
   margin-top: ${props => props.theme.spacing(0)};
   margin-bottom: ${props => props.theme.spacing(2)};
 
-  color: #78cc6d;
+  color: ${props => props.theme.palette.green[400]};
   font-size: 16px;
   line-height: 20px;
   font-weight: 300;
@@ -239,11 +239,11 @@ const StyledLink = styled.a`
 `
 
 const Icon = styled(FontAwesomeIcon)`
-  color: #a2a2a2;
+  color: ${props => props.theme.palette.grey[500]};
   font-size: 24px;
   transition: color 0.4s ease;
 
   &:hover {
-    color: #78cc6d;
+    color: ${props => props.theme.palette.green[400]};
   }
 `
