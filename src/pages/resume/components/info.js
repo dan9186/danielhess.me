@@ -36,6 +36,8 @@ const Content = styled.div`
 `
 
 const Item = styled.div`
+  display: flex;
+  flex-flow: row wrap;
   margin-top: ${props => props.theme.spacing(1)};
 
   &:first-child {
@@ -44,7 +46,7 @@ const Item = styled.div`
 `
 
 const Pill = styled.span`
-  max-width: fit-content;
+  display: flex;
   border: 1px solid ${props => props.theme.palette.green[400]};
   ${props => props.theme.borderRadius.all}
   margin-right: ${props => props.theme.spacing(1)};
