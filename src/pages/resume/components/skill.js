@@ -23,15 +23,17 @@ const Container = styled.div`
 `
 
 const Name = styled.h5`
-  font-family: Montserrat, sans-serif;
   font-weight: 500;
   font-size: 14px;
-  color: #778492;
+  color: ${props => props.theme.palette.grey[500]};
   margin-bottom: 0;
 `
 
 const Mark = styled.span`
-  background-color: ${props => (props.solid ? '#17CF5D' : '#D6D6D6')};
+  background-color: ${props =>
+    props.solid
+      ? props.theme.palette.green[400]
+      : props.theme.palette.grey[300]};
   display: inline-block;
   height: 2px;
   margin-right: ${props => props.theme.spacing(1)};
