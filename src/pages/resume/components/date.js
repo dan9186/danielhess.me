@@ -12,7 +12,7 @@ const Container = styled.div`
   border: 1px solid ${props =>
     props.active
       ? props.theme.palette.green[400]
-      : props.theme.palette.grey[600]};
+      : props.theme.palette.grey[500]};
   ${props => props.theme.borderRadius.all}
   margin-top: ${props => props.theme.spacing(1)};
   padding-right: ${props => props.theme.spacing(0.5)};
@@ -21,6 +21,6 @@ const Container = styled.div`
   color: ${props =>
     props.active
       ? props.theme.palette.green[400]
-      : props.theme.palette.grey[600]};
+      : props.theme.palette.grey[500]};
   font-size: 13px;
 `

@@ -2,7 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { ResumeText } from './resume_text'
-import { Accomplishments, Education, Info, Preface, Skills } from './components'
+import {
+  Accomplishments,
+  Education,
+  Info,
+  Positions,
+  Preface,
+  Skills,
+} from './components'
 
 export const Resume = () => (
   <Container>
@@ -14,6 +21,9 @@ export const Resume = () => (
     <Row>
       <Education education={ResumeText.education} />
       <Accomplishments accomplishments={ResumeText.accomplishments} />
+    </Row>
+    <Row>
+      <Positions positions={ResumeText.positions} />
     </Row>
     <Row>
       <Skills skills={ResumeText.skills} />
