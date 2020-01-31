@@ -10,6 +10,7 @@ export const Subtitle = styled.h2`
   color: ${props => props.theme.palette.grey[300]};
   font-size: 18px;
   font-weight: 400;
+  text-transform: capitalize;
 
   border-bottom: 1px solid ${props => props.theme.palette.grey[700]};
 `
