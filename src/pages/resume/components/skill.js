@@ -1,66 +1,39 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const Skill = props => {
-  return (
-    <li>
-      <SkillName>{props.name}</SkillName>
-      <SkillLevel level={props.level} />
-    </li>
-  )
-}
+export const Skill = ({ name, level }) => (
+  <Container>
+    <Name>{name}</Name>
+    <Level level={level} />
+  </Container>
+)
 
-const SkillLevel = props => {
-  const level = props.level ? props.level : 0
+const Level = ({ level = 0 }) => (
+  <div>
+    <Mark solid={level > 0} />
+    <Mark solid={level > 1} />
+    <Mark solid={level > 2} />
+  </div>
+)
 
-  switch (level) {
-    case 1:
-      return (
-        <div>
-          <SkillMark solid={'true'} />
-          <SkillMark />
-          <SkillMark />
-        </div>
-      )
-    case 2:
-      return (
-        <div>
-          <SkillMark solid={'true'} />
-          <SkillMark solid={'true'} />
-          <SkillMark />
-        </div>
-      )
-    case 3:
-      return (
-        <div>
-          <SkillMark solid={'true'} />
-          <SkillMark solid={'true'} />
-          <SkillMark solid={'true'} />
-        </div>
-      )
-    default:
-      return (
-        <div>
-          <SkillMark />
-          <SkillMark />
-          <SkillMark />
-        </div>
-      )
-  }
-}
+const Container = styled.div`
+  display: flex;
+  flex-flow: column;
+  margin-right: ${props => props.theme.spacing(2)};
+`
 
-const SkillName = styled.h5`
+const Name = styled.h5`
   font-family: Montserrat, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 14px;
   color: #778492;
   margin-bottom: 0;
 `
 
-const SkillMark = styled.span`
+const Mark = styled.span`
   background-color: ${props => (props.solid ? '#17CF5D' : '#D6D6D6')};
   display: inline-block;
   height: 2px;
-  margin-right: 10px;
-  width: 55px;
+  margin-right: ${props => props.theme.spacing(1)};
+  width: ${props => props.theme.spacing(2)};
 `
