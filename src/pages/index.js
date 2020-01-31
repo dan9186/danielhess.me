@@ -15,7 +15,7 @@ export const Pages = () => (
 const Container = styled.div`
   display: flex;
   flex: 1 0 auto;
-  padding: ${props => props.theme.spacing(2)};
+  padding: ${props => props.theme.spacing(3)};
   margin-bottom: ${props => props.theme.spacing(4)};
   overflow: scroll;
 
@@ -25,7 +25,7 @@ const Container = styled.div`
 
   @media ${props => props.theme.media.width.md} {
     max-width: 350px;
-    max-height: ${props => props.theme.spacing(4, 674)};
+    max-height: ${props => props.theme.spacing(10, 674)};
     margin-bottom: ${props => props.theme.spacing(0)};
   }
 

@@ -34,8 +34,9 @@ export const Education = ({ education = [] }) => (
 const Content = styled.div`
   display: flex;
   flex-flow: column;
-  padding-top: ${props => props.theme.spacing(1)};
-  padding-bottom: ${props => props.theme.spacing(1)};
+  margin-top: ${props => props.theme.spacing(2)};
+  margin-bottom: ${props => props.theme.spacing(0)};
+  padding-left: ${props => props.theme.spacing(2)};
 `
 
 const School = styled.div`
