@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Subtitle = styled.h2`
   display: flex;
+  align-items: center;
   margin: ${props => props.theme.spacing(0)};
   padding-left: ${props => props.theme.spacing(1)};
   padding-bottom: ${props => props.theme.spacing(1)};
