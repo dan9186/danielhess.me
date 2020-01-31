@@ -34,8 +34,9 @@ const Container = styled.div`
 const Title = styled.h1`
   display: flex;
   margin: ${props => props.theme.spacing(0)};
-  padding-left: 8px;
-  padding-bottom: 16px;
+  margin-right: ${props => props.theme.spacing(2)};
+  padding-left: ${props => props.theme.spacing(1)};
+  padding-bottom: ${props => props.theme.spacing(2)};
 
   color: #e3e3e3;
   font-size: 24px;
@@ -49,8 +50,8 @@ const Title = styled.h1`
     display: flex;
     border-radius: 50%;
     margin: 3px 4px 0px;
-    height: 24px;
-    width: 24px;
+    height: ${props => props.theme.spacing(3)};
+    width: ${props => props.theme.spacing(3)};
 
     background-color: rgb(120, 204, 109, 0.35);
     background: linear-gradient(

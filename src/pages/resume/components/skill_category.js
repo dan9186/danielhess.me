@@ -19,13 +19,13 @@ const Container = styled.div`
   flex-flow: column;
   flex: 1 1 47%;
   margin-right: ${props => props.theme.spacing(2)};
+  margin-bottom: ${props => props.theme.spacing(2)};
 `
 
 const Title = styled.h3`
   margin: ${props => props.theme.spacing(0)};
   padding-left: ${props => props.theme.spacing(1)};
   padding-bottom: ${props => props.theme.spacing(1)};
-  padding-top: ${props => props.theme.spacing(2)};
 
   color: ${props => props.theme.palette.grey[300]};
   font-size: 16px;
