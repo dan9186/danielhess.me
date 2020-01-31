@@ -26,6 +26,7 @@ const Name = styled.h5`
   font-weight: 500;
   font-size: 14px;
   color: ${props => props.theme.palette.grey[500]};
+  margin-top: ${props => props.theme.spacing(2)};
   margin-bottom: 0;
 `
 
