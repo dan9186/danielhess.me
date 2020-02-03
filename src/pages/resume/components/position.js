@@ -9,6 +9,7 @@ export const Position = ({ position }) => {
     <Container>
       <Date start={position.start} end={position.end} />
       <Title>{position.title}</Title>
+      <Company>{position.company}</Company>
       <Location>{position.location}</Location>
       <Entries></Entries>
     </Container>
@@ -29,6 +30,12 @@ const Title = styled.h3`
 
   color: ${props => props.theme.palette.grey[300]};
   font-size: 18px;
+`
+
+const Company = styled.div`
+  color: ${props => props.theme.palette.grey[400]};
+  font-size: 15px;
+  font-weight: 500;
 `
 
 const Location = styled.div`
