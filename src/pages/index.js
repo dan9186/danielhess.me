@@ -21,10 +21,9 @@ const Container = styled.div`
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15);
 
   color: #ffffff;
-  background-color: #31313a;
-  ${props => props.theme.borderRadius.right}
-
-  @media ${props => props.theme.media.width.md} {
+  background-color: ${props => props.theme.palette.grey[850]};
+    ${props => props.theme.borderRadius.right} @media
+      ${props => props.theme.media.width.md} {
     max-width: 350px;
     max-height: ${props => props.theme.spacing(10, 674)};
     margin-bottom: ${props => props.theme.spacing(0)};

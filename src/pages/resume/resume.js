@@ -17,8 +17,10 @@ import {
 export const Resume = () => (
   <Container>
     <Title>
-      <Icon icon={faFileAlt} />
-      Resume
+      <div>
+        <Icon icon={faFileAlt} />
+        Resume
+      </div>
     </Title>
     <Preface preface={ResumeText.preface} />
     <Row>
@@ -49,17 +51,26 @@ const Container = styled.div`
 
 const Title = styled.h1`
   display: flex;
+  flex-flow: column;
   margin: ${props => props.theme.spacing(0)};
   margin-right: ${props => props.theme.spacing(2)};
   padding-left: ${props => props.theme.spacing(1)};
-  padding-bottom: ${props => props.theme.spacing(2)};
-  align-items: center;
 
   color: #e3e3e3;
   font-size: 24px;
   font-weight: 600;
 
-  border-bottom: 1px solid #515151;
+  &:after {
+    margin-top: ${props => props.theme.spacing(2)};
+    content: '';
+    background: -webkit-linear-gradient(
+      left,
+      ${props => props.theme.palette.grey[600]},
+      ${props => props.theme.palette.grey[850]}
+    );
+    height: 1px;
+    width: 100%;
+  }
 `
 
 const Row = styled.div`
