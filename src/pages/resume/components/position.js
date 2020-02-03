@@ -5,25 +5,22 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons'
 
 import { Date } from './date'
 
-export const Position = ({ position }) => {
-  console.log(position)
-  return (
-    <Container>
-      <Date start={position.start} end={position.end} />
-      <Title>{position.title}</Title>
-      <Company>{position.company}</Company>
-      <Location>{position.location}</Location>
-      <Achievements>
-        {position.achievements.map(a => (
-          <Achievement>
-            <Mark icon={faCircle} />
-            {a}
-          </Achievement>
-        ))}
-      </Achievements>
-    </Container>
-  )
-}
+export const Position = ({ position }) => (
+  <Container>
+    <Date start={position.start} end={position.end} />
+    <Title>{position.title}</Title>
+    <Company>{position.company}</Company>
+    <Location>{position.location}</Location>
+    <Achievements>
+      {position.achievements.map(a => (
+        <Achievement>
+          <Mark icon={faCircle} />
+          {a}
+        </Achievement>
+      ))}
+    </Achievements>
+  </Container>
+)
 
 const Container = styled.div`
   display: flex;
