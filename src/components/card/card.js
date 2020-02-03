@@ -45,7 +45,7 @@ const Container = styled.div`
   ${props => props.theme.borderRadius.all}
   overflow: hidden;
 
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3);
 
   @media ${props => props.theme.media.width.xss} {
     max-height: 550px;

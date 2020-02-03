@@ -18,6 +18,7 @@ const Container = styled.div`
   padding: ${props => props.theme.spacing(3)};
   margin-bottom: ${props => props.theme.spacing(4)};
   overflow: scroll;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15);
 
   color: #ffffff;
   background-color: #31313a;
