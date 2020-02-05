@@ -1,23 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import moment from 'moment'
 
 export const Date = ({ start, end }) => {
   const active = end.toLowerCase() === 'present'
-
-  const stop = active ? moment.now() : end
-  const durr = moment.duration(moment(stop).diff(moment(start)))
-  const years = durr.years()
-  const months = durr.months()
-
-  const timeSpent = years > 0 ? `${years}y ${months}mo` : `${months}mo`
 
   return (
     <Container>
       <Pill active={active}>
         {start} - {end}
       </Pill>
-      <Pill active={active}>{timeSpent}</Pill>
     </Container>
   )
 }
