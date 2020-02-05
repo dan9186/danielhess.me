@@ -21,6 +21,8 @@ const Container = styled.div`
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15);
 
   color: #ffffff;
+  font-size: 16px;
+  line-height: 1.4em;
   background-color: ${props => props.theme.palette.grey[850]};
     ${props => props.theme.borderRadius.right} @media
       ${props => props.theme.media.width.md} {

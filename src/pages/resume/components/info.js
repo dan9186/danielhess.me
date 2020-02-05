@@ -55,5 +55,6 @@ const Pill = styled.span`
 
   color: ${props => props.theme.palette.green[400]};
   font-size: 14px;
+  line-height: 1.3em;
   font-weight: 500;
 `
