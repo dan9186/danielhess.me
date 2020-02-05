@@ -22,7 +22,9 @@ export const Resume = () => (
         Resume
       </div>
     </Title>
-    <Preface preface={ResumeText.preface} />
+    <Row>
+      <Preface preface={ResumeText.preface} />
+    </Row>
     <Row>
       <Info info={ResumeText.info} />
     </Row>
