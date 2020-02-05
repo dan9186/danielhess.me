@@ -79,6 +79,7 @@ const Row = styled.div`
   display: flex;
   flex-flow: row wrap;
   margin-top: ${props => props.theme.spacing(1)};
+  margin-bottom: ${props => props.theme.spacing(2)};
 
   &:last-child {
     margin-bottom: ${props => props.theme.spacing(2)};

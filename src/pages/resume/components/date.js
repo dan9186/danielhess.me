@@ -35,4 +35,5 @@ const Pill = styled.div`
       ? props.theme.palette.green[400]
       : props.theme.palette.grey[500]};
   font-size: 13px;
+  line-height: 1.4em;
 `

@@ -23,16 +23,28 @@ const Container = styled.div`
 `
 
 const Title = styled.h3`
+  display: flex;
+  flex-flow: column;
   margin: ${props => props.theme.spacing(0)};
   padding-left: ${props => props.theme.spacing(1)};
   padding-bottom: ${props => props.theme.spacing(1)};
 
   color: ${props => props.theme.palette.grey[300]};
   font-size: 16px;
-  font-weight: 400;
-  text-transform: capitalize;
+  font-weight: 300;
+  text-transform: uppercase;
 
-  border-bottom: 1px solid ${props => props.theme.palette.grey[700]};
+  &:after {
+    margin-top: ${props => props.theme.spacing(2)};
+    content: '';
+    background: -webkit-linear-gradient(
+      left,
+      ${props => props.theme.palette.grey[600]},
+      ${props => props.theme.palette.grey[850]}
+    );
+    height: 1px;
+    width: 100%;
+  }
 `
 
 const Entries = styled.div`

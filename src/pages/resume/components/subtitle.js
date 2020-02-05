@@ -15,12 +15,12 @@ const Container = styled.h2`
   padding-top: ${props => props.theme.spacing(2)};
 
   color: ${props => props.theme.palette.grey[300]};
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
-  text-transform: capitalize;
+  text-transform: uppercase;
 
   &:after {
-    margin-top: ${props => props.theme.spacing(1)};
+    margin-top: ${props => props.theme.spacing(2)};
     content: '';
     background: -webkit-linear-gradient(
       left,
