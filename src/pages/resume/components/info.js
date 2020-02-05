@@ -14,46 +14,57 @@ export const Info = ({ info }) => (
       Info
     </Subtitle>
     <Content>
-      <Item>
-        <Pill>Status</Pill> {info.status}
-      </Item>
-      <Item>
-        <Pill>Location</Pill> {info.location}
-      </Item>
-      <Item>
-        <Pill>Remote</Pill> {info.remote}
-      </Item>
+      <Pill row='1' rowEnd='2' col='1' colEnd='2'>
+        Status
+      </Pill>
+      <Details row='1' rowEnd='2' col='2' colEnd='3'>
+        {info.status}
+      </Details>
+      <Pill row='2' rowEnd='3' col='1' colEnd='2'>
+        Location
+      </Pill>
+      <Details row='2' rowEnd='3' col='2' colEnd='3'>
+        {info.location}
+      </Details>
+      <Pill row='3' rowEnd='4' col='1' colEnd='2'>
+        Remote
+      </Pill>
+      <Details row='3' rowEnd='4' col='2' colEnd='3'>
+        {info.remote}
+      </Details>
     </Content>
   </Section>
 )
 
 const Content = styled.div`
-  display: flex;
-  flex-flow: column;
+  display: grid;
   margin-top: ${props => props.theme.spacing(2)};
   margin-bottom: ${props => props.theme.spacing(0)};
   padding-left: ${props => props.theme.spacing(2)};
+
+  grid-template-columns: 70px auto;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: ${props => props.theme.spacing(1)};
+  grid-row-gap: ${props => props.theme.spacing(1)};
 `
 
-const Item = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  margin-top: ${props => props.theme.spacing(1)};
-
-  &:first-child {
-    margin-top: ${props => props.theme.spacing(0)};
-  }
+const Details = styled.div`
+  grid-area: ${props =>
+    `${props.row} / ${props.col} / ${props.rowEnd} / ${props.colEnd}`};
 `
 
 const Pill = styled.span`
-  display: flex;
+  grid-area: ${props =>
+    `${props.row} / ${props.col} / ${props.rowEnd} / ${props.colEnd}`};
+
+  max-height: 22px;
   border: 1px solid ${props => props.theme.palette.green[400]};
   ${props => props.theme.borderRadius.all}
-  margin-right: ${props => props.theme.spacing(1)};
   padding-right: ${props => props.theme.spacing(0.5)};
   padding-left: ${props => props.theme.spacing(0.5)};
 
   color: ${props => props.theme.palette.green[400]};
+  text-align: center;
   font-size: 14px;
   line-height: 1.3em;
   font-weight: 500;
