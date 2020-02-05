@@ -9,11 +9,11 @@ export const Skill = ({ name, level }) => (
 )
 
 const Level = ({ level = 0 }) => (
-  <div>
+  <Marks>
     <Mark solid={level > 0} />
     <Mark solid={level > 1} />
     <Mark solid={level > 2} />
-  </div>
+  </Marks>
 )
 
 const Container = styled.div`
@@ -23,11 +23,15 @@ const Container = styled.div`
 `
 
 const Name = styled.h5`
-  font-weight: 500;
+  font-weight: 300;
   font-size: 14px;
   color: ${props => props.theme.palette.grey[500]};
   margin-top: ${props => props.theme.spacing(2)};
   margin-bottom: 0;
+`
+
+const Marks = styled.div`
+  margin-top: ${props => props.theme.spacing(-1)};
 `
 
 const Mark = styled.span`

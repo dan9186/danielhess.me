@@ -222,9 +222,9 @@ const Title = styled.h2`
   margin-bottom: ${props => props.theme.spacing(2)};
 
   color: ${props => props.theme.palette.green[400]};
-  font-size: 16px;
+  font-size: 18px;
   line-height: 20px;
-  font-weight: 300;
+  font-weight: 400;
 `
 
 const Icons = styled.div`
