@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const Subtitle = ({ children }) => (
-  <Container>
+export const Subtitle = ({ children, onClick }) => (
+  <Container onClick={onClick}>
     <div>{children}</div>
   </Container>
 )
