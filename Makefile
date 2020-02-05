@@ -59,7 +59,7 @@ deploy: ## Deploy the project
 
 .PHONY: dev
 dev: ## Run the dev test server
-	@npx webpack-dev-server --hot --progress --port 8080
+	@npx webpack-dev-server --hot --progress --port 8080 --host 0.0.0.0
 
 .PHONY: help
 help:  ## Show This Help
