@@ -7,7 +7,9 @@ import { Resume } from './resume/resume'
 export const Pages = () => (
   <Container>
     <Switch>
-      <Route exact path='/' component={Resume} />
+      <Route exact path='/'>
+        <Resume />
+      </Route>
     </Switch>
   </Container>
 )
