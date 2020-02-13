@@ -1,24 +1,48 @@
 name: Build
-
 on: [push]
 
 jobs:
-  build:
+  linting:
+    name: Linting
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-dept: 1
 
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
 
-    - run: make install
+    - name: Install
+      run: make install
 
-    - run: make linters
+    - name: Linters
+      run: make linters
 
-    - run: make build
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-dept: 1
+
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+
+    - name: Install
+      run: make install
+
+    - name: Build
+      run: make build
 
     - run: make test
 
