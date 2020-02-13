@@ -69,10 +69,6 @@ help:  ## Show This Help
 install: ## Install dependencies
 	@npm install
 
-.PHONY: release
-release: ## Create a release PR
-	@hub pull-request -b release -h master -m Release
-
 .PHONY: linters
 linters: ## Run all linters
 	npx eslint src/**/*.js
