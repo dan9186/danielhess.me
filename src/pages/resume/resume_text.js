@@ -1,9 +1,9 @@
 export const ResumeText = {
   preface:
-    "I'm a motivated and self directed individual with a passion for learning anything new.  My skillset helps me to provide a fully cloud native software lifecycle, from design and development, to testing and deployment.  Strong communication skills and being very familiar with Agile software practices, I am capable of interacting and fitting into almost any team.",
+    "I'm a motivated and self directed individual with a passion for learning anything new.  My skillset helps me to provide a fully cloud native software lifecycle, from design and development, to testing and deployment.  With strong communication skills and familiarity with Agile software practices, I am capable of interacting and fitting into almost any team.",
   info: {
     location: 'Portland (Metropolitan Area), OR',
-    email: 'daniel@danielhess.me',
+    email: 'daniel@danielhess.dev',
     status: 'Open to offers',
     remote: 'Prefer in office/person over remote work',
   },
