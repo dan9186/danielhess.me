@@ -44,11 +44,17 @@ jobs:
     - name: Build
       run: make build
 
+    - name: Archive Production Artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: dist
+        path: dist
+
   deploy:
     name: Deploy
     needs: [linting, build]
     if: endsWith(github.ref, '/master') == true
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
@@ -56,10 +62,14 @@ jobs:
       with:
         fetch-dept: 1
 
-    - name: Setup Node
-      uses: actions/setup-node@v1
+    - name: Download Artifact
+      uses: actions/download-artifact@master
       with:
-        node-version: 10.x
+        name: dist
 
     - name: Deploy
-      run: make install build deploy
+      uses: w9jds/firebase-action@master
+      with:
+        args: deploy --only hosting
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
