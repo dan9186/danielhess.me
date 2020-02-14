@@ -26,7 +26,7 @@ export const Card = () => (
       <StyledLink href='https://www.linkedin.com/in/dan9186/' target='_blank'>
         <Icon icon={faLinkedin} />
       </StyledLink>
-      <StyledLink href='mailto:daniel@danielhess.me' target='_blank'>
+      <StyledLink href='mailto:daniel@danielhess.dev' target='_blank'>
         <Icon icon={faEnvelope} />
       </StyledLink>
     </Icons>
