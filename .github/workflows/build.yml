@@ -47,7 +47,7 @@ jobs:
   deploy:
     name: Deploy
     needs: [linting, build]
-    if: endsWith(github.ref, '/master') == true
+#    if: endsWith(github.ref, '/master') == true
     runs-on: macos-latest
 
     steps:
