@@ -5,6 +5,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin
 
+const info = require('./package.json')
+
 const PATHS = {
   dist: path.join(__dirname, 'dist'),
   src: path.join(__dirname, 'src'),
@@ -80,6 +82,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: PATHS.src + '/index.ejs',
       title: 'Daniel Hess',
+      version: info.version,
     }),
     new CopyWebpackPlugin([
       { from: path.join(PATHS.static, 'robots.txt'), to: PATHS.dist },
