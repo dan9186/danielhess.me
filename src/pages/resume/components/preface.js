@@ -12,7 +12,7 @@ export const Preface = ({ preface }) => (
 const Content = styled.div`
   display: flex;
   flex-flow: row wrap;
-  margin-top: ${props => props.theme.spacing(2)};
-  margin-bottom: ${props => props.theme.spacing(0)};
-  padding-left: ${props => props.theme.spacing(2)};
+  margin-top: ${({ theme }) => theme.spacing(2)};
+  margin-bottom: ${({ theme }) => theme.spacing(0)};
+  padding-left: ${({ theme }) => theme.spacing(2)};
 `

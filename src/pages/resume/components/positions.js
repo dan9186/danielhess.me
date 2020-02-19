@@ -46,22 +46,22 @@ export const Positions = ({ positions = [] }) => {
 const Content = styled.div`
   display: flex;
   flex-flow: row wrap;
-  margin-top: ${props => props.theme.spacing(2)};
-  margin-bottom: ${props => props.theme.spacing(0)};
-  padding-left: ${props => props.theme.spacing(2)};
+  margin-top: ${({ theme }) => theme.spacing(2)};
+  margin-bottom: ${({ theme }) => theme.spacing(0)};
+  padding-left: ${({ theme }) => theme.spacing(2)};
 
   overflow: hidden;
-  max-height: ${props => (props.show ? '10000px' : '0')};
-  opacity: ${props => (props.show ? '1' : '0')};
+  max-height: ${({ theme, show }) => (show ? '10000px' : '0')};
+  opacity: ${({ theme, show }) => (show ? '1' : '0')};
   transition: all 300ms linear;
 `
 
 const Chevron = styled(FontAwesomeIcon)`
-  color: ${props => props.theme.palette.green[400]};
+  color: ${({ theme }) => theme.palette.green[400]};
   font-size: 16px;
-  padding-left: ${props => props.theme.spacing(1)};
-  padding-right: ${props => props.theme.spacing(1)};
+  padding-left: ${({ theme }) => theme.spacing(1)};
+  padding-right: ${({ theme }) => theme.spacing(1)};
 
-  transform: rotate(${props => (!props.show ? '-90deg' : '0')});
+  transform: rotate(${({ theme, show }) => (!show ? '-90deg' : '0')});
   transition: all 300ms;
 `
