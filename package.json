@@ -7,7 +7,7 @@
   "author": "Daniel Hess",
   "license": "MIT",
   "engines": {
-    "node": ">=10.16.0"
+    "node": ">=12.16.1"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
