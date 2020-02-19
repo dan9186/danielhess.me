@@ -27,6 +27,10 @@ clean: ## Cleanup all running and generated items
 coverage: ## Generate code coverage
 	npx nyc --reporter=text --reporter=html --all --extension .js mocha --require babel-core/register "src/**/*.test.js"
 
+.PHONY: deploy
+deploy: ## Deploy the generated site
+	firebase deploy
+
 .PHONY: dev
 dev: ## Run the dev test server
 	@npx webpack-dev-server --hot --progress --port 8080 --host 0.0.0.0
