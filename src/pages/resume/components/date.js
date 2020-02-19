@@ -20,20 +20,16 @@ const Container = styled.div`
 
 const Pill = styled.div`
   max-width: fit-content;
-  border: 1px solid ${props =>
-    props.active
-      ? props.theme.palette.green[400]
-      : props.theme.palette.grey[500]};
-  ${props => props.theme.borderRadius.all}
-  margin-top: ${props => props.theme.spacing(1)};
-  margin-right: ${props => props.theme.spacing(1)};
-  padding-right: ${props => props.theme.spacing(0.5)};
-  padding-left: ${props => props.theme.spacing(0.5)};
+  border: 1px solid ${({ theme, active }) =>
+    active ? theme.palette.green[400] : theme.palette.grey[500]};
+  ${({ theme }) => theme.borderRadius.all}
+  margin-top: ${({ theme }) => theme.spacing(1)};
+  margin-right: ${({ theme }) => theme.spacing(1)};
+  padding-right: ${({ theme }) => theme.spacing(0.5)};
+  padding-left: ${({ theme }) => theme.spacing(0.5)};
 
-  color: ${props =>
-    props.active
-      ? props.theme.palette.green[400]
-      : props.theme.palette.grey[500]};
+  color: ${({ theme, active }) =>
+    active ? theme.palette.green[400] : theme.palette.grey[500]};
   font-size: 13px;
   line-height: 1.4em;
 `

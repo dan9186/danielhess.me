@@ -22,10 +22,10 @@ export const Accomplishments = ({ accomplishments = [] }) => (
 )
 
 const Content = styled.ul`
-  margin-top: ${props => props.theme.spacing(2)};
-  margin-bottom: ${props => props.theme.spacing(0)};
-  margin-left: ${props => props.theme.spacing(3)};
-  padding-left: ${props => props.theme.spacing(2)};
+  margin-top: ${({ theme }) => theme.spacing(2)};
+  margin-bottom: ${({ theme }) => theme.spacing(0)};
+  margin-left: ${({ theme }) => theme.spacing(3)};
+  padding-left: ${({ theme }) => theme.spacing(2)};
 
   font-size: 16px;
   font-weight: 500;

@@ -20,34 +20,34 @@ const AppContainer = styled.div`
   flex: 1;
   height: 100%;
 
-  @media ${props => props.theme.media.width.xss} {
+  @media ${({ theme }) => theme.media.width.xss} {
     flex-flow: column;
     max-width: 300px;
   }
 
-  @media ${props => props.theme.media.width.xs} {
+  @media ${({ theme }) => theme.media.width.xs} {
     flex-flow: column;
     max-width: 300px;
   }
 
-  @media ${props =>
-      `${props.theme.media.width.xs} and ${props.theme.media.landscape}`} {
+  @media ${({ theme }) =>
+      `${theme.media.width.xs} and ${theme.media.landscape}`} {
   }
 
-  @media ${props => props.theme.media.width.sm} {
+  @media ${({ theme }) => theme.media.width.sm} {
     max-width: 480px;
   }
 
-  @media ${props =>
-      `${props.theme.media.width.sm} and ${props.theme.media.landscape}`} {
+  @media ${({ theme }) =>
+      `${theme.media.width.sm} and ${theme.media.landscape}`} {
   }
 
-  @media ${props => props.theme.media.width.md} {
+  @media ${({ theme }) => theme.media.width.md} {
     flex-flow: row nowrap;
     max-width: 850px;
   }
 
-  @media ${props => props.theme.media.width.lg} {
+  @media ${({ theme }) => theme.media.width.lg} {
     max-width: 1168px;
   }
 `

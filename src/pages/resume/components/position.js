@@ -26,26 +26,26 @@ const Container = styled.div`
   display: flex;
   flex-flow: column;
   flex: 1 1 47%;
-  margin-right: ${props => props.theme.spacing(2)};
-  margin-bottom: ${props => props.theme.spacing(2)};
+  margin-right: ${({ theme }) => theme.spacing(2)};
+  margin-bottom: ${({ theme }) => theme.spacing(2)};
 `
 
 const Title = styled.h3`
-  margin-top: ${props => props.theme.spacing(1)};
-  margin-bottom: ${props => props.theme.spacing(0)};
+  margin-top: ${({ theme }) => theme.spacing(1)};
+  margin-bottom: ${({ theme }) => theme.spacing(0)};
 
-  color: ${props => props.theme.palette.grey[300]};
+  color: ${({ theme }) => theme.palette.grey[300]};
   font-size: 18px;
 `
 
 const Company = styled.div`
-  color: ${props => props.theme.palette.grey[400]};
+  color: ${({ theme }) => theme.palette.grey[400]};
   font-size: 15px;
   font-weight: 500;
 `
 
 const Location = styled.div`
-  margin-top: ${props => props.theme.spacing(1)};
+  margin-top: ${({ theme }) => theme.spacing(1)};
 
   font-size: 13px;
 `
@@ -53,22 +53,22 @@ const Location = styled.div`
 const Achievements = styled.ul`
   display: flex;
   flex-flow: column;
-  margin-top: ${props => props.theme.spacing(0.5)};
-  margin-bottom: ${props => props.theme.spacing(1)};
-  padding-left: ${props => props.theme.spacing(0)};
+  margin-top: ${({ theme }) => theme.spacing(0.5)};
+  margin-bottom: ${({ theme }) => theme.spacing(1)};
+  padding-left: ${({ theme }) => theme.spacing(0)};
   list-style: none;
 `
 
 const Achievement = styled.li`
   display: flex;
-  padding-top: ${props => props.theme.spacing(0.5)};
+  padding-top: ${({ theme }) => theme.spacing(0.5)};
 `
 
 const Mark = styled(FontAwesomeIcon)`
   display: flex;
-  padding-top: ${props => props.theme.spacing(0.9)};
-  padding-right: ${props => props.theme.spacing(1)};
+  padding-top: ${({ theme }) => theme.spacing(0.9)};
+  padding-right: ${({ theme }) => theme.spacing(1)};
 
-  color: ${props => props.theme.palette.green[400]};
+  color: ${({ theme }) => theme.palette.green[400]};
   font-size: 8px;
 `

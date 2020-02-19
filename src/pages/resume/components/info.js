@@ -38,32 +38,32 @@ export const Info = ({ info }) => (
 
 const Content = styled.div`
   display: grid;
-  margin-top: ${props => props.theme.spacing(2)};
-  margin-bottom: ${props => props.theme.spacing(0)};
-  padding-left: ${props => props.theme.spacing(2)};
+  margin-top: ${({ theme }) => theme.spacing(2)};
+  margin-bottom: ${({ theme }) => theme.spacing(0)};
+  padding-left: ${({ theme }) => theme.spacing(2)};
 
   grid-template-columns: 70px auto;
   grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: ${props => props.theme.spacing(1)};
-  grid-row-gap: ${props => props.theme.spacing(1)};
+  grid-column-gap: ${({ theme }) => theme.spacing(1)};
+  grid-row-gap: ${({ theme }) => theme.spacing(1)};
 `
 
 const Details = styled.div`
-  grid-area: ${props =>
-    `${props.row} / ${props.col} / ${props.rowEnd} / ${props.colEnd}`};
+  grid-area: ${({ theme, row, rowEnd, col, colEnd }) =>
+    `${row} / ${col} / ${rowEnd} / ${colEnd}`};
 `
 
 const Pill = styled.span`
-  grid-area: ${props =>
-    `${props.row} / ${props.col} / ${props.rowEnd} / ${props.colEnd}`};
+  grid-area: ${({ theme, row, rowEnd, col, colEnd }) =>
+    `${row} / ${col} / ${rowEnd} / ${colEnd}`};
 
   max-height: 22px;
-  border: 1px solid ${props => props.theme.palette.green[400]};
-  ${props => props.theme.borderRadius.all}
-  padding-right: ${props => props.theme.spacing(0.5)};
-  padding-left: ${props => props.theme.spacing(0.5)};
+  border: 1px solid ${({ theme }) => theme.palette.green[400]};
+  ${({ theme }) => theme.borderRadius.all}
+  padding-right: ${({ theme }) => theme.spacing(0.5)};
+  padding-left: ${({ theme }) => theme.spacing(0.5)};
 
-  color: ${props => props.theme.palette.green[400]};
+  color: ${({ theme }) => theme.palette.green[400]};
   text-align: center;
   font-size: 14px;
   line-height: 1.3em;
