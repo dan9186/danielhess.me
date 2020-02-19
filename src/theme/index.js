@@ -20,6 +20,8 @@ export const Theme = ({ children }) => (
   </ThemeProvider>
 )
 
+export const StoryTheme = story => <Theme>{story()}</Theme>
+
 const GlobalStyle = createGlobalStyle`
   html, body, #app {
     display: flex;

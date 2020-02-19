@@ -23,6 +23,27 @@ jobs:
     - name: Linters
       run: make linters
 
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-dept: 1
+
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.16.x
+
+    - name: Install
+      run: make install
+
+    - name: Test
+      run: make test
+
   build:
     name: Build
     runs-on: ubuntu-latest
