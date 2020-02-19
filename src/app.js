@@ -2,8 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { Theme } from './theme/'
-import { Card } from './components'
-import { Pages } from './pages'
+
+const Card = React.lazy(() => import('./components/card/card'))
+const Pages = React.lazy(() => import('./pages'))
 
 export const App = () => (
   <Theme>

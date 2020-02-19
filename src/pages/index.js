@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 
 import { Resume } from './resume/resume'
 
-export const Pages = () => (
+export default () => (
   <Container>
     <Switch>
       <Route exact path='/'>
