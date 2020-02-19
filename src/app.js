@@ -1,17 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Theme } from './theme/'
-import { Card } from './components'
-import { Pages } from './pages'
+import { Loading } from './components/loading/loading'
 
-export const App = () => (
-  <Theme>
-    <AppContainer>
+const Card = React.lazy(() => import('./components/card/card'))
+const Pages = React.lazy(() => import('./pages'))
+
+export default () => (
+  <AppContainer>
+    <React.Suspense fallback={<Loading />}>
       <Card />
       <Pages />
-    </AppContainer>
-  </Theme>
+    </React.Suspense>
+  </AppContainer>
 )
 
 const AppContainer = styled.div`

@@ -1,8 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { StoryTheme } from '../../theme'
-import Card from './card'
+import { Loading } from './loading'
 
-storiesOf('Components/Card', module)
+storiesOf('Components/Loading', module)
   .addDecorator(StoryTheme)
-  .add('default', () => <Card />)
+  .add('default', () => <Loading />)

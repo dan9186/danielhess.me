@@ -10,7 +10,7 @@ import {
 
 import { Logo } from '../logo/logo'
 
-export const Card = () => (
+export default () => (
   <Container>
     <Background />
     <StyledLogo size='150px' />
