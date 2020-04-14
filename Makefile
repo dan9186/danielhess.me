@@ -44,8 +44,19 @@ install: ## Install dependencies
 	@npm install
 
 .PHONY: linters
-linters: ## Run all linters
+linters: lint prettied ## Run all linters
+
+.PHONY: lint
+lint: ## Run the linter
 	npx eslint src/**/*.js
+
+.PHONY: prettied
+prettied: ## Run the check for prettier
+	npx prettier -c "src/**/*.js"
+
+.PHONY: pretty
+pretty: ## Run prettier
+	npx prettier --write "src/**/*.js"
 
 .PHONY: story
 story: ## Run storybook
