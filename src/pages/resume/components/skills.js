@@ -13,7 +13,7 @@ import { Subtitle } from './subtitle'
 export const Skills = ({ skills = [] }) => {
   const [show, setShow] = useState(false)
 
-  const handleClick = e => {
+  const handleClick = (e) => {
     setShow(!show)
     const target = e.target
 

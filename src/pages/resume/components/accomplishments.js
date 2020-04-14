@@ -14,7 +14,7 @@ export const Accomplishments = ({ accomplishments = [] }) => (
       Accomplishments
     </Subtitle>
     <Content>
-      {accomplishments.map(a => (
+      {accomplishments.map((a) => (
         <li>{a}</li>
       ))}
     </Content>

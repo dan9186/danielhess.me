@@ -12,7 +12,7 @@ export const Position = ({ position }) => (
     <Company>{position.company}</Company>
     <Location>{position.location}</Location>
     <Achievements>
-      {position.achievements.map(a => (
+      {position.achievements.map((a) => (
         <Achievement>
           <Mark icon={faCircle} />
           {a}

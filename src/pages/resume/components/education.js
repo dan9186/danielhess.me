@@ -15,13 +15,13 @@ export const Education = ({ education = [] }) => (
       Education
     </Subtitle>
     <Content>
-      {education.map(ed => (
+      {education.map((ed) => (
         <School>
           <Date start={ed.start} end={ed.end} />
           <Name>{ed.school}</Name>
           <Location>{ed.location}</Location>
           <Degrees>
-            {ed.degrees.map(d => (
+            {ed.degrees.map((d) => (
               <li>{d}</li>
             ))}
           </Degrees>

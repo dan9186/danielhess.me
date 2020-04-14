@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const Logo = props => {
+export const Logo = (props) => {
   const className = props.className
   const size = props.size || '100px'
 
@@ -1086,6 +1086,6 @@ export const Logo = props => {
 }
 
 const Icon = styled.svg`
-  height: ${props => props.size};
-  width: ${props => props.size};
+  height: ${(props) => props.size};
+  width: ${(props) => props.size};
 `
