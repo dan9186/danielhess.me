@@ -51,7 +51,7 @@
     "prettier": "^2.0.4",
     "react-test-renderer": "^16.13.1",
     "storybook-react-router": "^1.0.8",
-    "url-loader": "^3.0.0",
+    "url-loader": "^4.1.0",
     "webpack": "^4.42.1",
     "webpack-bundle-analyzer": "^3.6.1",
     "webpack-cli": "^3.3.11",
