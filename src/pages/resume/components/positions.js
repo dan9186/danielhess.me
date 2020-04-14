@@ -12,7 +12,7 @@ import { Position } from './position'
 export const Positions = ({ positions = [] }) => {
   const [show, setShow] = useState(true)
 
-  const handleClick = e => {
+  const handleClick = (e) => {
     setShow(!show)
     const target = e.target
 
@@ -35,7 +35,7 @@ export const Positions = ({ positions = [] }) => {
         <Chevron icon={faChevronDown} show={show} />
       </Subtitle>
       <Content show={show}>
-        {positions.map(p => (
+        {positions.map((p) => (
           <Position position={p} />
         ))}
       </Content>
