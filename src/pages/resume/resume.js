@@ -5,6 +5,7 @@ import { faFileAlt } from '@fortawesome/free-solid-svg-icons'
 
 import { ResumeText } from './resume_text'
 import { Icon, Title } from '../../components/typography'
+import { Row } from '../../components/grid'
 import {
   Accomplishments,
   Education,
@@ -49,15 +50,4 @@ const Container = styled.div`
 
   color: #a2a2a2;
   font-weight: 300;
-`
-
-const Row = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  margin-top: ${({ theme }) => theme.spacing(1)};
-  margin-bottom: ${({ theme }) => theme.spacing(2)};
-
-  &:last-child {
-    margin-bottom: ${({ theme }) => theme.spacing(2)};
-  }
 `

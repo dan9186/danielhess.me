@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Section } from './section'
+import { Section } from '../../../components/grid'
 
 export const Preface = ({ preface }) => (
   <Section>

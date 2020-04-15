@@ -6,7 +6,7 @@ import { faListAlt } from '@fortawesome/free-regular-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 import { Icon, Subtitle } from '../../../components/typography'
-import { Section } from './section'
+import { Section } from '../../../components/grid'
 import { SkillCategory } from './skill_category'
 
 export const Skills = ({ skills = [] }) => {

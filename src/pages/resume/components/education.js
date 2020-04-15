@@ -5,7 +5,7 @@ import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 
 import { Date } from './date'
 import { Icon, Subtitle } from '../../../components/typography'
-import { Section } from './section'
+import { Section } from '../../../components/grid'
 
 export const Education = ({ education = [] }) => (
   <Section>

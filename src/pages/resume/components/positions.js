@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBriefcase, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 import { Icon, Subtitle } from '../../../components/typography'
-import { Section } from './section'
+import { Section } from '../../../components/grid'
 import { Position } from './position'
 
 export const Positions = ({ positions = [] }) => {
