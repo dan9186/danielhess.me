@@ -12961,7 +12961,7 @@ exports[`Storyshots Components/Menu default 1`] = `
     <a
       active={false}
       className="item__Container-me407f-0 ezMAbA"
-      href="/project"
+      href="/projects"
       onClick={[Function]}
     >
       <li

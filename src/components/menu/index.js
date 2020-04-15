@@ -14,7 +14,7 @@ export const Menu = () => (
     <Items>
       <Item text='Resume' to='/' icon={faFileAlt} />
       <Item text='Hire Me' to='/hireme' icon={faFileContract} />
-      <Item text='Projects' to='/project' icon={faHammer} />
+      <Item text='Projects' to='/projects' icon={faHammer} />
       <Item text='Blog' to='/blog' icon={faCommentDots} />
     </Items>
   </Container>
