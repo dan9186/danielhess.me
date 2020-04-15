@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import {
-  faFileAlt,
   faCommentDots,
-  faPaintBrush,
+  faFileAlt,
+  faFileContract,
+  faHammer,
 } from '@fortawesome/free-solid-svg-icons'
 
 import { Item } from './item.js'
@@ -12,7 +13,8 @@ export const Menu = () => (
   <Container>
     <Items>
       <Item text='Resume' to='/' icon={faFileAlt} />
-      <Item text='Projects' to='/project' icon={faPaintBrush} />
+      <Item text='Hire Me' to='/hireme' icon={faFileContract} />
+      <Item text='Projects' to='/project' icon={faHammer} />
       <Item text='Blog' to='/blog' icon={faCommentDots} />
     </Items>
   </Container>
