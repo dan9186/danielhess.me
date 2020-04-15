@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { faAward } from '@fortawesome/free-solid-svg-icons'
 
 import { Icon, Subtitle } from '../../../components/typography'
-import { Section } from './section'
+import { Section } from '../../../components/grid'
 
 export const Accomplishments = ({ accomplishments = [] }) => (
   <Section>
