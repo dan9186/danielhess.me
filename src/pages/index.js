@@ -22,7 +22,7 @@ const Container = styled.div`
   overflow: scroll;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15);
 
-  color: #ffffff;
+  color: ${({ theme }) => theme.palette.white};
   font-size: 16px;
   line-height: 1.4em;
   background-color: ${({ theme }) => theme.palette.grey[850]};
