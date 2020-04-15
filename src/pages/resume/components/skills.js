@@ -5,10 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faListAlt } from '@fortawesome/free-regular-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
-import { Icon } from '../../../components/typography'
+import { Icon, Subtitle } from '../../../components/typography'
 import { Section } from './section'
 import { SkillCategory } from './skill_category'
-import { Subtitle } from './subtitle'
 
 export const Skills = ({ skills = [] }) => {
   const [show, setShow] = useState(false)

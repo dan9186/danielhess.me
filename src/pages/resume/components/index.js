@@ -1,6 +1,5 @@
 export { Date } from './date'
 export { Section } from './section'
-export { Subtitle } from './subtitle'
 
 export { Accomplishments } from './accomplishments'
 export { Education } from './education'

@@ -4,9 +4,8 @@ import styled from 'styled-components'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 
 import { Date } from './date'
-import { Icon } from '../../../components/typography'
+import { Icon, Subtitle } from '../../../components/typography'
 import { Section } from './section'
-import { Subtitle } from './subtitle'
 
 export const Education = ({ education = [] }) => (
   <Section>
