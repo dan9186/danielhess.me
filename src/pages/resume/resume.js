@@ -4,10 +4,10 @@ import styled from 'styled-components'
 import { faFileAlt } from '@fortawesome/free-solid-svg-icons'
 
 import { ResumeText } from './resume_text'
+import { Icon } from '../../components/typography'
 import {
   Accomplishments,
   Education,
-  Icon,
   Info,
   Positions,
   Preface,

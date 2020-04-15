@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 
 import { Date } from './date'
-import { Icon } from './icon'
+import { Icon } from '../../../components/typography'
 import { Section } from './section'
 import { Subtitle } from './subtitle'
 

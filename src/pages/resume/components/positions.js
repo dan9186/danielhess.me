@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBriefcase, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
-import { Icon } from './icon'
+import { Icon } from '../../../components/typography'
 import { Section } from './section'
 import { Subtitle } from './subtitle'
 import { Position } from './position'
