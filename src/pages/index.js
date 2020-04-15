@@ -3,12 +3,24 @@ import styled from 'styled-components'
 import { Switch, Route } from 'react-router-dom'
 
 import { Resume } from './resume/resume'
+import { Hireme } from './hireme'
+import { Projects } from './projects'
+import { Blog } from './blog'
 
 export default () => (
   <Container>
     <Switch>
       <Route exact path='/'>
         <Resume />
+      </Route>
+      <Route exact path='/hireme'>
+        <Hireme />
+      </Route>
+      <Route exact path='/projects'>
+        <Projects />
+      </Route>
+      <Route exact path='/blog'>
+        <Blog />
       </Route>
     </Switch>
   </Container>
