@@ -7,13 +7,15 @@ import { Icon } from './icon'
 export const Item = ({ text, to, icon }) => (
   <Container to={to}>
     <ListItem>
-      {icon && <Icon icon={icon} />}
+      <Icon icon={icon} />
       <Text>{text}</Text>
     </ListItem>
   </Container>
 )
 
 const Container = styled(Link)`
+  display: flex;
+  justify-content: center;
   height: 69px;
   width: 72px;
 
@@ -36,4 +38,5 @@ const Text = styled.span`
 
   color: ${({ theme }) => theme.palette.grey[300]};
   font-size: 11px;
+  text-transform: uppercase;
 `
