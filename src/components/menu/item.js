@@ -1,17 +1,22 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { Icon } from './icon'
 
-export const Item = ({ text, to, icon }) => (
-  <Container to={to}>
-    <ListItem>
-      <Icon icon={icon} />
-      <Text>{text}</Text>
-    </ListItem>
-  </Container>
-)
+export const Item = ({ text, to, icon }) => {
+  const location = useLocation()
+  const active = location.pathname === to
+
+  return (
+    <Container to={to} active={active}>
+      <ListItem>
+        <Icon icon={icon} />
+        <Text>{text}</Text>
+      </ListItem>
+    </Container>
+  )
+}
 
 const Container = styled(Link)`
   display: flex;
@@ -20,6 +25,13 @@ const Container = styled(Link)`
   width: 72px;
 
   text-decoration: none;
+  color: ${({ theme, active }) =>
+    active ? theme.palette.green[400] : theme.palette.grey[300]};
+  transition: color 0.4s ease;
+
+  &:hover {
+    color: ${({ theme }) => theme.palette.green[400]};
+  }
 `
 
 const ListItem = styled.li`
@@ -36,7 +48,6 @@ const Text = styled.span`
   width: 100%;
   text-align: center;
 
-  color: ${({ theme }) => theme.palette.grey[300]};
   font-size: 11px;
   text-transform: uppercase;
 `

@@ -12893,7 +12893,8 @@ exports[`Storyshots Components/Menu default 1`] = `
     className="menu__Items-sc-15s9krm-1 fsmiSv"
   >
     <a
-      className="item__Container-me407f-0 gMJTem"
+      active={true}
+      className="item__Container-me407f-0 kqsqCC"
       href="/"
       onClick={[Function]}
     >
@@ -12902,7 +12903,7 @@ exports[`Storyshots Components/Menu default 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="svg-inline--fa fa-file-alt fa-w-12 icon__Icon-sc-3cvt2o-0 feHWyv"
+          className="svg-inline--fa fa-file-alt fa-w-12 icon__Icon-sc-3cvt2o-0 hNQGGY"
           data-icon="file-alt"
           data-prefix="fas"
           focusable="false"
@@ -12918,14 +12919,15 @@ exports[`Storyshots Components/Menu default 1`] = `
           />
         </svg>
         <span
-          className="item__Text-me407f-2 fuhRjc"
+          className="item__Text-me407f-2 kPIrLB"
         >
           Resume
         </span>
       </li>
     </a>
     <a
-      className="item__Container-me407f-0 gMJTem"
+      active={false}
+      className="item__Container-me407f-0 ezMAbA"
       href="/project"
       onClick={[Function]}
     >
@@ -12934,7 +12936,7 @@ exports[`Storyshots Components/Menu default 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="svg-inline--fa fa-paint-brush fa-w-16 icon__Icon-sc-3cvt2o-0 feHWyv"
+          className="svg-inline--fa fa-paint-brush fa-w-16 icon__Icon-sc-3cvt2o-0 hNQGGY"
           data-icon="paint-brush"
           data-prefix="fas"
           focusable="false"
@@ -12950,14 +12952,15 @@ exports[`Storyshots Components/Menu default 1`] = `
           />
         </svg>
         <span
-          className="item__Text-me407f-2 fuhRjc"
+          className="item__Text-me407f-2 kPIrLB"
         >
           Projects
         </span>
       </li>
     </a>
     <a
-      className="item__Container-me407f-0 gMJTem"
+      active={false}
+      className="item__Container-me407f-0 ezMAbA"
       href="/blog"
       onClick={[Function]}
     >
@@ -12966,7 +12969,7 @@ exports[`Storyshots Components/Menu default 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="svg-inline--fa fa-comment-dots fa-w-16 icon__Icon-sc-3cvt2o-0 feHWyv"
+          className="svg-inline--fa fa-comment-dots fa-w-16 icon__Icon-sc-3cvt2o-0 hNQGGY"
           data-icon="comment-dots"
           data-prefix="fas"
           focusable="false"
@@ -12982,7 +12985,7 @@ exports[`Storyshots Components/Menu default 1`] = `
           />
         </svg>
         <span
-          className="item__Text-me407f-2 fuhRjc"
+          className="item__Text-me407f-2 kPIrLB"
         >
           Blog
         </span>
