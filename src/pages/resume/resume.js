@@ -9,7 +9,6 @@ import { Row } from '../../components/grid'
 import {
   Accomplishments,
   Education,
-  Info,
   Positions,
   Preface,
   Skills,
@@ -27,17 +26,14 @@ export const Resume = () => (
       <Preface preface={ResumeText.preface} />
     </Row>
     <Row>
-      <Info info={ResumeText.info} />
-    </Row>
-    <Row>
       <Education education={ResumeText.education} />
       <Accomplishments accomplishments={ResumeText.accomplishments} />
     </Row>
     <Row>
-      <Positions positions={ResumeText.positions} />
+      <Skills skills={ResumeText.skills} />
     </Row>
     <Row>
-      <Skills skills={ResumeText.skills} />
+      <Positions positions={ResumeText.positions} />
     </Row>
   </Container>
 )
