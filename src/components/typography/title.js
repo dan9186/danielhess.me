@@ -8,7 +8,7 @@ export const Title = styled.h1`
   padding-left: ${({ theme }) => theme.spacing(1)};
 
   color: #e3e3e3;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 600;
 
   &:after {
