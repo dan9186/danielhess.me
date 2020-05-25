@@ -84,13 +84,15 @@ module.exports = {
       title: 'Daniel Hess',
       version: info.version,
     }),
-    new CopyWebpackPlugin([
-      { from: path.join(PATHS.static, 'robots.txt'), to: PATHS.dist },
-      {
-        from: path.join(PATHS.static, 'favicons'),
-        to: path.join(PATHS.dist, 'favicons'),
-      },
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: path.join(PATHS.static, 'robots.txt'), to: PATHS.dist },
+        {
+          from: path.join(PATHS.static, 'favicons'),
+          to: path.join(PATHS.dist, 'favicons'),
+        },
+      ],
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
       VERSION: JSON.stringify(require('./package.json').version),
