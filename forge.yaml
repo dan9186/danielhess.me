@@ -1,0 +1,69 @@
+project:
+  name: danielhess.me
+
+steps:
+  analyze_bundle:
+    help: View the bundle stats
+    cmd: npx webpack-bundle-analyzer dist/stats.json
+
+  build:
+    help: Build the project
+    cmd: npx webpack -p
+
+  clean:
+    help: Clean up generated items
+    cmds:
+    - rm -rf dist
+    - rm -rf coverage
+    - rm -f *-debug.log *-error.log
+
+  coverage:
+    help: Generate code coverage
+    cmd: npx nyc --reporter=text --reporter=html --all --extension .js mocha --require
+      babel-core/register "src/**/*.test.js"
+
+  deploy:
+    help: Deploy the generated site
+    cmd: firebase deploy
+
+  dev:
+    help: Run the dev test server
+    cmd: npx webpack-dev-server --hot --progress --port 8080 --host 0.0.0.0
+
+  install:
+    help: Install all dependencies from npm
+    cmd: npm install
+
+  lint:
+    help: Run the linter
+    cmd: npx eslint src/**/*.js
+
+  linters:
+    help: Run the linter and prettier
+    steps:
+    - lint
+    - pretty
+
+  test:
+    help: Run all tests available
+    steps:
+    - snapshots
+  prettied:
+    help: Check whether files need prettier applied
+    cmd: npx prettier -c "src/**/*.js"
+
+  pretty:
+    help: Run prettier
+    cmd: npx prettier --write "src/**/*.js"
+
+  snapshots:
+    help: Run snapshot tests
+    cmd: npx jest --config jest.snapshot.config.js
+
+  story:
+    help: Run storybook
+    cmd: npx start-storybook -p 9001 -c .storybook
+
+  update_snapshots:
+    help: Run snapshots to update the save state
+    cmd: npx jest --config jest.snapshot.config.js -u
